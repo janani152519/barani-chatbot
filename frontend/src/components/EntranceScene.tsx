@@ -9,6 +9,18 @@ interface Props {
 export default function EntranceScene({ onComplete }: Props) {
   const [phase, setPhase] = useState<"approach" | "gate" | "enter" | "done">("approach");
   const [progress, setProgress] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 1200
+  );
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const isMobile = windowWidth < 768;
+  const gateScale = Math.min(1, Math.max(0.44, (windowWidth - 20) / 680));
 
   useEffect(() => {
     const t1 = setTimeout(() => setPhase("gate"), 2800);
@@ -67,15 +79,19 @@ export default function EntranceScene({ onComplete }: Props) {
         />
       </motion.div>
 
-      {/* Gate structure */}
+      {/* Gate structure (Responsive Scale for Phones & Monitors) */}
       <motion.div
         className="absolute bottom-0 left-1/2"
-        style={{ transform: "translateX(-50%)", width: "680px", height: "480px" }}
+        style={{
+          transformOrigin: "bottom center",
+          width: "680px",
+          height: "480px"
+        }}
         animate={
-          phase === "approach" ? { scale: 0.9, y: 30, opacity: 0.8 } :
-          phase === "gate" ? { scale: 1, y: 0, opacity: 1 } :
-          phase === "enter" ? { scale: 1.8, y: 60, opacity: 0.4 } :
-          { scale: 2.5, y: 120, opacity: 0 }
+          phase === "approach" ? { scale: 0.9 * gateScale, x: "-50%", y: 30, opacity: 0.8 } :
+          phase === "gate" ? { scale: 1 * gateScale, x: "-50%", y: 0, opacity: 1 } :
+          phase === "enter" ? { scale: 1.8 * gateScale, x: "-50%", y: 60, opacity: 0.4 } :
+          { scale: 2.5 * gateScale, x: "-50%", y: 120, opacity: 0 }
         }
         transition={{ duration: 2.2, ease: "easeInOut" }}
       >
@@ -345,8 +361,8 @@ export default function EntranceScene({ onComplete }: Props) {
           style={{
             fontFamily: "var(--font-display)",
             fontWeight: 800,
-            fontSize: 48,
-            letterSpacing: "0.18em",
+            fontSize: "clamp(28px, 8vw, 48px)",
+            letterSpacing: "clamp(0.08em, 2vw, 0.18em)",
             color: "#e2e8f0",
             lineHeight: 0.95,
             textShadow: "0 0 40px rgba(59,130,246,0.3)",
@@ -358,8 +374,8 @@ export default function EntranceScene({ onComplete }: Props) {
           style={{
             fontFamily: "var(--font-display)",
             fontWeight: 400,
-            fontSize: 21,
-            letterSpacing: "0.35em",
+            fontSize: "clamp(13px, 3.8vw, 21px)",
+            letterSpacing: "clamp(0.18em, 3.5vw, 0.35em)",
             color: "var(--steel)",
             marginTop: 4,
           }}
@@ -404,10 +420,10 @@ export default function EntranceScene({ onComplete }: Props) {
       <div
         style={{
           position: "absolute",
-          bottom: 32,
+          bottom: isMobile ? 22 : 32,
           left: "50%",
           transform: "translateX(-50%)",
-          width: 240,
+          width: "min(240px, 70vw)",
           zIndex: 40,
           display: "flex",
           flexDirection: "column",
@@ -443,9 +459,9 @@ export default function EntranceScene({ onComplete }: Props) {
             textTransform: "uppercase"
           }}
         >
-          {phase === "approach" && "Scanning security clearance…"}
+          {phase === "approach" && "Scanning clearance…"}
           {phase === "gate" && "Perimeter gate opening…"}
-          {phase === "enter" && "Authorizing SCADA gateway…"}
+          {phase === "enter" && "Authorizing gateway…"}
           {phase === "done" && "Ready for login"}
         </span>
       </div>
@@ -456,19 +472,19 @@ export default function EntranceScene({ onComplete }: Props) {
         onClick={onComplete}
         style={{
           position: "absolute",
-          bottom: 24,
-          right: 32,
+          bottom: isMobile ? 18 : 24,
+          right: isMobile ? 18 : 32,
           display: "flex",
           alignItems: "center",
-          gap: 8,
-          padding: "9px 18px",
-          background: "rgba(33, 33, 33, 0.85)",
+          gap: 7,
+          padding: isMobile ? "8px 14px" : "9px 18px",
+          background: "rgba(33, 33, 33, 0.88)",
           border: "1px solid rgba(255, 255, 255, 0.25)",
           backdropFilter: "blur(12px)",
           borderRadius: 24,
           color: "#ffffff",
           fontFamily: "var(--font-mono)",
-          fontSize: 11,
+          fontSize: isMobile ? 10 : 11,
           fontWeight: 600,
           letterSpacing: "0.1em",
           cursor: "pointer",

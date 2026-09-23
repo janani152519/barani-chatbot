@@ -84,6 +84,18 @@ function saveSessions(sessions) {
 export default function ChatWindow({ onLogout }) {
   const user = getAuthUser() || { username: "admin", role: "admin", full_name: "System Admin" };
 
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 1200
+  );
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const isMobile = windowWidth < 768;
+
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [historyOpen, setHistoryOpen] = useState(false); // logo click opens chat history
   const [activePortal, setActivePortal] = useState("chat"); // "chat" | "scada" | "email_scheduler" | "payroll" | "machines"
@@ -250,7 +262,7 @@ export default function ChatWindow({ onLogout }) {
 
       {/* ── Sidebar Overlay (mobile) ── */}
       <AnimatePresence>
-        {sidebarOpen && (
+        {isMobile && sidebarOpen && (
           <motion.div
             key="overlay"
             initial={{ opacity: 0 }}
@@ -259,9 +271,8 @@ export default function ChatWindow({ onLogout }) {
             onClick={() => setSidebarOpen(false)}
             style={{
               position: "fixed", inset: 0, zIndex: 40,
-              background: "rgba(0,0,0,0.5)",
-              backdropFilter: "blur(4px)",
-              display: "none" // hidden on desktop, shown on mobile via inline check
+              background: "rgba(0,0,0,0.65)",
+              backdropFilter: "blur(4px)"
             }}
           />
         )}
@@ -270,7 +281,7 @@ export default function ChatWindow({ onLogout }) {
       {/* ── Sidebar ── */}
       <motion.aside
         initial={false}
-        animate={{ width: sidebarOpen ? 280 : 0 }}
+        animate={{ width: sidebarOpen ? (isMobile ? Math.min(290, windowWidth * 0.85) : 280) : 0 }}
         transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
         style={{
           height: "100%",
@@ -280,11 +291,15 @@ export default function ChatWindow({ onLogout }) {
           flexDirection: "column",
           overflow: "hidden",
           flexShrink: 0,
-          zIndex: 30,
-          position: "relative"
+          zIndex: isMobile ? 50 : 30,
+          position: isMobile ? "fixed" : "relative",
+          top: 0,
+          left: 0,
+          bottom: 0,
+          boxShadow: isMobile && sidebarOpen ? "8px 0 32px rgba(0,0,0,0.7)" : "none"
         }}
       >
-        <div style={{ width: 280, height: "100%", display: "flex", flexDirection: "column" }}>
+        <div style={{ width: isMobile ? Math.min(290, windowWidth * 0.85) : 280, height: "100%", display: "flex", flexDirection: "column" }}>
 
           {/* Sidebar Header */}
           <div style={{
@@ -574,8 +589,8 @@ export default function ChatWindow({ onLogout }) {
 
         {/* Top Navigation Bar */}
         <header style={{
-          padding: "0 24px",
-          height: 60,
+          padding: isMobile ? "0 10px" : "0 24px",
+          height: isMobile ? 54 : 60,
           display: "flex", alignItems: "center",
           justifyContent: "space-between",
           borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
@@ -583,15 +598,15 @@ export default function ChatWindow({ onLogout }) {
           flexShrink: 0, zIndex: 20
         }}>
           {/* Left: Logo + History toggle */}
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 8 : 12 }}>
             {/* Logo click opens chat History panel */}
             <motion.button
               onClick={() => setHistoryOpen(prev => !prev)}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               style={{
-                display: "flex", alignItems: "center", gap: 10,
-                padding: "6px 12px", borderRadius: 8,
+                display: "flex", alignItems: "center", gap: 8,
+                padding: isMobile ? "5px 8px" : "6px 12px", borderRadius: 8,
                 background: "#2f2f2f",
                 border: "1px solid rgba(255, 255, 255, 0.12)",
                 cursor: "pointer", transition: "all 0.2s ease"
@@ -602,7 +617,7 @@ export default function ChatWindow({ onLogout }) {
                 src="/logo.jpg"
                 alt="BH SCADA"
                 style={{
-                  height: 30, width: 50,
+                  height: 28, width: 44,
                   aspectRatio: "670 / 377",
                   borderRadius: 5,
                   border: "1px solid rgba(255, 255, 255, 0.15)",
@@ -611,11 +626,11 @@ export default function ChatWindow({ onLogout }) {
                 }}
               />
               <div>
-                <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.05em", color: "#ECECEC", textTransform: "uppercase", textAlign: "left" }}>
-                  BH INDUSTRIAL SCADA
+                <div style={{ fontSize: isMobile ? 11 : 12, fontWeight: 700, letterSpacing: "0.05em", color: "#ECECEC", textTransform: "uppercase", textAlign: "left" }}>
+                  {isMobile ? "BH SCADA" : "BH INDUSTRIAL SCADA"}
                 </div>
-                <div style={{ fontSize: 9, fontFamily: "var(--font-mono)", color: "#10a37f", fontWeight: 700, letterSpacing: "0.04em", textAlign: "left" }}>
-                  {historyOpen ? "▼ HIDE HISTORY" : "▲ CHAT HISTORY"}
+                <div style={{ fontSize: 8.5, fontFamily: "var(--font-mono)", color: "#10a37f", fontWeight: 700, letterSpacing: "0.04em", textAlign: "left" }}>
+                  {historyOpen ? "▼ HIDE" : "▲ HISTORY"}
                 </div>
               </div>
             </motion.button>
@@ -624,126 +639,125 @@ export default function ChatWindow({ onLogout }) {
             <button
               onClick={() => setSidebarOpen(prev => !prev)}
               style={{
-                padding: "7px 10px", borderRadius: 8,
+                padding: isMobile ? "6px 8px" : "7px 10px", borderRadius: 8,
                 background: sidebarOpen ? "#2f2f2f" : "#212121",
                 border: "1px solid rgba(255, 255, 255, 0.12)",
                 color: "#ececec", cursor: "pointer", fontSize: 11, fontWeight: 500,
-                display: "flex", alignItems: "center", gap: 5,
+                display: "flex", alignItems: "center", gap: 4,
                 transition: "background 0.15s ease"
               }}
               title="Toggle portals sidebar"
             >
               <Menu size={14} color="#ececec" />
-              <span>Portals</span>
+              {!isMobile && <span>Portals</span>}
             </button>
           </div>
 
-          {/* Center: Portal Navigation Tabs inside Chatbot */}
-          <div style={{
-            display: "flex", alignItems: "center", gap: 4,
-            background: "#171717", padding: "3px 4px",
-            borderRadius: 8, border: "1px solid rgba(255, 255, 255, 0.1)",
-            overflowX: "auto"
-          }}>
-            <button
-              onClick={() => setActivePortal("chat")}
-              style={{
-                padding: "5px 12px", borderRadius: 6, cursor: "pointer",
-                fontSize: 11.5, fontWeight: 500, display: "flex", alignItems: "center", gap: 5,
-                background: activePortal === "chat" ? "#2f2f2f" : "transparent",
-                color: activePortal === "chat" ? "#ffffff" : "#8e8e8e",
-                border: `1px solid ${activePortal === "chat" ? "rgba(255, 255, 255, 0.15)" : "transparent"}`,
-                transition: "all 0.15s ease", whiteSpace: "nowrap"
-              }}
-            >
-              <Bot size={13} color={activePortal === "chat" ? "#10a37f" : "#8e8e8e"} />
-              <span>AI Chat</span>
-            </button>
-            <button
-              onClick={() => setActivePortal("email_scheduler")}
-              style={{
-                padding: "5px 12px", borderRadius: 6, cursor: "pointer",
-                fontSize: 11.5, fontWeight: 500, display: "flex", alignItems: "center", gap: 6,
-                background: activePortal === "email_scheduler" ? "#2f2f2f" : "transparent",
-                color: activePortal === "email_scheduler" ? "#ffffff" : "#8e8e8e",
-                border: `1px solid ${activePortal === "email_scheduler" ? "rgba(255, 255, 255, 0.15)" : "transparent"}`,
-                transition: "all 0.15s ease", whiteSpace: "nowrap"
-              }}
-            >
-              <FileText size={13} color={activePortal === "email_scheduler" ? "#10a37f" : "#8e8e8e"} />
-              <span>Reports & Emails</span>
-            </button>
-            <button
-              onClick={() => setActivePortal("machines")}
-              style={{
-                padding: "5px 12px", borderRadius: 6, cursor: "pointer",
-                fontSize: 11.5, fontWeight: 500, display: "flex", alignItems: "center", gap: 6,
-                background: activePortal === "machines" ? "#2f2f2f" : "transparent",
-                color: activePortal === "machines" ? "#ffffff" : "#8e8e8e",
-                border: `1px solid ${activePortal === "machines" ? "rgba(255, 255, 255, 0.15)" : "transparent"}`,
-                transition: "all 0.15s ease", whiteSpace: "nowrap"
-              }}
-            >
-              <MapPin size={13} color={activePortal === "machines" ? "#10a37f" : "#8e8e8e"} />
-              <span>Floor Map</span>
-            </button>
-            <button
-              onClick={() => setActivePortal("audit_logs")}
-              style={{
-                padding: "5px 12px", borderRadius: 6, cursor: "pointer",
-                fontSize: 11.5, fontWeight: 500, display: "flex", alignItems: "center", gap: 6,
-                background: activePortal === "audit_logs" ? "#2f2f2f" : "transparent",
-                color: activePortal === "audit_logs" ? "#ffffff" : "#8e8e8e",
-                border: `1px solid ${activePortal === "audit_logs" ? "rgba(255, 255, 255, 0.15)" : "transparent"}`,
-                transition: "all 0.15s ease", whiteSpace: "nowrap"
-              }}
-            >
-              <Shield size={13} color={activePortal === "audit_logs" ? "#10a37f" : "#8e8e8e"} />
-              <span>Audit Logs</span>
-            </button>
-          </div>
+          {/* Center: Portal Navigation Tabs inside Chatbot (Desktop only) */}
+          {!isMobile && (
+            <div style={{
+              display: "flex", alignItems: "center", gap: 4,
+              background: "#171717", padding: "3px 4px",
+              borderRadius: 8, border: "1px solid rgba(255, 255, 255, 0.1)",
+              overflowX: "auto"
+            }}>
+              <button
+                onClick={() => setActivePortal("chat")}
+                style={{
+                  padding: "5px 12px", borderRadius: 6, cursor: "pointer",
+                  fontSize: 11.5, fontWeight: 500, display: "flex", alignItems: "center", gap: 5,
+                  background: activePortal === "chat" ? "#2f2f2f" : "transparent",
+                  color: activePortal === "chat" ? "#ffffff" : "#8e8e8e",
+                  border: `1px solid ${activePortal === "chat" ? "rgba(255, 255, 255, 0.15)" : "transparent"}`,
+                  transition: "all 0.15s ease", whiteSpace: "nowrap"
+                }}
+              >
+                <Bot size={13} color={activePortal === "chat" ? "#10a37f" : "#8e8e8e"} />
+                <span>AI Chat</span>
+              </button>
+              <button
+                onClick={() => setActivePortal("email_scheduler")}
+                style={{
+                  padding: "5px 12px", borderRadius: 6, cursor: "pointer",
+                  fontSize: 11.5, fontWeight: 500, display: "flex", alignItems: "center", gap: 6,
+                  background: activePortal === "email_scheduler" ? "#2f2f2f" : "transparent",
+                  color: activePortal === "email_scheduler" ? "#ffffff" : "#8e8e8e",
+                  border: `1px solid ${activePortal === "email_scheduler" ? "rgba(255, 255, 255, 0.15)" : "transparent"}`,
+                  transition: "all 0.15s ease", whiteSpace: "nowrap"
+                }}
+              >
+                <FileText size={13} color={activePortal === "email_scheduler" ? "#10a37f" : "#8e8e8e"} />
+                <span>Reports & Emails</span>
+              </button>
+              <button
+                onClick={() => setActivePortal("machines")}
+                style={{
+                  padding: "5px 12px", borderRadius: 6, cursor: "pointer",
+                  fontSize: 11.5, fontWeight: 500, display: "flex", alignItems: "center", gap: 6,
+                  background: activePortal === "machines" ? "#2f2f2f" : "transparent",
+                  color: activePortal === "machines" ? "#ffffff" : "#8e8e8e",
+                  border: `1px solid ${activePortal === "machines" ? "rgba(255, 255, 255, 0.15)" : "transparent"}`,
+                  transition: "all 0.15s ease", whiteSpace: "nowrap"
+                }}
+              >
+                <MapPin size={13} color={activePortal === "machines" ? "#10a37f" : "#8e8e8e"} />
+                <span>Floor Map</span>
+              </button>
+              <button
+                onClick={() => setActivePortal("audit_logs")}
+                style={{
+                  padding: "5px 12px", borderRadius: 6, cursor: "pointer",
+                  fontSize: 11.5, fontWeight: 500, display: "flex", alignItems: "center", gap: 6,
+                  background: activePortal === "audit_logs" ? "#2f2f2f" : "transparent",
+                  color: activePortal === "audit_logs" ? "#ffffff" : "#8e8e8e",
+                  border: `1px solid ${activePortal === "audit_logs" ? "rgba(255, 255, 255, 0.15)" : "transparent"}`,
+                  transition: "all 0.15s ease", whiteSpace: "nowrap"
+                }}
+              >
+                <Shield size={13} color={activePortal === "audit_logs" ? "#10a37f" : "#8e8e8e"} />
+                <span>Audit Logs</span>
+              </button>
+            </div>
+          )}
 
           {/* Right: Actions */}
-          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 5 : 8 }}>
             <button
               onClick={handleNewChat}
               style={{
-                padding: "7px 14px", borderRadius: 8,
+                padding: isMobile ? "6px 9px" : "7px 14px", borderRadius: 8,
                 background: "#212121",
                 border: "1px solid rgba(255, 255, 255, 0.15)",
                 color: "#ececec", fontSize: 11, fontWeight: 500,
                 cursor: "pointer", display: "flex", alignItems: "center",
-                gap: 6, transition: "background 0.15s ease"
+                gap: 5, transition: "background 0.15s ease"
               }}
-              onMouseEnter={e => {
-                e.currentTarget.style.background = "#2f2f2f";
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.background = "#212121";
-              }}
+              title="New Chat"
             >
               <Plus size={13} color="#ececec" />
-              New Chat
+              {!isMobile && <span>New Chat</span>}
             </button>
 
             <div style={{
-              display: "flex", alignItems: "center", gap: 7,
-              padding: "6px 12px", borderRadius: 8,
+              display: "flex", alignItems: "center", gap: 5,
+              padding: isMobile ? "5px 8px" : "6px 12px", borderRadius: 8,
               background: "#2f2f2f",
               border: "1px solid rgba(255, 255, 255, 0.12)",
-              fontSize: 11.5, fontWeight: 600, color: "#ececec"
+              fontSize: isMobile ? 10.5 : 11.5, fontWeight: 600, color: "#ececec"
             }}>
-              <User size={13} style={{ color: "#10a37f" }} />
+              <User size={12} style={{ color: "#10a37f" }} />
               <span>{user.username}</span>
-              <span style={{ fontSize: 9.5, color: "#10a37f", fontFamily: "var(--font-mono)", fontWeight: 700, textTransform: "uppercase" }}>
-                {user.role}
-              </span>
+              {!isMobile && (
+                <span style={{ fontSize: 9.5, color: "#10a37f", fontFamily: "var(--font-mono)", fontWeight: 700, textTransform: "uppercase" }}>
+                  {user.role}
+                </span>
+              )}
             </div>
 
             <button
               onClick={onLogout}
               style={{
-                padding: "6px 12px", borderRadius: 8,
+                padding: isMobile ? "6px 8px" : "6px 12px", borderRadius: 8,
                 background: "#212121",
                 border: "1px solid rgba(255, 255, 255, 0.15)",
                 color: "#8e8e8e", fontSize: 11.5, fontWeight: 500,
@@ -763,10 +777,54 @@ export default function ChatWindow({ onLogout }) {
               title="Sign Out to Login Screen"
             >
               <LogOut size={12} />
-              <span>Sign Out</span>
+              {!isMobile && <span>Sign Out</span>}
             </button>
           </div>
         </header>
+
+        {/* Mobile Dedicated Horizontal Portal Bar */}
+        {isMobile && (
+          <div style={{
+            display: "flex", alignItems: "center", gap: 6,
+            padding: "6px 10px", background: "#1a1a1a",
+            borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+            overflowX: "auto", flexShrink: 0, scrollbarWidth: "none"
+          }}>
+            {[
+              { id: "chat", label: "AI Chat", icon: Bot },
+              { id: "email_scheduler", label: "Reports & Email", icon: FileText },
+              { id: "machines", label: "Floor Map", icon: MapPin },
+              { id: "audit_logs", label: "Audit Logs", icon: Shield }
+            ].map(tab => {
+              const Icon = tab.icon;
+              const isActive = activePortal === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActivePortal(tab.id)}
+                  style={{
+                    padding: "5px 11px",
+                    borderRadius: 6,
+                    cursor: "pointer",
+                    fontSize: 11,
+                    fontWeight: 600,
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 5,
+                    background: isActive ? "#2f2f2f" : "#242424",
+                    color: isActive ? "#ffffff" : "#8e8e8e",
+                    border: `1px solid ${isActive ? "#10a37f" : "rgba(255,255,255,0.08)"}`,
+                    whiteSpace: "nowrap",
+                    flexShrink: 0
+                  }}
+                >
+                  <Icon size={12} color={isActive ? "#10a37f" : "#8e8e8e"} />
+                  <span>{tab.label}</span>
+                </button>
+              );
+            })}
+          </div>
+        )}
 
         {/* ── Chat History Overlay Panel (shown when logo clicked) ── */}
         <AnimatePresence>
@@ -1049,7 +1107,7 @@ export default function ChatWindow({ onLogout }) {
 
             {/* ── Bottom Input Area ── */}
             <div style={{
-              padding: "12px 24px 20px",
+              padding: isMobile ? "8px 10px 14px" : "12px 24px 20px",
               background: "#212121",
               borderTop: "1px solid rgba(255, 255, 255, 0.08)",
               flexShrink: 0
@@ -1057,7 +1115,7 @@ export default function ChatWindow({ onLogout }) {
               <form
                 onSubmit={(e) => { e.preventDefault(); handleSend(); }}
                 style={{
-                  display: "flex", gap: 10, alignItems: "flex-end",
+                  display: "flex", gap: isMobile ? 6 : 10, alignItems: "flex-end",
                   maxWidth: 800, margin: "0 auto", position: "relative"
                 }}
               >
@@ -1065,7 +1123,7 @@ export default function ChatWindow({ onLogout }) {
                   flex: 1, position: "relative",
                   background: "#2f2f2f",
                   border: "1.5px solid rgba(255, 255, 255, 0.15)",
-                  borderRadius: 24,
+                  borderRadius: 22,
                   transition: "all 0.2s ease",
                   boxShadow: "0 2px 12px rgba(0,0,0,0.2)"
                 }}
@@ -1092,43 +1150,45 @@ export default function ChatWindow({ onLogout }) {
                         handleSend();
                       }
                     }}
-                    placeholder="Message BH SCADA AI..."
+                    placeholder={isMobile ? "Ask SCADA AI..." : "Message BH SCADA AI..."}
                     disabled={loading}
                     rows={1}
                     style={{
-                      width: "100%", padding: "14px 18px",
+                      width: "100%", padding: isMobile ? "10px 14px" : "14px 18px",
                       background: "transparent", border: "none",
-                      color: "#ECECEC", fontSize: 14, outline: "none",
+                      color: "#ECECEC", fontSize: isMobile ? 13.5 : 14, outline: "none",
                       fontFamily: "var(--font-body)", resize: "none",
-                      lineHeight: 1.5, minHeight: 48,
+                      lineHeight: 1.45, minHeight: isMobile ? 42 : 48,
                       boxSizing: "border-box", display: "block"
                     }}
                   />
                   <div style={{
                     display: "flex", alignItems: "center",
-                    justifyContent: "space-between",
-                    padding: "4px 16px 10px"
+                    justifyContent: isMobile ? "flex-end" : "space-between",
+                    padding: isMobile ? "2px 14px 8px" : "4px 16px 10px"
                   }}>
-                    <span style={{ fontSize: 10.5, color: "#8E8E8E", fontFamily: "var(--font-mono)" }}>
-                      ↵ Enter to send • Shift+↵ for new line
-                    </span>
-                    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                    {!isMobile && (
+                      <span style={{ fontSize: 10.5, color: "#8E8E8E", fontFamily: "var(--font-mono)" }}>
+                        ↵ Enter to send • Shift+↵ for new line
+                      </span>
+                    )}
+                    <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
                       <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#10a37f" }} />
-                      <span style={{ fontSize: 10, color: "#10a37f", fontFamily: "var(--font-mono)", fontWeight: 600 }}>
+                      <span style={{ fontSize: 9.5, color: "#10a37f", fontFamily: "var(--font-mono)", fontWeight: 600 }}>
                         gri_db ONLINE
                       </span>
                     </div>
                   </div>
                 </div>
 
-                {/* Send Button — Iconic ChatGPT Circular White Button with Black Arrow */}
+                {/* Send Button — Touch ergonomic on mobile */}
                 <motion.button
                   type="submit"
                   disabled={!inputText.trim() || loading}
                   whileHover={{ scale: inputText.trim() && !loading ? 1.05 : 1 }}
                   whileTap={{ scale: 0.95 }}
                   style={{
-                    width: 44, height: 44, borderRadius: "50%",
+                    width: isMobile ? 40 : 44, height: isMobile ? 40 : 44, borderRadius: "50%",
                     border: "none", cursor: !inputText.trim() || loading ? "default" : "pointer",
                     background: !inputText.trim() || loading
                       ? "#383838"
@@ -1142,8 +1202,8 @@ export default function ChatWindow({ onLogout }) {
                   }}
                 >
                   {loading
-                    ? <Loader2 size={18} style={{ color: "#8E8E8E", animation: "spin 1s linear infinite" }} />
-                    : <Send size={17} color={!inputText.trim() ? "#676767" : "#000000"} />
+                    ? <Loader2 size={16} style={{ color: "#8E8E8E", animation: "spin 1s linear infinite" }} />
+                    : <Send size={isMobile ? 15 : 17} color={!inputText.trim() ? "#676767" : "#000000"} />
                   }
                 </motion.button>
               </form>

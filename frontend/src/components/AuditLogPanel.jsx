@@ -154,18 +154,20 @@ export default function AuditLogPanel() {
 
       {/* Logs Table / List */}
       <div style={{ background: "#262626", border: "1px solid #343434", borderRadius: 12, overflow: "hidden" }}>
-        <div style={{
-          padding: "12px 18px", background: "#212121", borderBottom: "1px solid #343434",
-          display: "grid", gridTemplateColumns: "160px 110px 140px 1fr", gap: 12,
-          fontSize: 11, fontWeight: 700, color: "#8e8e8e", textTransform: "uppercase", letterSpacing: "0.05em"
-        }}>
-          <div>Timestamp</div>
-          <div>Operator</div>
-          <div>Action Type</div>
-          <div>Audit Remarks & Retrieved Details</div>
-        </div>
+        <div style={{ overflowX: "auto", WebkitOverflowScrolling: "touch" }}>
+          <div style={{ minWidth: 620 }}>
+            <div style={{
+              padding: "12px 18px", background: "#212121", borderBottom: "1px solid #343434",
+              display: "grid", gridTemplateColumns: "160px 110px 140px 1fr", gap: 12,
+              fontSize: 11, fontWeight: 700, color: "#8e8e8e", textTransform: "uppercase", letterSpacing: "0.05em"
+            }}>
+              <div>Timestamp</div>
+              <div>Operator</div>
+              <div>Action Type</div>
+              <div>Audit Remarks & Retrieved Details</div>
+            </div>
 
-        <div style={{ maxHeight: 520, overflowY: "auto" }}>
+            <div style={{ maxHeight: 520, overflowY: "auto" }}>
           {loading && logs.length === 0 ? (
             <div style={{ padding: 40, textAlign: "center", color: "#8e8e8e", fontSize: 13 }}>
               Loading database audit records...
@@ -246,6 +248,8 @@ export default function AuditLogPanel() {
               );
             })
           )}
+        </div>
+          </div>
         </div>
       </div>
     </div>
