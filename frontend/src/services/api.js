@@ -2,9 +2,11 @@
  * Centralized API Service for Company AI Assistant
  */
 
-export const API_BASE = (typeof window !== "undefined" && window.location.origin.includes('3000'))
-  ? "http://127.0.0.1:8000/api"
-  : "/api";
+export const API_BASE = (typeof import.meta !== "undefined" && import.meta.env && import.meta.env.VITE_API_URL)
+  ? import.meta.env.VITE_API_URL.replace(/\/$/, '')
+  : ((typeof window !== "undefined" && window.location.origin.includes('3000'))
+      ? "http://127.0.0.1:8000/api"
+      : "/api");
 
 if (typeof window !== "undefined") {
   window.__API_BASE__ = API_BASE;

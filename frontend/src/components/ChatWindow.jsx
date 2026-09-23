@@ -210,7 +210,7 @@ export default function ChatWindow({ onLogout }) {
       setMessages(prev => [...prev, {
         id: (Date.now() + 1).toString(),
         role: "bot",
-        text: "⚠️ **Connection Error**: Could not connect to the GRI backend server at `http://127.0.0.1:8000`. Please ensure the backend is running.",
+        text: "⚠️ **Connection Error**: Could not connect to the GRI SCADA AI backend server. Please verify network connectivity or backend service status.",
         timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
       }]);
     } finally {
