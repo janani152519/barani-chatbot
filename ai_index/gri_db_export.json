@@ -1,0 +1,4857 @@
+{
+    "knowledge_base": [
+        {
+            "id": 201948,
+            "keyword": "login",
+            "screen_name": "Login Screen",
+            "feature_name": "System Access",
+            "description": "Login screen is used to enter username and password to access system.",
+            "how_to_use": "Enter your assigned username and password to log in. Different roles (Admin, Operator) have different access levels.",
+            "solution": "Contact Admin if you forgot your credentials.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201949,
+            "keyword": "trend",
+            "screen_name": "Trend Screen",
+            "feature_name": "Live\/Historical Graph",
+            "description": "Trend screen shows graphical data of machine values.",
+            "how_to_use": "Navigate to Trend page from the sidebar to view live or historical data logs.",
+            "solution": "Use the filters to select specific date ranges or recipes.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201950,
+            "keyword": "alarm",
+            "screen_name": "Alarm Screen",
+            "feature_name": "Alert Management",
+            "description": "Alarm screen shows machine alarms. You can view active and historical alarms.",
+            "how_to_use": "Open it from the sidebar menu to see alarm details and acknowledge them.",
+            "solution": "Resolve the physical issue on the machine and press Acknowledge.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201951,
+            "keyword": "report",
+            "screen_name": "Report Screen",
+            "feature_name": "Data Export",
+            "description": "The Report screen allows you to view and export production data as PDF.",
+            "how_to_use": "Open Reports from the sidebar, select filters, and click Export or View.",
+            "solution": "Ensure a USB\/printer is connected if exporting\/printing.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201952,
+            "keyword": "print",
+            "screen_name": "Report Screen",
+            "feature_name": "Print Data",
+            "description": "To print report, open Report screen and click Print button.",
+            "how_to_use": "Go to Reports, filter data, and select Print option.",
+            "solution": "Check printer connection and paper status.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201953,
+            "keyword": "dashboard",
+            "screen_name": "Process Screen",
+            "feature_name": "Main Dashboard",
+            "description": "The main dashboard shows live gauges, counters, and status.",
+            "how_to_use": "Use the Process Screen button to see real-time machine telemetry.",
+            "solution": "Watch the gauges and counters for operational feedback.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201954,
+            "keyword": "recipe",
+            "screen_name": "Recipe Page",
+            "feature_name": "Production Settings",
+            "description": "Store and load machine parameters for different products.",
+            "how_to_use": "Open Recipe page, select or create a recipe, and press Upload to PLC.",
+            "solution": "Ensure the machine is in a safe state before uploading.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201955,
+            "keyword": "config",
+            "screen_name": "Settings",
+            "feature_name": "System Config",
+            "description": "Configure system-wide settings and user permissions.",
+            "how_to_use": "Access Settings from the sidebar (requires Admin\/Manager role).",
+            "solution": "Only authorized personnel should change these settings.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201956,
+            "keyword": "useradd",
+            "screen_name": "User Registration",
+            "feature_name": "New User",
+            "description": "Add new operators or managers to the system.",
+            "how_to_use": "Go to User Reg from the sidebar and fill in the details.",
+            "solution": "Ensure a unique username and strong password.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201957,
+            "keyword": "io",
+            "screen_name": "IO Page",
+            "feature_name": "Digital Inputs\/Outputs",
+            "description": "Monitor the status of PLC binary inputs and outputs.",
+            "how_to_use": "Go to Inputs or Outputs screen to see real-time signal status.",
+            "solution": "Green indicators mean the signal is ON, gray means OFF.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201958,
+            "keyword": "reset",
+            "screen_name": "Process Screen",
+            "feature_name": "Reset Alarms",
+            "description": "Allows resetting of active alarms or counters.",
+            "how_to_use": "Use the Reset button on the dashboard or alarm page.",
+            "solution": "Ensure the fault condition is cleared before resetting.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201959,
+            "keyword": "datalog",
+            "screen_name": "Data Log Page",
+            "feature_name": "Detailed Records",
+            "description": "Contains detailed logs of every production cycle with timestamps.",
+            "how_to_use": "Navigate to Data Log from the sidebar to view historical part data.",
+            "solution": "Use the export button to save logs as a spreadsheet.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201960,
+            "keyword": "valve",
+            "screen_name": "Valve Sequence",
+            "feature_name": "Sequence Monitoring",
+            "description": "Shows the active sequence of machine valves during a cycle.",
+            "how_to_use": "Open Valve Sequence to monitor valve timings and states.",
+            "solution": "Useful for troubleshooting cycle irregularities.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201961,
+            "keyword": "spec",
+            "screen_name": "Machine Specification",
+            "feature_name": "M\/C Details",
+            "description": "Contains technical specifications and dimensions of the machine.",
+            "how_to_use": "View M\/C Spec from the sidebar for maintenance or capacity checks.",
+            "solution": "Contact the manufacturer for any part replacements.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201962,
+            "keyword": "manual",
+            "screen_name": "Manual Settings",
+            "feature_name": "Manual Control",
+            "description": "Allows manual operation of the machine for setup purposes.",
+            "how_to_use": "Navigate to Settings -> Manual Control to jog machine axes.",
+            "solution": "Ensure safety protocols are followed during manual movement.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201963,
+            "keyword": "wo",
+            "screen_name": "Work Order",
+            "feature_name": "Production Tracking",
+            "description": "Track production progress against specific orders.",
+            "how_to_use": "Press 'Select W.O.' on the dashboard to assign an order.",
+            "solution": "Actual count updates automatically as parts are produced.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201964,
+            "keyword": "cp",
+            "screen_name": "SPC Stats",
+            "feature_name": "Process Capability (Cp)",
+            "description": "Cp = (USL - LSL) \/ (6 * Sigma). It measures the potential capability of a process if it were perfectly centered.",
+            "how_to_use": "View Cp on the Dashboard donut charts. It uses the last 30 days of data.",
+            "solution": "If Cp is low, investigate machine repeatability and variation.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201965,
+            "keyword": "cpk",
+            "screen_name": "SPC Stats",
+            "feature_name": "Process Capability Index (Cpk)",
+            "description": "Cpk = min((USL - Mean)\/(3*SD), (Mean - LSL)\/(3*SD)). It measures the actual process capability considering the mean centering.",
+            "how_to_use": "Refreshed every 30 seconds on the Dashboard. High Cpk (>1.33) indicates a high-quality process.",
+            "solution": "If Cpk is much lower than Cp, the process mean is shifted. Adjust recipe parameters\/offsets.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201966,
+            "keyword": "ppk",
+            "screen_name": "SPC Stats",
+            "feature_name": "Performance Index (Ppk)",
+            "description": "Ppk uses Total Variation (Population SD) instead of within-subgroup variation. It describes how the process actually performed.",
+            "how_to_use": "Displayed on the Dashboard as a key quality metric.",
+            "solution": "Ideally Ppk should be close to Cpk for a stable process.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201967,
+            "keyword": "oee",
+            "screen_name": "OEE Stats",
+            "feature_name": "Overall Equipment Effectiveness",
+            "description": "OEE = Availability x Performance x Quality. It is a gold standard for measuring manufacturing productivity.",
+            "how_to_use": "Tracked live on the Dashboard from PLC data.",
+            "solution": "Availability: Machine uptime. Performance: Actual vs Target speed. Quality: Good vs NG parts.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201968,
+            "keyword": "oae",
+            "screen_name": "OAE Stats",
+            "feature_name": "Overall Asset Effectiveness",
+            "description": "OAE = Availability x Performance x Quality. Similar to OEE, it measures how effectively assets are utilized.",
+            "how_to_use": "View OAE\/OEE donut chart on the main process screen.",
+            "solution": "Analyze downtime reasons to improve overall effectiveness.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201969,
+            "keyword": "start",
+            "screen_name": "Process Screen",
+            "feature_name": "Cycle Start",
+            "description": "Initiates the automatic hydraulic cycle based on the active recipe.",
+            "how_to_use": "Press the Green START button in the header (if authorized).",
+            "solution": "Ensure all safety guards are closed before starting.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201970,
+            "keyword": "stop",
+            "screen_name": "Process Screen",
+            "feature_name": "Cycle Stop",
+            "description": "Stops the automatic cycle safely after the current stroke finishes.",
+            "how_to_use": "Press the Red STOP button in the header.",
+            "solution": "For immediate stop, use the physical Emergency Stop mushroom button.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201971,
+            "keyword": "download",
+            "screen_name": "Recipe Page",
+            "feature_name": "Write PLC",
+            "description": "Sends the current recipe parameters from the HMI database to the PLC registers.",
+            "how_to_use": "Press 'WRITE PLC' on the Recipe page.",
+            "solution": "Wait for the 'Success' confirmation before starting a cycle.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201972,
+            "keyword": "upload",
+            "screen_name": "Recipe Page",
+            "feature_name": "Read PLC",
+            "description": "Fetches the current live parameters from the PLC and updates the HMI screen.",
+            "how_to_use": "Press 'READ PLC' on the Recipe page.",
+            "solution": "Useful to see what settings the machine is currently using.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201973,
+            "keyword": "save",
+            "screen_name": "Recipe Page",
+            "feature_name": "Save Recipe",
+            "description": "Stores the on-screen parameters into the local HMI database.",
+            "how_to_use": "Press 'SAVE' or 'SAVE AS' to store the product profile.",
+            "solution": "Give recipes descriptive names like 'REAR_FENDER_V2'.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201974,
+            "keyword": "export",
+            "screen_name": "Reports Page",
+            "feature_name": "Excel Export",
+            "description": "Generates and saves a detailed report of production logs in .xlsx format.",
+            "how_to_use": "Go to Reports, select Date\/Work Order, and click 'EXPORT EXCEL'.",
+            "solution": "Reports include timestamps, pressures, and operator names.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        },
+        {
+            "id": 201975,
+            "keyword": "record",
+            "screen_name": "Trend Page",
+            "feature_name": "Start Recording",
+            "description": "Begins logging live pressure and position data to the trend database.",
+            "how_to_use": "Press 'START RECORDING' on the Trend page.",
+            "solution": "Trends help analyze part quality over time.",
+            "screen_name_hi": null,
+            "feature_name_hi": null,
+            "description_hi": null,
+            "how_to_use_hi": null,
+            "solution_hi": null,
+            "screen_name_ta": null,
+            "feature_name_ta": null,
+            "description_ta": null,
+            "how_to_use_ta": null,
+            "solution_ta": null
+        }
+    ],
+    "alarm_mappings": [
+        {
+            "id": 638,
+            "byte_addr": 0,
+            "bit_addr": 0,
+            "alarm_text": "E STOP AT PENDENT",
+            "severity": "FAULT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 639,
+            "byte_addr": 0,
+            "bit_addr": 1,
+            "alarm_text": "SINGLE PHASE PREVENTOR SPP",
+            "severity": "FAULT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 640,
+            "byte_addr": 0,
+            "bit_addr": 2,
+            "alarm_text": "HYD PUMP TRIP CB1",
+            "severity": "FAULT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 641,
+            "byte_addr": 0,
+            "bit_addr": 3,
+            "alarm_text": "PILOT PUMP TRIP CB2",
+            "severity": "FAULT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 642,
+            "byte_addr": 0,
+            "bit_addr": 4,
+            "alarm_text": "ROLLER DRIVE 1 MPCB TRIP",
+            "severity": "FAULT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 643,
+            "byte_addr": 0,
+            "bit_addr": 5,
+            "alarm_text": "ROLLER DRIVE 2 MPCB TRIP",
+            "severity": "FAULT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 644,
+            "byte_addr": 0,
+            "bit_addr": 6,
+            "alarm_text": "HYD PUMP DELTA FEEDBACK FAILED",
+            "severity": "FAULT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 645,
+            "byte_addr": 0,
+            "bit_addr": 7,
+            "alarm_text": "ECB TRIP",
+            "severity": "FAULT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 646,
+            "byte_addr": 1,
+            "bit_addr": 0,
+            "alarm_text": "ESTOP AT POWERPACK ES2",
+            "severity": "FAULT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 647,
+            "byte_addr": 1,
+            "bit_addr": 1,
+            "alarm_text": "SUCTION BALL VALVE LIMIT ACTIVATED LS2",
+            "severity": "FAULT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 648,
+            "byte_addr": 1,
+            "bit_addr": 2,
+            "alarm_text": "LEFT PREFIL VALVE LIMIT ACTIVATED LS2",
+            "severity": "FAULT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 649,
+            "byte_addr": 1,
+            "bit_addr": 3,
+            "alarm_text": "RIGHT PREFIL VALVE LIMIT ACTIVATED LS3",
+            "severity": "FAULT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 650,
+            "byte_addr": 1,
+            "bit_addr": 4,
+            "alarm_text": "LEFT PREFILL BALL VALVE LIMIT ACTIVATED LS3",
+            "severity": "FAULT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 651,
+            "byte_addr": 1,
+            "bit_addr": 5,
+            "alarm_text": "RIGHT PREFILL BALL VALVE LIMIT ACTIVATED LS4",
+            "severity": "FAULT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 652,
+            "byte_addr": 2,
+            "bit_addr": 0,
+            "alarm_text": "Manual - Top Clamp Forward",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 653,
+            "byte_addr": 2,
+            "bit_addr": 1,
+            "alarm_text": "Manual - Top Clamp Forward – Confirmed",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 654,
+            "byte_addr": 2,
+            "bit_addr": 2,
+            "alarm_text": "Manual - Top Clamp Reverse",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 655,
+            "byte_addr": 2,
+            "bit_addr": 3,
+            "alarm_text": "Manual - Top Clamp Reverse – Confirmed",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 656,
+            "byte_addr": 2,
+            "bit_addr": 4,
+            "alarm_text": "Manual - Press Front Stopper Up",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 657,
+            "byte_addr": 2,
+            "bit_addr": 5,
+            "alarm_text": "Manual - Press Front Stopper Up – Confirmed",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 658,
+            "byte_addr": 2,
+            "bit_addr": 6,
+            "alarm_text": "Manual - Press Front Stopper Down",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 659,
+            "byte_addr": 2,
+            "bit_addr": 7,
+            "alarm_text": "Manual - Press Front Stopper Down – Confirmed",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 660,
+            "byte_addr": 3,
+            "bit_addr": 0,
+            "alarm_text": "Manual - Ejection Stopper Up",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 661,
+            "byte_addr": 3,
+            "bit_addr": 1,
+            "alarm_text": "Manual - Ejection Stopper Up – Confirmed",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 662,
+            "byte_addr": 3,
+            "bit_addr": 2,
+            "alarm_text": "Manual - Ejection Stopper Down",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 663,
+            "byte_addr": 3,
+            "bit_addr": 3,
+            "alarm_text": "Manual - Ejection Stopper Down – Confirmed",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 664,
+            "byte_addr": 3,
+            "bit_addr": 4,
+            "alarm_text": "Manual - Ejection Up",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 665,
+            "byte_addr": 3,
+            "bit_addr": 5,
+            "alarm_text": "Manual - Ejection Up – Confirmed",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 666,
+            "byte_addr": 3,
+            "bit_addr": 6,
+            "alarm_text": "Manual - Ejection Down",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 667,
+            "byte_addr": 3,
+            "bit_addr": 7,
+            "alarm_text": "Manual - Ejection Down – Confirmed",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 668,
+            "byte_addr": 4,
+            "bit_addr": 0,
+            "alarm_text": "Manual - Main Ram Up",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 669,
+            "byte_addr": 4,
+            "bit_addr": 1,
+            "alarm_text": "Manual - Main Ram Up – Confirmed",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 670,
+            "byte_addr": 4,
+            "bit_addr": 2,
+            "alarm_text": "Manual - Main Ram Decompression",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 671,
+            "byte_addr": 4,
+            "bit_addr": 3,
+            "alarm_text": "Manual - Main Ram Down",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 672,
+            "byte_addr": 4,
+            "bit_addr": 4,
+            "alarm_text": "Manual - Main Ram Down – Confirmed",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 673,
+            "byte_addr": 6,
+            "bit_addr": 0,
+            "alarm_text": "AUTO - MODE READY",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 674,
+            "byte_addr": 6,
+            "bit_addr": 1,
+            "alarm_text": "AUTO - CYCLE READY",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 675,
+            "byte_addr": 6,
+            "bit_addr": 2,
+            "alarm_text": "AUTO - CYCLE SELECTION LOAD = TRUE",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 676,
+            "byte_addr": 6,
+            "bit_addr": 3,
+            "alarm_text": "AUTO - CURING CYCLE ON",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 677,
+            "byte_addr": 6,
+            "bit_addr": 4,
+            "alarm_text": "AUTO - PRESS FRONT STOPPER DOWN 1",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 678,
+            "byte_addr": 6,
+            "bit_addr": 5,
+            "alarm_text": "AUTO - PRESS FRONT STOPPER DOWN 1 CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 679,
+            "byte_addr": 6,
+            "bit_addr": 6,
+            "alarm_text": "AUTO - MOULD CART FRONT STOPPER DOWN 1",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 680,
+            "byte_addr": 6,
+            "bit_addr": 7,
+            "alarm_text": "AUTO - MOULD CART FRONT STOPPER DOWN 1 CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 681,
+            "byte_addr": 7,
+            "bit_addr": 0,
+            "alarm_text": "AUTO - EJECTION CYL DOWN",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 682,
+            "byte_addr": 7,
+            "bit_addr": 1,
+            "alarm_text": "AUTO - EJECTION CYL DOWN CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 683,
+            "byte_addr": 7,
+            "bit_addr": 2,
+            "alarm_text": "AUTO - TOP TOOL CLAMP FOR",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 684,
+            "byte_addr": 7,
+            "bit_addr": 3,
+            "alarm_text": "AUTO - TOP TOOL CLAMP FOR CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 685,
+            "byte_addr": 7,
+            "bit_addr": 4,
+            "alarm_text": "AUTO - ROLLER CONVEYOR 1 FOR IN ON",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 686,
+            "byte_addr": 7,
+            "bit_addr": 5,
+            "alarm_text": "AUTO - ROLLER CONVEYOR 1 FOR IN ON CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 687,
+            "byte_addr": 7,
+            "bit_addr": 6,
+            "alarm_text": "AUTO - ROLLER CONVEYOR 2 FOR IN ON",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 688,
+            "byte_addr": 7,
+            "bit_addr": 7,
+            "alarm_text": "AUTO - ROLLER CONVEYOR 2 FOR IN ON CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 689,
+            "byte_addr": 8,
+            "bit_addr": 0,
+            "alarm_text": "AUTO - PRESS FRONT STOPPER UP",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 690,
+            "byte_addr": 8,
+            "bit_addr": 1,
+            "alarm_text": "AUTO - PRESS FRONT STOPPER UP CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 691,
+            "byte_addr": 8,
+            "bit_addr": 2,
+            "alarm_text": "AUTO - MAIN RAM FAST APPROACH",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 692,
+            "byte_addr": 8,
+            "bit_addr": 3,
+            "alarm_text": "AUTO - MAIN RAM FAST APPROACH CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 693,
+            "byte_addr": 8,
+            "bit_addr": 4,
+            "alarm_text": "AUTO - BUMPING ENABLED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 694,
+            "byte_addr": 8,
+            "bit_addr": 5,
+            "alarm_text": "AUTO - BUMPING PRESSING",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 695,
+            "byte_addr": 8,
+            "bit_addr": 6,
+            "alarm_text": "AUTO - BUMPING PRESSING CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 696,
+            "byte_addr": 8,
+            "bit_addr": 7,
+            "alarm_text": "AUTO - BUMPING UP HOLD",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 697,
+            "byte_addr": 9,
+            "bit_addr": 0,
+            "alarm_text": "AUTO - BUMPING UP HOLD CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 698,
+            "byte_addr": 9,
+            "bit_addr": 1,
+            "alarm_text": "AUTO - BUMPING DOWN DECOM",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 699,
+            "byte_addr": 9,
+            "bit_addr": 2,
+            "alarm_text": "AUTO - BUMPING DOWN",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 700,
+            "byte_addr": 9,
+            "bit_addr": 3,
+            "alarm_text": "AUTO - BUMPING DOWN CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 701,
+            "byte_addr": 9,
+            "bit_addr": 4,
+            "alarm_text": "AUTO - BUMPING DOWN HOLD",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 702,
+            "byte_addr": 9,
+            "bit_addr": 5,
+            "alarm_text": "AUTO - BUMPING DOWN HOLD CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 703,
+            "byte_addr": 9,
+            "bit_addr": 6,
+            "alarm_text": "AUTO - BUMP STEP INCREASE",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 704,
+            "byte_addr": 9,
+            "bit_addr": 7,
+            "alarm_text": "AUTO - GO TO FINAL PRESSING",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 705,
+            "byte_addr": 10,
+            "bit_addr": 0,
+            "alarm_text": "AUTO - MAIN RAM FINAL PRESSING",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 706,
+            "byte_addr": 10,
+            "bit_addr": 1,
+            "alarm_text": "AUTO - MAIN RAM FINAL PRESSING POSITION CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 707,
+            "byte_addr": 10,
+            "bit_addr": 2,
+            "alarm_text": "AUTO - MAIN RAM FINAL PRESSING PRESSURE CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 708,
+            "byte_addr": 10,
+            "bit_addr": 3,
+            "alarm_text": "AUTO - WARMING TIMER ON",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 709,
+            "byte_addr": 10,
+            "bit_addr": 4,
+            "alarm_text": "AUTO - WARMING TIMER ON CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 710,
+            "byte_addr": 10,
+            "bit_addr": 5,
+            "alarm_text": "AUTO - MAIN RAM SLOW DOWN REVERSE TOP",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 711,
+            "byte_addr": 10,
+            "bit_addr": 6,
+            "alarm_text": "AUTO - MAIN RAM SLOW DOWN REVERSE TOP CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 712,
+            "byte_addr": 10,
+            "bit_addr": 7,
+            "alarm_text": "AUTO - MAIN RAM FAST DOWN REVERSE",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 713,
+            "byte_addr": 11,
+            "bit_addr": 0,
+            "alarm_text": "AUTO - MAIN RAM FAST DOWN REVERSE CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 714,
+            "byte_addr": 11,
+            "bit_addr": 1,
+            "alarm_text": "AUTO - MAIN RAM SLOW DOWN REVERSE BOTTOM",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 715,
+            "byte_addr": 11,
+            "bit_addr": 2,
+            "alarm_text": "AUTO - MAIN RAM SLOW DOWN REVERSE BOTTOM CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 716,
+            "byte_addr": 11,
+            "bit_addr": 3,
+            "alarm_text": "AUTO - PRESS FRONT STOPPER DOWN 2",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 717,
+            "byte_addr": 11,
+            "bit_addr": 4,
+            "alarm_text": "AUTO - PRESS FRONT STOPPER DOWN 2 CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 718,
+            "byte_addr": 11,
+            "bit_addr": 5,
+            "alarm_text": "AUTO - MOULD CART FRONT STOPPER DOWN 2",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 719,
+            "byte_addr": 11,
+            "bit_addr": 6,
+            "alarm_text": "AUTO - MOULD CART FRONT STOPPER DOWN 2 CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 720,
+            "byte_addr": 11,
+            "bit_addr": 7,
+            "alarm_text": "AUTO - ROLLER CONVEYOR 1 REV OUT ON",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 721,
+            "byte_addr": 12,
+            "bit_addr": 0,
+            "alarm_text": "AUTO - ROLLER CONVEYOR 1 REV OUT ON CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 722,
+            "byte_addr": 12,
+            "bit_addr": 1,
+            "alarm_text": "AUTO - ROLLER CONVEYOR 2 REV OUT ON",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 723,
+            "byte_addr": 12,
+            "bit_addr": 2,
+            "alarm_text": "AUTO - ROLLER CONVEYOR 2 REV OUT ON CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 724,
+            "byte_addr": 12,
+            "bit_addr": 3,
+            "alarm_text": "AUTO - MOULD CART FRONT STOPPER UP 1",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 725,
+            "byte_addr": 12,
+            "bit_addr": 4,
+            "alarm_text": "AUTO - MOULD CART FRONT STOPPER UP 1 CONFIRMED",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        },
+        {
+            "id": 726,
+            "byte_addr": 12,
+            "bit_addr": 5,
+            "alarm_text": "AUTO - CURE CYCLE END",
+            "severity": "EVENT",
+            "created_at": "2026-06-22 10:25:24"
+        }
+    ],
+    "parameter_limits": [
+        {
+            "id": 2,
+            "parameter_key": "fast_app_position",
+            "min_val": 0,
+            "max_val": 1000
+        },
+        {
+            "id": 3,
+            "parameter_key": "fast_app_speed",
+            "min_val": 0,
+            "max_val": 1000
+        },
+        {
+            "id": 4,
+            "parameter_key": "first_pressing_position",
+            "min_val": 105,
+            "max_val": 205
+        },
+        {
+            "id": 5,
+            "parameter_key": "first_pressing_speed",
+            "min_val": 106,
+            "max_val": 206
+        },
+        {
+            "id": 6,
+            "parameter_key": "first_pressing_pressure",
+            "min_val": 107,
+            "max_val": 207
+        },
+        {
+            "id": 7,
+            "parameter_key": "first_pressing_tonnage",
+            "min_val": 108,
+            "max_val": 208
+        },
+        {
+            "id": 8,
+            "parameter_key": "second_pressing_position",
+            "min_val": 109,
+            "max_val": 209
+        },
+        {
+            "id": 9,
+            "parameter_key": "second_pressing_speed",
+            "min_val": 110,
+            "max_val": 210
+        },
+        {
+            "id": 10,
+            "parameter_key": "second_pressing_pressure",
+            "min_val": 111,
+            "max_val": 211
+        },
+        {
+            "id": 11,
+            "parameter_key": "second_pressing_tonnage",
+            "min_val": 112,
+            "max_val": 212
+        },
+        {
+            "id": 12,
+            "parameter_key": "final_pressing_position",
+            "min_val": 0,
+            "max_val": 1000
+        },
+        {
+            "id": 13,
+            "parameter_key": "final_pressing_speed",
+            "min_val": 0,
+            "max_val": 1000
+        },
+        {
+            "id": 14,
+            "parameter_key": "final_pressing_pressure",
+            "min_val": 0,
+            "max_val": 1000
+        },
+        {
+            "id": 15,
+            "parameter_key": "final_pressing_tonnage",
+            "min_val": 0,
+            "max_val": 1000
+        },
+        {
+            "id": 16,
+            "parameter_key": "slow_reverse_position",
+            "min_val": 0,
+            "max_val": 10000
+        },
+        {
+            "id": 17,
+            "parameter_key": "slow_reverse_speed",
+            "min_val": 0,
+            "max_val": 1000
+        },
+        {
+            "id": 18,
+            "parameter_key": "fast_reverse_speed",
+            "min_val": 0,
+            "max_val": 1000
+        },
+        {
+            "id": 19,
+            "parameter_key": "die_cushion_speed",
+            "min_val": 0,
+            "max_val": 1000
+        },
+        {
+            "id": 20,
+            "parameter_key": "die_cushion_clamp_pressure",
+            "min_val": 0,
+            "max_val": 1000
+        },
+        {
+            "id": 21,
+            "parameter_key": "die_cushion_up_pressure",
+            "min_val": 0,
+            "max_val": 1000
+        },
+        {
+            "id": 22,
+            "parameter_key": "die_cushion_up_position",
+            "min_val": 0,
+            "max_val": 1000
+        },
+        {
+            "id": 23,
+            "parameter_key": "die_cushion_down_speed",
+            "min_val": 0,
+            "max_val": 1000
+        },
+        {
+            "id": 24,
+            "parameter_key": "die_cushion_down_position",
+            "min_val": 0,
+            "max_val": 1000
+        },
+        {
+            "id": 25,
+            "parameter_key": "die_cushion_down_pressure",
+            "min_val": 0,
+            "max_val": 1000
+        },
+        {
+            "id": 26,
+            "parameter_key": "damper_pressure",
+            "min_val": 0,
+            "max_val": 1000
+        },
+        {
+            "id": 53,
+            "parameter_key": "operation_mode",
+            "min_val": 0,
+            "max_val": 1000
+        },
+        {
+            "id": 80,
+            "parameter_key": "mr_press",
+            "min_val": 0,
+            "max_val": 220
+        },
+        {
+            "id": 81,
+            "parameter_key": "mr_pos",
+            "min_val": 0,
+            "max_val": 1500
+        },
+        {
+            "id": 82,
+            "parameter_key": "dc_press",
+            "min_val": 0,
+            "max_val": 350
+        },
+        {
+            "id": 83,
+            "parameter_key": "dc_pos",
+            "min_val": 0,
+            "max_val": 1400
+        },
+        {
+            "id": 84,
+            "parameter_key": "ttool",
+            "min_val": 0,
+            "max_val": 220
+        },
+        {
+            "id": 85,
+            "parameter_key": "btool",
+            "min_val": 0,
+            "max_val": 220
+        },
+        {
+            "id": 87,
+            "parameter_key": "home_position",
+            "min_val": 0,
+            "max_val": 1000
+        },
+        {
+            "id": 130,
+            "parameter_key": "pumping_count",
+            "min_val": 0,
+            "max_val": 999
+        },
+        {
+            "id": 131,
+            "parameter_key": "curing_time_hh",
+            "min_val": 0,
+            "max_val": 999
+        },
+        {
+            "id": 132,
+            "parameter_key": "curing_time_min",
+            "min_val": 0,
+            "max_val": 999
+        }
+    ],
+    "recipes": [
+        {
+            "id": 7,
+            "name": "PART-A-STD",
+            "product_no": "A-001",
+            "plc_record_name": "REC_A_STD",
+            "fast_app_position": 600,
+            "fast_app_speed": 100,
+            "first_pressing_position": 700,
+            "first_pressing_pressure": 100,
+            "first_pressing_speed": 10,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 8,
+            "name": "PART-HM-HEAVY",
+            "product_no": "H-500",
+            "plc_record_name": "RE_HEAVY",
+            "fast_app_position": 900,
+            "fast_app_speed": 150,
+            "first_pressing_position": 1050,
+            "first_pressing_pressure": 150,
+            "first_pressing_speed": 15,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 9,
+            "name": "PART-LT-FAST",
+            "product_no": "L-100",
+            "plc_record_name": "REC_LIGHT",
+            "fast_app_position": 480,
+            "fast_app_speed": 80,
+            "first_pressing_position": 560,
+            "first_pressing_pressure": 80,
+            "first_pressing_speed": 8,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 10,
+            "name": "recipe 1",
+            "product_no": "R-001",
+            "plc_record_name": "REC_1",
+            "fast_app_position": 600,
+            "fast_app_speed": 100,
+            "first_pressing_position": 700,
+            "first_pressing_pressure": 100,
+            "first_pressing_speed": 10,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 12,
+            "name": "RECIPE 3",
+            "product_no": "",
+            "plc_record_name": "",
+            "fast_app_position": 0,
+            "fast_app_speed": 0,
+            "first_pressing_position": 0,
+            "first_pressing_pressure": 0,
+            "first_pressing_speed": 0,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 13,
+            "name": "RECIPE 100",
+            "product_no": "",
+            "plc_record_name": "",
+            "fast_app_position": 0,
+            "fast_app_speed": 0,
+            "first_pressing_position": 0,
+            "first_pressing_pressure": 0,
+            "first_pressing_speed": 0,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 14,
+            "name": "RECIPE 12",
+            "product_no": "",
+            "plc_record_name": "",
+            "fast_app_position": 0,
+            "fast_app_speed": 0,
+            "first_pressing_position": 0,
+            "first_pressing_pressure": 0,
+            "first_pressing_speed": 0,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 15,
+            "name": "RECIPE NEW",
+            "product_no": null,
+            "plc_record_name": null,
+            "fast_app_position": 104,
+            "fast_app_speed": 105,
+            "first_pressing_position": 107,
+            "first_pressing_pressure": 109,
+            "first_pressing_speed": 108,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 16,
+            "name": "DEMO_COMPLETE_LOOK",
+            "product_no": null,
+            "plc_record_name": null,
+            "fast_app_position": 0,
+            "fast_app_speed": 0,
+            "first_pressing_position": 0,
+            "first_pressing_pressure": 0,
+            "first_pressing_speed": 0,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 17,
+            "name": "testing",
+            "product_no": null,
+            "plc_record_name": null,
+            "fast_app_position": 550,
+            "fast_app_speed": 200,
+            "first_pressing_position": 0,
+            "first_pressing_pressure": 0,
+            "first_pressing_speed": 0,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 18,
+            "name": "test2",
+            "product_no": null,
+            "plc_record_name": null,
+            "fast_app_position": 550,
+            "fast_app_speed": 200,
+            "first_pressing_position": 0,
+            "first_pressing_pressure": 0,
+            "first_pressing_speed": 0,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 19,
+            "name": "test_gri",
+            "product_no": null,
+            "plc_record_name": null,
+            "fast_app_position": 0,
+            "fast_app_speed": 100,
+            "first_pressing_position": 0,
+            "first_pressing_pressure": 0,
+            "first_pressing_speed": 0,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 20,
+            "name": "gri_new",
+            "product_no": null,
+            "plc_record_name": null,
+            "fast_app_position": 2,
+            "fast_app_speed": 100,
+            "first_pressing_position": 0,
+            "first_pressing_pressure": 0,
+            "first_pressing_speed": 0,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 21,
+            "name": "6945279556787",
+            "product_no": null,
+            "plc_record_name": null,
+            "fast_app_position": 600,
+            "fast_app_speed": 100,
+            "first_pressing_position": 0,
+            "first_pressing_pressure": 0,
+            "first_pressing_speed": 0,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 22,
+            "name": "^BEPSUC0.",
+            "product_no": null,
+            "plc_record_name": null,
+            "fast_app_position": 2,
+            "fast_app_speed": 100,
+            "first_pressing_position": 0,
+            "first_pressing_pressure": 0,
+            "first_pressing_speed": 0,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 23,
+            "name": "NATIONWIDE BARCODE",
+            "product_no": null,
+            "plc_record_name": null,
+            "fast_app_position": 2,
+            "fast_app_speed": 100,
+            "first_pressing_position": 0,
+            "first_pressing_pressure": 0,
+            "first_pressing_speed": 0,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 24,
+            "name": "1234567895",
+            "product_no": null,
+            "plc_record_name": null,
+            "fast_app_position": 0,
+            "fast_app_speed": 100,
+            "first_pressing_position": 0,
+            "first_pressing_pressure": 0,
+            "first_pressing_speed": 0,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 25,
+            "name": "301PMFE008467",
+            "product_no": null,
+            "plc_record_name": null,
+            "fast_app_position": 104,
+            "fast_app_speed": 100,
+            "first_pressing_position": 0,
+            "first_pressing_pressure": 0,
+            "first_pressing_speed": 0,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 26,
+            "name": "1234",
+            "product_no": null,
+            "plc_record_name": null,
+            "fast_app_position": 0,
+            "fast_app_speed": 100,
+            "first_pressing_position": 0,
+            "first_pressing_pressure": 0,
+            "first_pressing_speed": 0,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 28,
+            "name": "AuditTestRecipe",
+            "product_no": null,
+            "plc_record_name": null,
+            "fast_app_position": 0,
+            "fast_app_speed": 0,
+            "first_pressing_position": 240,
+            "first_pressing_pressure": 0,
+            "first_pressing_speed": 0,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 29,
+            "name": "new_rec",
+            "product_no": null,
+            "plc_record_name": null,
+            "fast_app_position": 0,
+            "fast_app_speed": 100,
+            "first_pressing_position": 0,
+            "first_pressing_pressure": 0,
+            "first_pressing_speed": 0,
+            "curing_time_sec": 0
+        },
+        {
+            "id": 30,
+            "name": "nn",
+            "product_no": null,
+            "plc_record_name": null,
+            "fast_app_position": 0,
+            "fast_app_speed": 100,
+            "first_pressing_position": 0,
+            "first_pressing_pressure": 0,
+            "first_pressing_speed": 0,
+            "curing_time_sec": 0
+        }
+    ],
+    "down_time": [
+        {
+            "id": 32,
+            "start_time": "2026-07-12 00:07:24",
+            "end_time": "2026-07-12 00:07:57",
+            "duration": 0.57,
+            "reason": "Breakdown",
+            "operator": "imz",
+            "category": "Unplanned"
+        },
+        {
+            "id": 33,
+            "start_time": "2026-07-12 01:03:02",
+            "end_time": "2026-07-12 01:03:30",
+            "duration": 0.48,
+            "reason": "Breakdown",
+            "operator": "admin",
+            "category": "Unplanned"
+        },
+        {
+            "id": 34,
+            "start_time": "2026-07-11 14:47:15",
+            "end_time": "2026-07-11 14:47:54",
+            "duration": 0.65,
+            "reason": "Breakdown",
+            "operator": "imz",
+            "category": "Unplanned"
+        },
+        {
+            "id": 35,
+            "start_time": "2026-08-18 14:45:18",
+            "end_time": "2026-08-18 14:45:22",
+            "duration": 0.08,
+            "reason": "Tea Time",
+            "operator": "admin",
+            "category": "Planned"
+        },
+        {
+            "id": 36,
+            "start_time": "2026-08-18 14:45:25",
+            "end_time": "2026-08-18 14:45:40",
+            "duration": 0.27,
+            "reason": "Breakdown",
+            "operator": "admin",
+            "category": "Unplanned"
+        },
+        {
+            "id": 37,
+            "start_time": "2026-09-02 16:09:38",
+            "end_time": "2026-09-03 12:10:07",
+            "duration": 1200.49,
+            "reason": "Breakdown",
+            "operator": "admin",
+            "category": "Unplanned"
+        },
+        {
+            "id": 38,
+            "start_time": "2026-09-09 09:55:29",
+            "end_time": "2026-09-09 09:56:48",
+            "duration": 1.33,
+            "reason": "Breakdown",
+            "operator": "admin",
+            "category": "Unplanned"
+        }
+    ],
+    "work_orders": [
+        {
+            "id": 1,
+            "work_order_no": "WORK ORDER 1",
+            "total": 5000,
+            "actual": 0,
+            "status": "OPEN",
+            "created_at": "2026-02-04 09:56:15",
+            "is_visible": 0
+        },
+        {
+            "id": 2,
+            "work_order_no": "estiyuihgfgfxuiijhjvcxfuiklnbcfjlkb,cvh",
+            "total": 10000,
+            "actual": 0,
+            "status": "OPEN",
+            "created_at": "2026-02-04 10:14:52",
+            "is_visible": 0
+        },
+        {
+            "id": 3,
+            "work_order_no": "work order 2",
+            "total": 5000,
+            "actual": 0,
+            "status": "OPEN",
+            "created_at": "2026-02-04 10:56:33",
+            "is_visible": 1
+        },
+        {
+            "id": 4,
+            "work_order_no": "ESRTYKHRTYGJFHJDTRTI",
+            "total": 5666,
+            "actual": 0,
+            "status": "OPEN",
+            "created_at": "2026-02-04 12:57:05",
+            "is_visible": 0
+        },
+        {
+            "id": 5,
+            "work_order_no": "WORK ORDER 4",
+            "total": 5000,
+            "actual": 0,
+            "status": "OPEN",
+            "created_at": "2026-02-05 13:27:12",
+            "is_visible": 1
+        }
+    ],
+    "critical_spares": [
+        {
+            "id": 3,
+            "part_name": "bhipl sapre 5",
+            "part_description": "spare 5",
+            "oem_part_name": "tata",
+            "uom": "SET",
+            "quantity": 50,
+            "created_at": "2026-03-31 11:44:53",
+            "category": "Hydraulic"
+        },
+        {
+            "id": 6,
+            "part_name": "bhipl sapre 5",
+            "part_description": "spare 5",
+            "oem_part_name": "",
+            "uom": "SET",
+            "quantity": 50,
+            "created_at": "2026-04-01 09:27:13",
+            "category": "Hydraulic"
+        }
+    ],
+    "toolmaster": [
+        {
+            "ID": 1,
+            "Date Time": "2025-12-12T02:07:03.760000",
+            "Date": "2025-12-12",
+            "Time": "02:07:03",
+            "Tool ID": "TM-001",
+            "Tool Name": "Tool Master 1",
+            "Drawing No": "DRW-001",
+            "Tool Type": "Punch",
+            "Set Nos": 1,
+            "Cum Qty": 1020,
+            "Target": 2178,
+            "Diff Qty": 19
+        },
+        {
+            "ID": 2,
+            "Date Time": "2025-12-12T02:14:03.760000",
+            "Date": "2025-12-12",
+            "Time": "02:14:03",
+            "Tool ID": "TM-002",
+            "Tool Name": "Tool Master 2",
+            "Drawing No": "DRW-002",
+            "Tool Type": "Die",
+            "Set Nos": 4,
+            "Cum Qty": 1040,
+            "Target": 2006,
+            "Diff Qty": 1
+        },
+        {
+            "ID": 3,
+            "Date Time": "2025-12-12T02:21:03.760000",
+            "Date": "2025-12-12",
+            "Time": "02:21:03",
+            "Tool ID": "TM-003",
+            "Tool Name": "Tool Master 3",
+            "Drawing No": "DRW-003",
+            "Tool Type": "Cutter",
+            "Set Nos": 1,
+            "Cum Qty": 1060,
+            "Target": 2065,
+            "Diff Qty": 19
+        },
+        {
+            "ID": 4,
+            "Date Time": "2025-12-12T02:28:03.760000",
+            "Date": "2025-12-12",
+            "Time": "02:28:03",
+            "Tool ID": "TM-004",
+            "Tool Name": "Tool Master 4",
+            "Drawing No": "DRW-004",
+            "Tool Type": "Forming",
+            "Set Nos": 4,
+            "Cum Qty": 1080,
+            "Target": 2001,
+            "Diff Qty": 19
+        },
+        {
+            "ID": 5,
+            "Date Time": "2025-12-12T02:35:03.760000",
+            "Date": "2025-12-12",
+            "Time": "02:35:03",
+            "Tool ID": "TM-005",
+            "Tool Name": "Tool Master 5",
+            "Drawing No": "DRW-005",
+            "Tool Type": "Punch",
+            "Set Nos": 6,
+            "Cum Qty": 1100,
+            "Target": 2168,
+            "Diff Qty": 14
+        },
+        {
+            "ID": 6,
+            "Date Time": "2025-12-12T02:42:03.760000",
+            "Date": "2025-12-12",
+            "Time": "02:42:03",
+            "Tool ID": "TM-006",
+            "Tool Name": "Tool Master 6",
+            "Drawing No": "DRW-006",
+            "Tool Type": "Die",
+            "Set Nos": 6,
+            "Cum Qty": 1120,
+            "Target": 2078,
+            "Diff Qty": 9
+        },
+        {
+            "ID": 7,
+            "Date Time": "2025-12-12T02:49:03.760000",
+            "Date": "2025-12-12",
+            "Time": "02:49:03",
+            "Tool ID": "TM-007",
+            "Tool Name": "Tool Master 7",
+            "Drawing No": "DRW-007",
+            "Tool Type": "Cutter",
+            "Set Nos": 6,
+            "Cum Qty": 1140,
+            "Target": 2128,
+            "Diff Qty": 15
+        },
+        {
+            "ID": 8,
+            "Date Time": "2025-12-12T02:56:03.760000",
+            "Date": "2025-12-12",
+            "Time": "02:56:03",
+            "Tool ID": "TM-008",
+            "Tool Name": "Tool Master 8",
+            "Drawing No": "DRW-008",
+            "Tool Type": "Forming",
+            "Set Nos": 3,
+            "Cum Qty": 1160,
+            "Target": 2073,
+            "Diff Qty": -5
+        },
+        {
+            "ID": 9,
+            "Date Time": "2025-12-12T03:03:03.760000",
+            "Date": "2025-12-12",
+            "Time": "03:03:03",
+            "Tool ID": "TM-009",
+            "Tool Name": "Tool Master 9",
+            "Drawing No": "DRW-009",
+            "Tool Type": "Punch",
+            "Set Nos": 5,
+            "Cum Qty": 1180,
+            "Target": 2069,
+            "Diff Qty": 13
+        },
+        {
+            "ID": 10,
+            "Date Time": "2025-12-12T03:10:03.760000",
+            "Date": "2025-12-12",
+            "Time": "03:10:03",
+            "Tool ID": "TM-010",
+            "Tool Name": "Tool Master 10",
+            "Drawing No": "DRW-010",
+            "Tool Type": "Die",
+            "Set Nos": 2,
+            "Cum Qty": 1200,
+            "Target": 2165,
+            "Diff Qty": -13
+        },
+        {
+            "ID": 11,
+            "Date Time": "2025-12-12T03:17:03.760000",
+            "Date": "2025-12-12",
+            "Time": "03:17:03",
+            "Tool ID": "TM-011",
+            "Tool Name": "Tool Master 11",
+            "Drawing No": "DRW-011",
+            "Tool Type": "Cutter",
+            "Set Nos": 4,
+            "Cum Qty": 1220,
+            "Target": 2061,
+            "Diff Qty": 12
+        },
+        {
+            "ID": 12,
+            "Date Time": "2025-12-12T03:24:03.760000",
+            "Date": "2025-12-12",
+            "Time": "03:24:03",
+            "Tool ID": "TM-012",
+            "Tool Name": "Tool Master 12",
+            "Drawing No": "DRW-012",
+            "Tool Type": "Forming",
+            "Set Nos": 4,
+            "Cum Qty": 1240,
+            "Target": 2099,
+            "Diff Qty": 16
+        },
+        {
+            "ID": 13,
+            "Date Time": "2025-12-12T03:31:03.760000",
+            "Date": "2025-12-12",
+            "Time": "03:31:03",
+            "Tool ID": "TM-013",
+            "Tool Name": "Tool Master 13",
+            "Drawing No": "DRW-013",
+            "Tool Type": "Punch",
+            "Set Nos": 4,
+            "Cum Qty": 1260,
+            "Target": 2061,
+            "Diff Qty": -10
+        },
+        {
+            "ID": 14,
+            "Date Time": "2025-12-12T03:38:03.760000",
+            "Date": "2025-12-12",
+            "Time": "03:38:03",
+            "Tool ID": "TM-014",
+            "Tool Name": "Tool Master 14",
+            "Drawing No": "DRW-014",
+            "Tool Type": "Die",
+            "Set Nos": 6,
+            "Cum Qty": 1280,
+            "Target": 2063,
+            "Diff Qty": -9
+        },
+        {
+            "ID": 15,
+            "Date Time": "2025-12-12T03:45:03.760000",
+            "Date": "2025-12-12",
+            "Time": "03:45:03",
+            "Tool ID": "TM-015",
+            "Tool Name": "Tool Master 15",
+            "Drawing No": "DRW-015",
+            "Tool Type": "Cutter",
+            "Set Nos": 1,
+            "Cum Qty": 1300,
+            "Target": 2198,
+            "Diff Qty": 2
+        },
+        {
+            "ID": 16,
+            "Date Time": "2025-12-12T03:52:03.760000",
+            "Date": "2025-12-12",
+            "Time": "03:52:03",
+            "Tool ID": "TM-016",
+            "Tool Name": "Tool Master 16",
+            "Drawing No": "DRW-016",
+            "Tool Type": "Forming",
+            "Set Nos": 4,
+            "Cum Qty": 1320,
+            "Target": 2166,
+            "Diff Qty": -18
+        },
+        {
+            "ID": 17,
+            "Date Time": "2025-12-12T03:59:03.760000",
+            "Date": "2025-12-12",
+            "Time": "03:59:03",
+            "Tool ID": "TM-017",
+            "Tool Name": "Tool Master 17",
+            "Drawing No": "DRW-017",
+            "Tool Type": "Punch",
+            "Set Nos": 5,
+            "Cum Qty": 1340,
+            "Target": 2091,
+            "Diff Qty": 9
+        },
+        {
+            "ID": 18,
+            "Date Time": "2025-12-12T04:06:03.760000",
+            "Date": "2025-12-12",
+            "Time": "04:06:03",
+            "Tool ID": "TM-018",
+            "Tool Name": "Tool Master 18",
+            "Drawing No": "DRW-018",
+            "Tool Type": "Die",
+            "Set Nos": 4,
+            "Cum Qty": 1360,
+            "Target": 2180,
+            "Diff Qty": 2
+        },
+        {
+            "ID": 19,
+            "Date Time": "2025-12-12T04:13:03.760000",
+            "Date": "2025-12-12",
+            "Time": "04:13:03",
+            "Tool ID": "TM-019",
+            "Tool Name": "Tool Master 19",
+            "Drawing No": "DRW-019",
+            "Tool Type": "Cutter",
+            "Set Nos": 4,
+            "Cum Qty": 1380,
+            "Target": 2060,
+            "Diff Qty": -15
+        },
+        {
+            "ID": 20,
+            "Date Time": "2025-12-12T04:20:03.760000",
+            "Date": "2025-12-12",
+            "Time": "04:20:03",
+            "Tool ID": "TM-020",
+            "Tool Name": "Tool Master 20",
+            "Drawing No": "DRW-020",
+            "Tool Type": "Forming",
+            "Set Nos": 4,
+            "Cum Qty": 1400,
+            "Target": 2094,
+            "Diff Qty": 10
+        },
+        {
+            "ID": 21,
+            "Date Time": "2025-12-12T04:27:03.760000",
+            "Date": "2025-12-12",
+            "Time": "04:27:03",
+            "Tool ID": "TM-021",
+            "Tool Name": "Tool Master 21",
+            "Drawing No": "DRW-021",
+            "Tool Type": "Punch",
+            "Set Nos": 1,
+            "Cum Qty": 1420,
+            "Target": 2062,
+            "Diff Qty": -11
+        },
+        {
+            "ID": 22,
+            "Date Time": "2025-12-12T04:34:03.760000",
+            "Date": "2025-12-12",
+            "Time": "04:34:03",
+            "Tool ID": "TM-022",
+            "Tool Name": "Tool Master 22",
+            "Drawing No": "DRW-022",
+            "Tool Type": "Die",
+            "Set Nos": 5,
+            "Cum Qty": 1440,
+            "Target": 2052,
+            "Diff Qty": -15
+        },
+        {
+            "ID": 23,
+            "Date Time": "2025-12-12T04:41:03.760000",
+            "Date": "2025-12-12",
+            "Time": "04:41:03",
+            "Tool ID": "TM-023",
+            "Tool Name": "Tool Master 23",
+            "Drawing No": "DRW-023",
+            "Tool Type": "Cutter",
+            "Set Nos": 4,
+            "Cum Qty": 1460,
+            "Target": 2041,
+            "Diff Qty": 16
+        },
+        {
+            "ID": 24,
+            "Date Time": "2025-12-12T04:48:03.760000",
+            "Date": "2025-12-12",
+            "Time": "04:48:03",
+            "Tool ID": "TM-024",
+            "Tool Name": "Tool Master 24",
+            "Drawing No": "DRW-024",
+            "Tool Type": "Forming",
+            "Set Nos": 4,
+            "Cum Qty": 1480,
+            "Target": 2116,
+            "Diff Qty": 12
+        },
+        {
+            "ID": 25,
+            "Date Time": "2025-12-12T04:55:03.760000",
+            "Date": "2025-12-12",
+            "Time": "04:55:03",
+            "Tool ID": "TM-025",
+            "Tool Name": "Tool Master 25",
+            "Drawing No": "DRW-025",
+            "Tool Type": "Punch",
+            "Set Nos": 5,
+            "Cum Qty": 1500,
+            "Target": 2171,
+            "Diff Qty": -5
+        },
+        {
+            "ID": 26,
+            "Date Time": "2025-12-12T05:02:03.760000",
+            "Date": "2025-12-12",
+            "Time": "05:02:03",
+            "Tool ID": "TM-026",
+            "Tool Name": "Tool Master 26",
+            "Drawing No": "DRW-026",
+            "Tool Type": "Die",
+            "Set Nos": 5,
+            "Cum Qty": 1520,
+            "Target": 2145,
+            "Diff Qty": -15
+        },
+        {
+            "ID": 27,
+            "Date Time": "2025-12-12T05:09:03.760000",
+            "Date": "2025-12-12",
+            "Time": "05:09:03",
+            "Tool ID": "TM-027",
+            "Tool Name": "Tool Master 27",
+            "Drawing No": "DRW-027",
+            "Tool Type": "Cutter",
+            "Set Nos": 5,
+            "Cum Qty": 1540,
+            "Target": 2119,
+            "Diff Qty": -7
+        },
+        {
+            "ID": 28,
+            "Date Time": "2025-12-12T05:16:03.760000",
+            "Date": "2025-12-12",
+            "Time": "05:16:03",
+            "Tool ID": "TM-028",
+            "Tool Name": "Tool Master 28",
+            "Drawing No": "DRW-028",
+            "Tool Type": "Forming",
+            "Set Nos": 4,
+            "Cum Qty": 1560,
+            "Target": 2126,
+            "Diff Qty": 4
+        },
+        {
+            "ID": 29,
+            "Date Time": "2025-12-12T05:23:03.760000",
+            "Date": "2025-12-12",
+            "Time": "05:23:03",
+            "Tool ID": "TM-029",
+            "Tool Name": "Tool Master 29",
+            "Drawing No": "DRW-029",
+            "Tool Type": "Punch",
+            "Set Nos": 3,
+            "Cum Qty": 1580,
+            "Target": 2086,
+            "Diff Qty": -8
+        },
+        {
+            "ID": 30,
+            "Date Time": "2025-12-12T05:30:03.760000",
+            "Date": "2025-12-12",
+            "Time": "05:30:03",
+            "Tool ID": "TM-030",
+            "Tool Name": "Tool Master 30",
+            "Drawing No": "DRW-030",
+            "Tool Type": "Die",
+            "Set Nos": 5,
+            "Cum Qty": 1600,
+            "Target": 2009,
+            "Diff Qty": 19
+        },
+        {
+            "ID": 31,
+            "Date Time": "2025-12-12T05:37:03.760000",
+            "Date": "2025-12-12",
+            "Time": "05:37:03",
+            "Tool ID": "TM-031",
+            "Tool Name": "Tool Master 31",
+            "Drawing No": "DRW-031",
+            "Tool Type": "Cutter",
+            "Set Nos": 5,
+            "Cum Qty": 1620,
+            "Target": 2172,
+            "Diff Qty": -9
+        },
+        {
+            "ID": 32,
+            "Date Time": "2025-12-12T05:44:03.760000",
+            "Date": "2025-12-12",
+            "Time": "05:44:03",
+            "Tool ID": "TM-032",
+            "Tool Name": "Tool Master 32",
+            "Drawing No": "DRW-032",
+            "Tool Type": "Forming",
+            "Set Nos": 3,
+            "Cum Qty": 1640,
+            "Target": 2040,
+            "Diff Qty": -3
+        },
+        {
+            "ID": 33,
+            "Date Time": "2025-12-12T05:51:03.760000",
+            "Date": "2025-12-12",
+            "Time": "05:51:03",
+            "Tool ID": "TM-033",
+            "Tool Name": "Tool Master 33",
+            "Drawing No": "DRW-033",
+            "Tool Type": "Punch",
+            "Set Nos": 1,
+            "Cum Qty": 1660,
+            "Target": 2193,
+            "Diff Qty": -1
+        },
+        {
+            "ID": 34,
+            "Date Time": "2025-12-12T05:58:03.760000",
+            "Date": "2025-12-12",
+            "Time": "05:58:03",
+            "Tool ID": "TM-034",
+            "Tool Name": "Tool Master 34",
+            "Drawing No": "DRW-034",
+            "Tool Type": "Die",
+            "Set Nos": 3,
+            "Cum Qty": 1680,
+            "Target": 2130,
+            "Diff Qty": 12
+        },
+        {
+            "ID": 35,
+            "Date Time": "2025-12-12T06:05:03.760000",
+            "Date": "2025-12-12",
+            "Time": "06:05:03",
+            "Tool ID": "TM-035",
+            "Tool Name": "Tool Master 35",
+            "Drawing No": "DRW-035",
+            "Tool Type": "Cutter",
+            "Set Nos": 3,
+            "Cum Qty": 1700,
+            "Target": 2074,
+            "Diff Qty": 15
+        },
+        {
+            "ID": 36,
+            "Date Time": "2025-12-12T06:12:03.760000",
+            "Date": "2025-12-12",
+            "Time": "06:12:03",
+            "Tool ID": "TM-036",
+            "Tool Name": "Tool Master 36",
+            "Drawing No": "DRW-036",
+            "Tool Type": "Forming",
+            "Set Nos": 4,
+            "Cum Qty": 1720,
+            "Target": 2108,
+            "Diff Qty": 17
+        },
+        {
+            "ID": 37,
+            "Date Time": "2025-12-12T06:19:03.760000",
+            "Date": "2025-12-12",
+            "Time": "06:19:03",
+            "Tool ID": "TM-037",
+            "Tool Name": "Tool Master 37",
+            "Drawing No": "DRW-037",
+            "Tool Type": "Punch",
+            "Set Nos": 1,
+            "Cum Qty": 1740,
+            "Target": 2120,
+            "Diff Qty": 10
+        },
+        {
+            "ID": 38,
+            "Date Time": "2025-12-12T06:26:03.760000",
+            "Date": "2025-12-12",
+            "Time": "06:26:03",
+            "Tool ID": "TM-038",
+            "Tool Name": "Tool Master 38",
+            "Drawing No": "DRW-038",
+            "Tool Type": "Die",
+            "Set Nos": 3,
+            "Cum Qty": 1760,
+            "Target": 2029,
+            "Diff Qty": 8
+        },
+        {
+            "ID": 39,
+            "Date Time": "2025-12-12T06:33:03.760000",
+            "Date": "2025-12-12",
+            "Time": "06:33:03",
+            "Tool ID": "TM-039",
+            "Tool Name": "Tool Master 39",
+            "Drawing No": "DRW-039",
+            "Tool Type": "Cutter",
+            "Set Nos": 2,
+            "Cum Qty": 1780,
+            "Target": 2097,
+            "Diff Qty": -12
+        },
+        {
+            "ID": 40,
+            "Date Time": "2025-12-12T06:40:03.760000",
+            "Date": "2025-12-12",
+            "Time": "06:40:03",
+            "Tool ID": "TM-040",
+            "Tool Name": "Tool Master 40",
+            "Drawing No": "DRW-040",
+            "Tool Type": "Forming",
+            "Set Nos": 3,
+            "Cum Qty": 1800,
+            "Target": 2096,
+            "Diff Qty": -18
+        },
+        {
+            "ID": 41,
+            "Date Time": "2025-12-12T06:47:03.760000",
+            "Date": "2025-12-12",
+            "Time": "06:47:03",
+            "Tool ID": "TM-041",
+            "Tool Name": "Tool Master 41",
+            "Drawing No": "DRW-041",
+            "Tool Type": "Punch",
+            "Set Nos": 2,
+            "Cum Qty": 1820,
+            "Target": 2157,
+            "Diff Qty": -19
+        },
+        {
+            "ID": 42,
+            "Date Time": "2025-12-12T06:54:03.760000",
+            "Date": "2025-12-12",
+            "Time": "06:54:03",
+            "Tool ID": "TM-042",
+            "Tool Name": "Tool Master 42",
+            "Drawing No": "DRW-042",
+            "Tool Type": "Die",
+            "Set Nos": 2,
+            "Cum Qty": 1840,
+            "Target": 2129,
+            "Diff Qty": 8
+        },
+        {
+            "ID": 43,
+            "Date Time": "2025-12-12T07:01:03.760000",
+            "Date": "2025-12-12",
+            "Time": "07:01:03",
+            "Tool ID": "TM-043",
+            "Tool Name": "Tool Master 43",
+            "Drawing No": "DRW-043",
+            "Tool Type": "Cutter",
+            "Set Nos": 4,
+            "Cum Qty": 1860,
+            "Target": 2164,
+            "Diff Qty": -1
+        },
+        {
+            "ID": 44,
+            "Date Time": "2025-12-12T07:08:03.760000",
+            "Date": "2025-12-12",
+            "Time": "07:08:03",
+            "Tool ID": "TM-044",
+            "Tool Name": "Tool Master 44",
+            "Drawing No": "DRW-044",
+            "Tool Type": "Forming",
+            "Set Nos": 6,
+            "Cum Qty": 1880,
+            "Target": 2072,
+            "Diff Qty": 0
+        },
+        {
+            "ID": 45,
+            "Date Time": "2025-12-12T07:15:03.760000",
+            "Date": "2025-12-12",
+            "Time": "07:15:03",
+            "Tool ID": "TM-045",
+            "Tool Name": "Tool Master 45",
+            "Drawing No": "DRW-045",
+            "Tool Type": "Punch",
+            "Set Nos": 3,
+            "Cum Qty": 1900,
+            "Target": 2134,
+            "Diff Qty": 19
+        },
+        {
+            "ID": 46,
+            "Date Time": "2025-12-12T07:22:03.760000",
+            "Date": "2025-12-12",
+            "Time": "07:22:03",
+            "Tool ID": "TM-046",
+            "Tool Name": "Tool Master 46",
+            "Drawing No": "DRW-046",
+            "Tool Type": "Die",
+            "Set Nos": 2,
+            "Cum Qty": 1920,
+            "Target": 2120,
+            "Diff Qty": -18
+        },
+        {
+            "ID": 47,
+            "Date Time": "2025-12-12T07:29:03.760000",
+            "Date": "2025-12-12",
+            "Time": "07:29:03",
+            "Tool ID": "TM-047",
+            "Tool Name": "Tool Master 47",
+            "Drawing No": "DRW-047",
+            "Tool Type": "Cutter",
+            "Set Nos": 3,
+            "Cum Qty": 1940,
+            "Target": 2124,
+            "Diff Qty": -4
+        },
+        {
+            "ID": 48,
+            "Date Time": "2025-12-12T07:36:03.760000",
+            "Date": "2025-12-12",
+            "Time": "07:36:03",
+            "Tool ID": "TM-048",
+            "Tool Name": "Tool Master 48",
+            "Drawing No": "DRW-048",
+            "Tool Type": "Forming",
+            "Set Nos": 3,
+            "Cum Qty": 1960,
+            "Target": 2064,
+            "Diff Qty": 17
+        },
+        {
+            "ID": 49,
+            "Date Time": "2025-12-12T07:43:03.760000",
+            "Date": "2025-12-12",
+            "Time": "07:43:03",
+            "Tool ID": "TM-049",
+            "Tool Name": "Tool Master 49",
+            "Drawing No": "DRW-049",
+            "Tool Type": "Punch",
+            "Set Nos": 1,
+            "Cum Qty": 1980,
+            "Target": 2190,
+            "Diff Qty": 9
+        },
+        {
+            "ID": 50,
+            "Date Time": "2025-12-12T07:50:03.760000",
+            "Date": "2025-12-12",
+            "Time": "07:50:03",
+            "Tool ID": "TM-050",
+            "Tool Name": "Tool Master 50",
+            "Drawing No": "DRW-050",
+            "Tool Type": "Die",
+            "Set Nos": 3,
+            "Cum Qty": 2000,
+            "Target": 2088,
+            "Diff Qty": -11
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "username": "admin",
+            "email": "admin@barani.com",
+            "role": "admin",
+            "is_active": 1
+        },
+        {
+            "id": 25,
+            "username": "imran",
+            "email": null,
+            "role": "designer",
+            "is_active": 1
+        },
+        {
+            "id": 116,
+            "username": "ragavendra",
+            "email": null,
+            "role": "Operator",
+            "is_active": 1
+        },
+        {
+            "id": 225,
+            "username": "imz",
+            "email": null,
+            "role": "worker",
+            "is_active": 1
+        },
+        {
+            "id": 226,
+            "username": "bhipl100",
+            "email": null,
+            "role": "bhipl",
+            "is_active": 1
+        },
+        {
+            "id": 1226,
+            "username": "hussain",
+            "email": null,
+            "role": "Operator",
+            "is_active": 1
+        },
+        {
+            "id": 7611,
+            "username": "main",
+            "email": null,
+            "role": "Maintenance",
+            "is_active": 1
+        }
+    ],
+    "runlog_stats": {
+        "total_runs": 19331,
+        "max_cycle": 600,
+        "avg_cycle": 280.94424718633763
+    },
+    "bumping_recipes": [
+        {
+            "id": 9,
+            "name": "123",
+            "bumping_settings": "[{\"step_no\": \"000\", \"pressure\": \"90.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"001\", \"pressure\": \"90.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"002\", \"pressure\": \"90.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"003\", \"pressure\": \"90.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"004\", \"pressure\": \"90.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"005\", \"pressure\": \"120.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"006\", \"pressure\": \"120.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"007\", \"pressure\": \"120.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"008\", \"pressure\": \"120.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"009\", \"pressure\": \"120.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"010\", \"pressure\": \"150.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"011\", \"pressure\": \"150.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"012\", \"pressure\": \"150.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"013\", \"pressure\": \"150.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"014\", \"pressure\": \"150.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"015\", \"pressure\": \"170.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"016\", \"pressure\": \"170.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"017\", \"pressure\": \"170.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"018\", \"pressure\": \"170.0\", \"up_hold\": \"1000.000\", \"down_time\": \"2000.000\", \"down_hold\": \"1000.000\"}, {\"step_no\": \"019\", \"pressure\": \"170.0\", \"up_hold\": \"1190.000\", \"down_time\": \"3190.000\", \"down_hold\": \"6190.000\"}, {\"step_no\": \"020\", \"pressure\": \"200.0\", \"up_hold\": \"1200.000\", \"down_time\": \"3200.000\", \"down_hold\": \"6200.000\"}, {\"step_no\": \"021\", \"pressure\": \"210.0\", \"up_hold\": \"1210.000\", \"down_time\": \"3210.000\", \"down_hold\": \"6210.000\"}, {\"step_no\": \"022\", \"pressure\": \"220.0\", \"up_hold\": \"1220.000\", \"down_time\": \"3220.000\", \"down_hold\": \"6220.000\"}, {\"step_no\": \"023\", \"pressure\": \"230.0\", \"up_hold\": \"1230.000\", \"down_time\": \"3230.000\", \"down_hold\": \"6230.000\"}, {\"step_no\": \"024\", \"pressure\": \"240.0\", \"up_hold\": \"1240.000\", \"down_time\": \"3240.000\", \"down_hold\": \"6240.000\"}, {\"step_no\": \"025\", \"pressure\": \"250.0\", \"up_hold\": \"1250.000\", \"down_time\": \"3250.000\", \"down_hold\": \"6250.000\"}, {\"step_no\": \"026\", \"pressure\": \"260.0\", \"up_hold\": \"1260.000\", \"down_time\": \"3260.000\", \"down_hold\": \"6260.000\"}, {\"step_no\": \"027\", \"pressure\": \"270.0\", \"up_hold\": \"1270.000\", \"down_time\": \"3270.000\", \"down_hold\": \"6270.000\"}, {\"step_no\": \"028\", \"pressure\": \"280.0\", \"up_hold\": \"1280.000\", \"down_time\": \"3280.000\", \"down_hold\": \"6280.000\"}, {\"step_no\": \"029\", \"pressure\": \"290.0\", \"up_hold\": \"1290.000\", \"down_time\": \"3290.000\", \"down_hold\": \"6290.000\"}, {\"step_no\": \"030\", \"pressure\": \"300.0\", \"up_hold\": \"1300.000\", \"down_time\": \"3300.000\", \"down_hold\": \"6300.000\"}, {\"step_no\": \"031\", \"pressure\": \"310.0\", \"up_hold\": \"1310.000\", \"down_time\": \"3310.000\", \"down_hold\": \"6310.000\"}, {\"step_no\": \"032\", \"pressure\": \"320.0\", \"up_hold\": \"1320.000\", \"down_time\": \"3320.000\", \"down_hold\": \"6320.000\"}, {\"step_no\": \"033\", \"pressure\": \"330.0\", \"up_hold\": \"1330.000\", \"down_time\": \"3330.000\", \"down_hold\": \"6330.000\"}, {\"step_no\": \"034\", \"pressure\": \"340.0\", \"up_hold\": \"1340.000\", \"down_time\": \"3340.000\", \"down_hold\": \"6340.000\"}, {\"step_no\": \"035\", \"pressure\": \"350.0\", \"up_hold\": \"1350.000\", \"down_time\": \"3350.000\", \"down_hold\": \"6350.000\"}, {\"step_no\": \"036\", \"pressure\": \"360.0\", \"up_hold\": \"1360.000\", \"down_time\": \"3360.000\", \"down_hold\": \"6360.000\"}, {\"step_no\": \"037\", \"pressure\": \"370.0\", \"up_hold\": \"1370.000\", \"down_time\": \"3370.000\", \"down_hold\": \"6370.000\"}, {\"step_no\": \"038\", \"pressure\": \"380.0\", \"up_hold\": \"1380.000\", \"down_time\": \"3380.000\", \"down_hold\": \"6380.000\"}, {\"step_no\": \"039\", \"pressure\": \"390.0\", \"up_hold\": \"1390.000\", \"down_time\": \"3390.000\", \"down_hold\": \"6390.000\"}, {\"step_no\": \"040\", \"pressure\": \"400.0\", \"up_hold\": \"1400.000\", \"down_time\": \"3400.000\", \"down_hold\": \"6400.000\"}, {\"step_no\": \"041\", \"pressure\": \"410.0\", \"up_hold\": \"1410.000\", \"down_time\": \"3410.000\", \"down_hold\": \"6410.000\"}, {\"step_no\": \"042\", \"pressure\": \"420.0\", \"up_hold\": \"1420.000\", \"down_time\": \"3420.000\", \"down_hold\": \"6420.000\"}, {\"step_no\": \"043\", \"pressure\": \"430.0\", \"up_hold\": \"1430.000\", \"down_time\": \"3430.000\", \"down_hold\": \"6430.000\"}, {\"step_no\": \"044\", \"pressure\": \"440.0\", \"up_hold\": \"1440.000\", \"down_time\": \"3440.000\", \"down_hold\": \"6440.000\"}, {\"step_no\": \"045\", \"pressure\": \"450.0\", \"up_hold\": \"1450.000\", \"down_time\": \"3450.000\", \"down_hold\": \"6450.000\"}, {\"step_no\": \"046\", \"pressure\": \"460.0\", \"up_hold\": \"1460.000\", \"down_time\": \"3460.000\", \"down_hold\": \"6460.000\"}, {\"step_no\": \"047\", \"pressure\": \"470.0\", \"up_hold\": \"1470.000\", \"down_time\": \"3470.000\", \"down_hold\": \"6470.000\"}, {\"step_no\": \"048\", \"pressure\": \"480.0\", \"up_hold\": \"1480.000\", \"down_time\": \"3480.000\", \"down_hold\": \"6480.000\"}, {\"step_no\": \"049\", \"pressure\": \"490.0\", \"up_hold\": \"1490.000\", \"down_time\": \"3490.000\", \"down_hold\": \"6490.000\"}, {\"step_no\": \"050\", \"pressure\": \"500.0\", \"up_hold\": \"1500.000\", \"down_time\": \"3500.000\", \"down_hold\": \"6500.000\"}]"
+        }
+    ],
+    "bumping_log": [
+        {
+            "id": 31,
+            "log_id": 35,
+            "operator_name": "admin",
+            "timestamp": "2026-07-11 00:08:06",
+            "shift_count": "0",
+            "recipe_name": "",
+            "work_order": "11072026",
+            "work_order_sl_no": 0,
+            "bumping_step_1_press": 0,
+            "bumping_step_1_down_hold": 0,
+            "bumping_step_1_down_time": 0,
+            "bumping_step_1_up_hold": 0,
+            "bumping_step_2_press": 0,
+            "bumping_step_2_down_hold": 0,
+            "bumping_step_2_down_time": 0,
+            "bumping_step_2_up_hold": 0,
+            "bumping_step_3_press": 0,
+            "bumping_step_3_down_hold": 0,
+            "bumping_step_3_down_time": 0,
+            "bumping_step_3_up_hold": 0,
+            "bumping_step_4_press": 0,
+            "bumping_step_4_down_hold": 0,
+            "bumping_step_4_down_time": 0,
+            "bumping_step_4_up_hold": 0,
+            "bumping_step_5_press": 0,
+            "bumping_step_5_down_hold": 0,
+            "bumping_step_5_down_time": 0,
+            "bumping_step_5_up_hold": 0,
+            "bumping_step_6_press": 0,
+            "bumping_step_6_down_hold": 0,
+            "bumping_step_6_down_time": 0,
+            "bumping_step_6_up_hold": 0,
+            "bumping_step_7_press": 0,
+            "bumping_step_7_down_hold": 0,
+            "bumping_step_7_down_time": 0,
+            "bumping_step_7_up_hold": 0,
+            "bumping_step_8_press": 0,
+            "bumping_step_8_down_hold": 0,
+            "bumping_step_8_down_time": 0,
+            "bumping_step_8_up_hold": 0,
+            "bumping_step_9_press": 0,
+            "bumping_step_9_down_hold": 0,
+            "bumping_step_9_down_time": 0,
+            "bumping_step_9_up_hold": 0,
+            "bumping_step_10_press": 0,
+            "bumping_step_10_down_hold": 0,
+            "bumping_step_10_down_time": 0,
+            "bumping_step_10_up_hold": 0,
+            "bumping_step_11_press": 0,
+            "bumping_step_11_down_hold": 0,
+            "bumping_step_11_down_time": 0,
+            "bumping_step_11_up_hold": 0,
+            "bumping_step_12_press": 0,
+            "bumping_step_12_down_hold": 0,
+            "bumping_step_12_down_time": 0,
+            "bumping_step_12_up_hold": 0,
+            "bumping_step_13_press": 0,
+            "bumping_step_13_down_hold": 0,
+            "bumping_step_13_down_time": 0,
+            "bumping_step_13_up_hold": 0,
+            "bumping_step_14_press": 0,
+            "bumping_step_14_down_hold": 0,
+            "bumping_step_14_down_time": 0,
+            "bumping_step_14_up_hold": 0,
+            "bumping_step_15_press": 0,
+            "bumping_step_15_down_hold": 0,
+            "bumping_step_15_down_time": 0,
+            "bumping_step_15_up_hold": 0,
+            "bumping_step_16_press": 0,
+            "bumping_step_16_down_hold": 0,
+            "bumping_step_16_down_time": 0,
+            "bumping_step_16_up_hold": 0,
+            "bumping_step_17_press": 0,
+            "bumping_step_17_down_hold": 0,
+            "bumping_step_17_down_time": 0,
+            "bumping_step_17_up_hold": 0,
+            "bumping_step_18_press": 0,
+            "bumping_step_18_down_hold": 0,
+            "bumping_step_18_down_time": 0,
+            "bumping_step_18_up_hold": 0,
+            "bumping_step_19_press": 0,
+            "bumping_step_19_down_hold": 0,
+            "bumping_step_19_down_time": 0,
+            "bumping_step_19_up_hold": 0,
+            "bumping_step_20_press": 0,
+            "bumping_step_20_down_hold": 0,
+            "bumping_step_20_down_time": 0,
+            "bumping_step_20_up_hold": 0,
+            "bumping_step_21_press": 0,
+            "bumping_step_21_down_hold": 0,
+            "bumping_step_21_down_time": 0,
+            "bumping_step_21_up_hold": 0,
+            "bumping_step_22_press": 0,
+            "bumping_step_22_down_hold": 0,
+            "bumping_step_22_down_time": 0,
+            "bumping_step_22_up_hold": 0,
+            "bumping_step_23_press": 0,
+            "bumping_step_23_down_hold": 0,
+            "bumping_step_23_down_time": 0,
+            "bumping_step_23_up_hold": 0,
+            "bumping_step_24_press": 0,
+            "bumping_step_24_down_hold": 0,
+            "bumping_step_24_down_time": 0,
+            "bumping_step_24_up_hold": 0,
+            "bumping_step_25_press": 0,
+            "bumping_step_25_down_hold": 0,
+            "bumping_step_25_down_time": 0,
+            "bumping_step_25_up_hold": 0,
+            "bumping_step_26_press": 0,
+            "bumping_step_26_down_hold": 0,
+            "bumping_step_26_down_time": 0,
+            "bumping_step_26_up_hold": 0,
+            "bumping_step_27_press": 0,
+            "bumping_step_27_down_hold": 0,
+            "bumping_step_27_down_time": 0,
+            "bumping_step_27_up_hold": 0,
+            "bumping_step_28_press": 0,
+            "bumping_step_28_down_hold": 0,
+            "bumping_step_28_down_time": 0,
+            "bumping_step_28_up_hold": 0,
+            "bumping_step_29_press": 0,
+            "bumping_step_29_down_hold": 0,
+            "bumping_step_29_down_time": 0,
+            "bumping_step_29_up_hold": 0,
+            "bumping_step_30_press": 0,
+            "bumping_step_30_down_hold": 0,
+            "bumping_step_30_down_time": 0,
+            "bumping_step_30_up_hold": 0,
+            "bumping_step_31_press": 0,
+            "bumping_step_31_down_hold": 0,
+            "bumping_step_31_down_time": 0,
+            "bumping_step_31_up_hold": 0,
+            "bumping_step_32_press": 0,
+            "bumping_step_32_down_hold": 0,
+            "bumping_step_32_down_time": 0,
+            "bumping_step_32_up_hold": 0,
+            "bumping_step_33_press": 0,
+            "bumping_step_33_down_hold": 0,
+            "bumping_step_33_down_time": 0,
+            "bumping_step_33_up_hold": 0,
+            "bumping_step_34_press": 0,
+            "bumping_step_34_down_hold": 0,
+            "bumping_step_34_down_time": 0,
+            "bumping_step_34_up_hold": 0,
+            "bumping_step_35_press": 0,
+            "bumping_step_35_down_hold": 0,
+            "bumping_step_35_down_time": 0,
+            "bumping_step_35_up_hold": 0,
+            "bumping_step_36_press": 0,
+            "bumping_step_36_down_hold": 0,
+            "bumping_step_36_down_time": 0,
+            "bumping_step_36_up_hold": 0,
+            "bumping_step_37_press": 0,
+            "bumping_step_37_down_hold": 0,
+            "bumping_step_37_down_time": 0,
+            "bumping_step_37_up_hold": 0,
+            "bumping_step_38_press": 0,
+            "bumping_step_38_down_hold": 0,
+            "bumping_step_38_down_time": 0,
+            "bumping_step_38_up_hold": 0,
+            "bumping_step_39_press": 0,
+            "bumping_step_39_down_hold": 0,
+            "bumping_step_39_down_time": 0,
+            "bumping_step_39_up_hold": 0,
+            "bumping_step_40_press": 0,
+            "bumping_step_40_down_hold": 0,
+            "bumping_step_40_down_time": 0,
+            "bumping_step_40_up_hold": 0,
+            "bumping_step_41_press": 0,
+            "bumping_step_41_down_hold": 0,
+            "bumping_step_41_down_time": 0,
+            "bumping_step_41_up_hold": 0,
+            "bumping_step_42_press": 0,
+            "bumping_step_42_down_hold": 0,
+            "bumping_step_42_down_time": 0,
+            "bumping_step_42_up_hold": 0,
+            "bumping_step_43_press": 0,
+            "bumping_step_43_down_hold": 0,
+            "bumping_step_43_down_time": 0,
+            "bumping_step_43_up_hold": 0,
+            "bumping_step_44_press": 0,
+            "bumping_step_44_down_hold": 0,
+            "bumping_step_44_down_time": 0,
+            "bumping_step_44_up_hold": 0,
+            "bumping_step_45_press": 0,
+            "bumping_step_45_down_hold": 0,
+            "bumping_step_45_down_time": 0,
+            "bumping_step_45_up_hold": 0,
+            "bumping_step_46_press": 0,
+            "bumping_step_46_down_hold": 0,
+            "bumping_step_46_down_time": 0,
+            "bumping_step_46_up_hold": 0,
+            "bumping_step_47_press": 0,
+            "bumping_step_47_down_hold": 0,
+            "bumping_step_47_down_time": 0,
+            "bumping_step_47_up_hold": 0,
+            "bumping_step_48_press": 0,
+            "bumping_step_48_down_hold": 0,
+            "bumping_step_48_down_time": 0,
+            "bumping_step_48_up_hold": 0,
+            "bumping_step_49_press": 0,
+            "bumping_step_49_down_hold": 0,
+            "bumping_step_49_down_time": 0,
+            "bumping_step_49_up_hold": 0,
+            "bumping_step_50_press": 0,
+            "bumping_step_50_down_hold": 0,
+            "bumping_step_50_down_time": 0,
+            "bumping_step_50_up_hold": 0,
+            "batch_no": 1,
+            "bumping_step_0_press": 0,
+            "bumping_step_0_down_hold": 0,
+            "bumping_step_0_down_time": 0,
+            "bumping_step_0_up_hold": 0,
+            "previous_cycle_time": 0,
+            "actual_cycle_time": 0
+        },
+        {
+            "id": 32,
+            "log_id": 36,
+            "operator_name": "admin",
+            "timestamp": "2026-07-12 00:46:55",
+            "shift_count": "0",
+            "recipe_name": "",
+            "work_order": "12072026",
+            "work_order_sl_no": 0,
+            "bumping_step_1_press": 0,
+            "bumping_step_1_down_hold": 0,
+            "bumping_step_1_down_time": 0,
+            "bumping_step_1_up_hold": 0,
+            "bumping_step_2_press": 0,
+            "bumping_step_2_down_hold": 0,
+            "bumping_step_2_down_time": 0,
+            "bumping_step_2_up_hold": 0,
+            "bumping_step_3_press": 0,
+            "bumping_step_3_down_hold": 0,
+            "bumping_step_3_down_time": 0,
+            "bumping_step_3_up_hold": 0,
+            "bumping_step_4_press": 0,
+            "bumping_step_4_down_hold": 0,
+            "bumping_step_4_down_time": 0,
+            "bumping_step_4_up_hold": 0,
+            "bumping_step_5_press": 0,
+            "bumping_step_5_down_hold": 0,
+            "bumping_step_5_down_time": 0,
+            "bumping_step_5_up_hold": 0,
+            "bumping_step_6_press": 0,
+            "bumping_step_6_down_hold": 0,
+            "bumping_step_6_down_time": 0,
+            "bumping_step_6_up_hold": 0,
+            "bumping_step_7_press": 0,
+            "bumping_step_7_down_hold": 0,
+            "bumping_step_7_down_time": 0,
+            "bumping_step_7_up_hold": 0,
+            "bumping_step_8_press": 0,
+            "bumping_step_8_down_hold": 0,
+            "bumping_step_8_down_time": 0,
+            "bumping_step_8_up_hold": 0,
+            "bumping_step_9_press": 0,
+            "bumping_step_9_down_hold": 0,
+            "bumping_step_9_down_time": 0,
+            "bumping_step_9_up_hold": 0,
+            "bumping_step_10_press": 0,
+            "bumping_step_10_down_hold": 0,
+            "bumping_step_10_down_time": 0,
+            "bumping_step_10_up_hold": 0,
+            "bumping_step_11_press": 0,
+            "bumping_step_11_down_hold": 0,
+            "bumping_step_11_down_time": 0,
+            "bumping_step_11_up_hold": 0,
+            "bumping_step_12_press": 0,
+            "bumping_step_12_down_hold": 0,
+            "bumping_step_12_down_time": 0,
+            "bumping_step_12_up_hold": 0,
+            "bumping_step_13_press": 0,
+            "bumping_step_13_down_hold": 0,
+            "bumping_step_13_down_time": 0,
+            "bumping_step_13_up_hold": 0,
+            "bumping_step_14_press": 0,
+            "bumping_step_14_down_hold": 0,
+            "bumping_step_14_down_time": 0,
+            "bumping_step_14_up_hold": 0,
+            "bumping_step_15_press": 0,
+            "bumping_step_15_down_hold": 0,
+            "bumping_step_15_down_time": 0,
+            "bumping_step_15_up_hold": 0,
+            "bumping_step_16_press": 0,
+            "bumping_step_16_down_hold": 0,
+            "bumping_step_16_down_time": 0,
+            "bumping_step_16_up_hold": 0,
+            "bumping_step_17_press": 0,
+            "bumping_step_17_down_hold": 0,
+            "bumping_step_17_down_time": 0,
+            "bumping_step_17_up_hold": 0,
+            "bumping_step_18_press": 0,
+            "bumping_step_18_down_hold": 0,
+            "bumping_step_18_down_time": 0,
+            "bumping_step_18_up_hold": 0,
+            "bumping_step_19_press": 0,
+            "bumping_step_19_down_hold": 0,
+            "bumping_step_19_down_time": 0,
+            "bumping_step_19_up_hold": 0,
+            "bumping_step_20_press": 0,
+            "bumping_step_20_down_hold": 0,
+            "bumping_step_20_down_time": 0,
+            "bumping_step_20_up_hold": 0,
+            "bumping_step_21_press": 0,
+            "bumping_step_21_down_hold": 0,
+            "bumping_step_21_down_time": 0,
+            "bumping_step_21_up_hold": 0,
+            "bumping_step_22_press": 0,
+            "bumping_step_22_down_hold": 0,
+            "bumping_step_22_down_time": 0,
+            "bumping_step_22_up_hold": 0,
+            "bumping_step_23_press": 0,
+            "bumping_step_23_down_hold": 0,
+            "bumping_step_23_down_time": 0,
+            "bumping_step_23_up_hold": 0,
+            "bumping_step_24_press": 0,
+            "bumping_step_24_down_hold": 0,
+            "bumping_step_24_down_time": 0,
+            "bumping_step_24_up_hold": 0,
+            "bumping_step_25_press": 0,
+            "bumping_step_25_down_hold": 0,
+            "bumping_step_25_down_time": 0,
+            "bumping_step_25_up_hold": 0,
+            "bumping_step_26_press": 0,
+            "bumping_step_26_down_hold": 0,
+            "bumping_step_26_down_time": 0,
+            "bumping_step_26_up_hold": 0,
+            "bumping_step_27_press": 0,
+            "bumping_step_27_down_hold": 0,
+            "bumping_step_27_down_time": 0,
+            "bumping_step_27_up_hold": 0,
+            "bumping_step_28_press": 0,
+            "bumping_step_28_down_hold": 0,
+            "bumping_step_28_down_time": 0,
+            "bumping_step_28_up_hold": 0,
+            "bumping_step_29_press": 0,
+            "bumping_step_29_down_hold": 0,
+            "bumping_step_29_down_time": 0,
+            "bumping_step_29_up_hold": 0,
+            "bumping_step_30_press": 0,
+            "bumping_step_30_down_hold": 0,
+            "bumping_step_30_down_time": 0,
+            "bumping_step_30_up_hold": 0,
+            "bumping_step_31_press": 0,
+            "bumping_step_31_down_hold": 0,
+            "bumping_step_31_down_time": 0,
+            "bumping_step_31_up_hold": 0,
+            "bumping_step_32_press": 0,
+            "bumping_step_32_down_hold": 0,
+            "bumping_step_32_down_time": 0,
+            "bumping_step_32_up_hold": 0,
+            "bumping_step_33_press": 0,
+            "bumping_step_33_down_hold": 0,
+            "bumping_step_33_down_time": 0,
+            "bumping_step_33_up_hold": 0,
+            "bumping_step_34_press": 0,
+            "bumping_step_34_down_hold": 0,
+            "bumping_step_34_down_time": 0,
+            "bumping_step_34_up_hold": 0,
+            "bumping_step_35_press": 0,
+            "bumping_step_35_down_hold": 0,
+            "bumping_step_35_down_time": 0,
+            "bumping_step_35_up_hold": 0,
+            "bumping_step_36_press": 0,
+            "bumping_step_36_down_hold": 0,
+            "bumping_step_36_down_time": 0,
+            "bumping_step_36_up_hold": 0,
+            "bumping_step_37_press": 0,
+            "bumping_step_37_down_hold": 0,
+            "bumping_step_37_down_time": 0,
+            "bumping_step_37_up_hold": 0,
+            "bumping_step_38_press": 0,
+            "bumping_step_38_down_hold": 0,
+            "bumping_step_38_down_time": 0,
+            "bumping_step_38_up_hold": 0,
+            "bumping_step_39_press": 0,
+            "bumping_step_39_down_hold": 0,
+            "bumping_step_39_down_time": 0,
+            "bumping_step_39_up_hold": 0,
+            "bumping_step_40_press": 0,
+            "bumping_step_40_down_hold": 0,
+            "bumping_step_40_down_time": 0,
+            "bumping_step_40_up_hold": 0,
+            "bumping_step_41_press": 0,
+            "bumping_step_41_down_hold": 0,
+            "bumping_step_41_down_time": 0,
+            "bumping_step_41_up_hold": 0,
+            "bumping_step_42_press": 0,
+            "bumping_step_42_down_hold": 0,
+            "bumping_step_42_down_time": 0,
+            "bumping_step_42_up_hold": 0,
+            "bumping_step_43_press": 0,
+            "bumping_step_43_down_hold": 0,
+            "bumping_step_43_down_time": 0,
+            "bumping_step_43_up_hold": 0,
+            "bumping_step_44_press": 0,
+            "bumping_step_44_down_hold": 0,
+            "bumping_step_44_down_time": 0,
+            "bumping_step_44_up_hold": 0,
+            "bumping_step_45_press": 0,
+            "bumping_step_45_down_hold": 0,
+            "bumping_step_45_down_time": 0,
+            "bumping_step_45_up_hold": 0,
+            "bumping_step_46_press": 0,
+            "bumping_step_46_down_hold": 0,
+            "bumping_step_46_down_time": 0,
+            "bumping_step_46_up_hold": 0,
+            "bumping_step_47_press": 0,
+            "bumping_step_47_down_hold": 0,
+            "bumping_step_47_down_time": 0,
+            "bumping_step_47_up_hold": 0,
+            "bumping_step_48_press": 0,
+            "bumping_step_48_down_hold": 0,
+            "bumping_step_48_down_time": 0,
+            "bumping_step_48_up_hold": 0,
+            "bumping_step_49_press": 0,
+            "bumping_step_49_down_hold": 0,
+            "bumping_step_49_down_time": 0,
+            "bumping_step_49_up_hold": 0,
+            "bumping_step_50_press": 0,
+            "bumping_step_50_down_hold": 0,
+            "bumping_step_50_down_time": 0,
+            "bumping_step_50_up_hold": 0,
+            "batch_no": 2,
+            "bumping_step_0_press": 0,
+            "bumping_step_0_down_hold": 0,
+            "bumping_step_0_down_time": 0,
+            "bumping_step_0_up_hold": 0,
+            "previous_cycle_time": 0,
+            "actual_cycle_time": 0
+        },
+        {
+            "id": 33,
+            "log_id": 38,
+            "operator_name": "admin",
+            "timestamp": "2026-07-13 11:43:55",
+            "shift_count": "0",
+            "recipe_name": "",
+            "work_order": "13072026",
+            "work_order_sl_no": 2,
+            "bumping_step_1_press": 0,
+            "bumping_step_1_down_hold": 0,
+            "bumping_step_1_down_time": 0,
+            "bumping_step_1_up_hold": 0,
+            "bumping_step_2_press": 0,
+            "bumping_step_2_down_hold": 0,
+            "bumping_step_2_down_time": 0,
+            "bumping_step_2_up_hold": 0,
+            "bumping_step_3_press": 0,
+            "bumping_step_3_down_hold": 0,
+            "bumping_step_3_down_time": 0,
+            "bumping_step_3_up_hold": 0,
+            "bumping_step_4_press": 0,
+            "bumping_step_4_down_hold": 0,
+            "bumping_step_4_down_time": 0,
+            "bumping_step_4_up_hold": 0,
+            "bumping_step_5_press": 0,
+            "bumping_step_5_down_hold": 0,
+            "bumping_step_5_down_time": 0,
+            "bumping_step_5_up_hold": 0,
+            "bumping_step_6_press": 0,
+            "bumping_step_6_down_hold": 0,
+            "bumping_step_6_down_time": 0,
+            "bumping_step_6_up_hold": 0,
+            "bumping_step_7_press": 0,
+            "bumping_step_7_down_hold": 0,
+            "bumping_step_7_down_time": 0,
+            "bumping_step_7_up_hold": 0,
+            "bumping_step_8_press": 0,
+            "bumping_step_8_down_hold": 0,
+            "bumping_step_8_down_time": 0,
+            "bumping_step_8_up_hold": 0,
+            "bumping_step_9_press": 0,
+            "bumping_step_9_down_hold": 0,
+            "bumping_step_9_down_time": 0,
+            "bumping_step_9_up_hold": 0,
+            "bumping_step_10_press": 0,
+            "bumping_step_10_down_hold": 0,
+            "bumping_step_10_down_time": 0,
+            "bumping_step_10_up_hold": 0,
+            "bumping_step_11_press": 0,
+            "bumping_step_11_down_hold": 0,
+            "bumping_step_11_down_time": 0,
+            "bumping_step_11_up_hold": 0,
+            "bumping_step_12_press": 0,
+            "bumping_step_12_down_hold": 0,
+            "bumping_step_12_down_time": 0,
+            "bumping_step_12_up_hold": 0,
+            "bumping_step_13_press": 0,
+            "bumping_step_13_down_hold": 0,
+            "bumping_step_13_down_time": 0,
+            "bumping_step_13_up_hold": 0,
+            "bumping_step_14_press": 0,
+            "bumping_step_14_down_hold": 0,
+            "bumping_step_14_down_time": 0,
+            "bumping_step_14_up_hold": 0,
+            "bumping_step_15_press": 0,
+            "bumping_step_15_down_hold": 0,
+            "bumping_step_15_down_time": 0,
+            "bumping_step_15_up_hold": 0,
+            "bumping_step_16_press": 0,
+            "bumping_step_16_down_hold": 0,
+            "bumping_step_16_down_time": 0,
+            "bumping_step_16_up_hold": 0,
+            "bumping_step_17_press": 0,
+            "bumping_step_17_down_hold": 0,
+            "bumping_step_17_down_time": 0,
+            "bumping_step_17_up_hold": 0,
+            "bumping_step_18_press": 0,
+            "bumping_step_18_down_hold": 0,
+            "bumping_step_18_down_time": 0,
+            "bumping_step_18_up_hold": 0,
+            "bumping_step_19_press": 0,
+            "bumping_step_19_down_hold": 0,
+            "bumping_step_19_down_time": 0,
+            "bumping_step_19_up_hold": 0,
+            "bumping_step_20_press": 0,
+            "bumping_step_20_down_hold": 0,
+            "bumping_step_20_down_time": 0,
+            "bumping_step_20_up_hold": 0,
+            "bumping_step_21_press": 0,
+            "bumping_step_21_down_hold": 0,
+            "bumping_step_21_down_time": 0,
+            "bumping_step_21_up_hold": 0,
+            "bumping_step_22_press": 0,
+            "bumping_step_22_down_hold": 0,
+            "bumping_step_22_down_time": 0,
+            "bumping_step_22_up_hold": 0,
+            "bumping_step_23_press": 0,
+            "bumping_step_23_down_hold": 0,
+            "bumping_step_23_down_time": 0,
+            "bumping_step_23_up_hold": 0,
+            "bumping_step_24_press": 0,
+            "bumping_step_24_down_hold": 0,
+            "bumping_step_24_down_time": 0,
+            "bumping_step_24_up_hold": 0,
+            "bumping_step_25_press": 0,
+            "bumping_step_25_down_hold": 0,
+            "bumping_step_25_down_time": 0,
+            "bumping_step_25_up_hold": 0,
+            "bumping_step_26_press": 0,
+            "bumping_step_26_down_hold": 0,
+            "bumping_step_26_down_time": 0,
+            "bumping_step_26_up_hold": 0,
+            "bumping_step_27_press": 0,
+            "bumping_step_27_down_hold": 0,
+            "bumping_step_27_down_time": 0,
+            "bumping_step_27_up_hold": 0,
+            "bumping_step_28_press": 0,
+            "bumping_step_28_down_hold": 0,
+            "bumping_step_28_down_time": 0,
+            "bumping_step_28_up_hold": 0,
+            "bumping_step_29_press": 0,
+            "bumping_step_29_down_hold": 0,
+            "bumping_step_29_down_time": 0,
+            "bumping_step_29_up_hold": 0,
+            "bumping_step_30_press": 0,
+            "bumping_step_30_down_hold": 0,
+            "bumping_step_30_down_time": 0,
+            "bumping_step_30_up_hold": 0,
+            "bumping_step_31_press": 0,
+            "bumping_step_31_down_hold": 0,
+            "bumping_step_31_down_time": 0,
+            "bumping_step_31_up_hold": 0,
+            "bumping_step_32_press": 0,
+            "bumping_step_32_down_hold": 0,
+            "bumping_step_32_down_time": 0,
+            "bumping_step_32_up_hold": 0,
+            "bumping_step_33_press": 0,
+            "bumping_step_33_down_hold": 0,
+            "bumping_step_33_down_time": 0,
+            "bumping_step_33_up_hold": 0,
+            "bumping_step_34_press": 0,
+            "bumping_step_34_down_hold": 0,
+            "bumping_step_34_down_time": 0,
+            "bumping_step_34_up_hold": 0,
+            "bumping_step_35_press": 0,
+            "bumping_step_35_down_hold": 0,
+            "bumping_step_35_down_time": 0,
+            "bumping_step_35_up_hold": 0,
+            "bumping_step_36_press": 0,
+            "bumping_step_36_down_hold": 0,
+            "bumping_step_36_down_time": 0,
+            "bumping_step_36_up_hold": 0,
+            "bumping_step_37_press": 0,
+            "bumping_step_37_down_hold": 0,
+            "bumping_step_37_down_time": 0,
+            "bumping_step_37_up_hold": 0,
+            "bumping_step_38_press": 0,
+            "bumping_step_38_down_hold": 0,
+            "bumping_step_38_down_time": 0,
+            "bumping_step_38_up_hold": 0,
+            "bumping_step_39_press": 0,
+            "bumping_step_39_down_hold": 0,
+            "bumping_step_39_down_time": 0,
+            "bumping_step_39_up_hold": 0,
+            "bumping_step_40_press": 0,
+            "bumping_step_40_down_hold": 0,
+            "bumping_step_40_down_time": 0,
+            "bumping_step_40_up_hold": 0,
+            "bumping_step_41_press": 0,
+            "bumping_step_41_down_hold": 0,
+            "bumping_step_41_down_time": 0,
+            "bumping_step_41_up_hold": 0,
+            "bumping_step_42_press": 0,
+            "bumping_step_42_down_hold": 0,
+            "bumping_step_42_down_time": 0,
+            "bumping_step_42_up_hold": 0,
+            "bumping_step_43_press": 0,
+            "bumping_step_43_down_hold": 0,
+            "bumping_step_43_down_time": 0,
+            "bumping_step_43_up_hold": 0,
+            "bumping_step_44_press": 0,
+            "bumping_step_44_down_hold": 0,
+            "bumping_step_44_down_time": 0,
+            "bumping_step_44_up_hold": 0,
+            "bumping_step_45_press": 0,
+            "bumping_step_45_down_hold": 0,
+            "bumping_step_45_down_time": 0,
+            "bumping_step_45_up_hold": 0,
+            "bumping_step_46_press": 0,
+            "bumping_step_46_down_hold": 0,
+            "bumping_step_46_down_time": 0,
+            "bumping_step_46_up_hold": 0,
+            "bumping_step_47_press": 0,
+            "bumping_step_47_down_hold": 0,
+            "bumping_step_47_down_time": 0,
+            "bumping_step_47_up_hold": 0,
+            "bumping_step_48_press": 0,
+            "bumping_step_48_down_hold": 0,
+            "bumping_step_48_down_time": 0,
+            "bumping_step_48_up_hold": 0,
+            "bumping_step_49_press": 0,
+            "bumping_step_49_down_hold": 0,
+            "bumping_step_49_down_time": 0,
+            "bumping_step_49_up_hold": 0,
+            "bumping_step_50_press": 0,
+            "bumping_step_50_down_hold": 0,
+            "bumping_step_50_down_time": 0,
+            "bumping_step_50_up_hold": 0,
+            "batch_no": 4,
+            "bumping_step_0_press": 0,
+            "bumping_step_0_down_hold": 0,
+            "bumping_step_0_down_time": 0,
+            "bumping_step_0_up_hold": 0,
+            "previous_cycle_time": 0,
+            "actual_cycle_time": 0
+        }
+    ],
+    "app_settings": [
+        {
+            "setting_key": "breakdown_manager_emails",
+            "setting_value": "imran1222hussain@gmail.com"
+        },
+        {
+            "setting_key": "order_to_email",
+            "setting_value": "imran1222hussain@gmail.com"
+        },
+        {
+            "setting_key": "smtp_encryption",
+            "setting_value": "STARTTLS"
+        },
+        {
+            "setting_key": "smtp_from",
+            "setting_value": "itsupportbhipl@gmail.com"
+        },
+        {
+            "setting_key": "smtp_host",
+            "setting_value": "smtp.gmail.com"
+        },
+        {
+            "setting_key": "smtp_pass",
+            "setting_value": "newg yyde fjhc upbh"
+        },
+        {
+            "setting_key": "smtp_port",
+            "setting_value": "587"
+        },
+        {
+            "setting_key": "smtp_user",
+            "setting_value": "itsupportbhipl@gmail.com"
+        }
+    ],
+    "reports": [
+        {
+            "id": 1,
+            "report_uuid": "rep_b924478f0dd996112a306c3e0798812e",
+            "title": "Attendance Report (PDF)",
+            "type": "attendance",
+            "format": "pdf",
+            "file_path": "attendance_report_rep_b924478f0dd996112a306c3e0798812e.pdf",
+            "file_size": 4776,
+            "generated_by": 1,
+            "created_at": "2026-09-11 13:13:58"
+        },
+        {
+            "id": 2,
+            "report_uuid": "rep_1ae3337156cb9f0f5ed0587b004a729e",
+            "title": "Payroll Report (EXCEL)",
+            "type": "payroll",
+            "format": "excel",
+            "file_path": "payroll_report_rep_1ae3337156cb9f0f5ed0587b004a729e.xlsx",
+            "file_size": 7016,
+            "generated_by": 1,
+            "created_at": "2026-09-11 13:13:59"
+        },
+        {
+            "id": 3,
+            "report_uuid": "rep_3c993eb48d95d754247a38922c3403b3",
+            "title": "Employee Report (CSV)",
+            "type": "employee",
+            "format": "csv",
+            "file_path": "employee_report_rep_3c993eb48d95d754247a38922c3403b3.csv",
+            "file_size": 861,
+            "generated_by": 1,
+            "created_at": "2026-09-11 13:13:59"
+        },
+        {
+            "id": 4,
+            "report_uuid": "rep_b16f715c14b694167565deae24811e7a",
+            "title": "Attendance Report (PDF)",
+            "type": "attendance",
+            "format": "pdf",
+            "file_path": "attendance_report_rep_b16f715c14b694167565deae24811e7a.pdf",
+            "file_size": 4777,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:10:51"
+        },
+        {
+            "id": 5,
+            "report_uuid": "rep_419907e062dc8a063d9e0ff457ea5b58",
+            "title": "Payroll Report (EXCEL)",
+            "type": "payroll",
+            "format": "excel",
+            "file_path": "payroll_report_rep_419907e062dc8a063d9e0ff457ea5b58.xlsx",
+            "file_size": 7015,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:10:52"
+        },
+        {
+            "id": 6,
+            "report_uuid": "rep_97a9b6dc9552b90e57fb28176f587678",
+            "title": "Employee Report (CSV)",
+            "type": "employee",
+            "format": "csv",
+            "file_path": "employee_report_rep_97a9b6dc9552b90e57fb28176f587678.csv",
+            "file_size": 861,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:10:52"
+        },
+        {
+            "id": 7,
+            "report_uuid": "rep_8a0f5e9b8ad5eb77b12ecae7127ae139",
+            "title": "Attendance Report (PDF)",
+            "type": "attendance",
+            "format": "pdf",
+            "file_path": "attendance_report_rep_8a0f5e9b8ad5eb77b12ecae7127ae139.pdf",
+            "file_size": 4776,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:11:33"
+        },
+        {
+            "id": 8,
+            "report_uuid": "rep_b3f1c006b40870399001f3d3afc91004",
+            "title": "Payroll Report (EXCEL)",
+            "type": "payroll",
+            "format": "excel",
+            "file_path": "payroll_report_rep_b3f1c006b40870399001f3d3afc91004.xlsx",
+            "file_size": 7015,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:11:33"
+        },
+        {
+            "id": 9,
+            "report_uuid": "rep_d0529a882814cc26083e9922c8dfc909",
+            "title": "Employee Report (CSV)",
+            "type": "employee",
+            "format": "csv",
+            "file_path": "employee_report_rep_d0529a882814cc26083e9922c8dfc909.csv",
+            "file_size": 861,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:11:33"
+        },
+        {
+            "id": 10,
+            "report_uuid": "rep_621c60b58a22e7bc5ad7893020710072",
+            "title": "Attendance Report (PDF)",
+            "type": "attendance",
+            "format": "pdf",
+            "file_path": "attendance_report_rep_621c60b58a22e7bc5ad7893020710072.pdf",
+            "file_size": 4777,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:12:28"
+        },
+        {
+            "id": 11,
+            "report_uuid": "rep_b06229d8d890d4e5369d9b39dca96ef8",
+            "title": "Payroll Report (EXCEL)",
+            "type": "payroll",
+            "format": "excel",
+            "file_path": "payroll_report_rep_b06229d8d890d4e5369d9b39dca96ef8.xlsx",
+            "file_size": 7015,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:12:28"
+        },
+        {
+            "id": 12,
+            "report_uuid": "rep_d53e7921cffeb31b8bbaa58cb000020a",
+            "title": "Employee Report (CSV)",
+            "type": "employee",
+            "format": "csv",
+            "file_path": "employee_report_rep_d53e7921cffeb31b8bbaa58cb000020a.csv",
+            "file_size": 861,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:12:28"
+        },
+        {
+            "id": 13,
+            "report_uuid": "rep_9098a88da4e05c0e6952a0fa33f70617",
+            "title": "Attendance Report (PDF)",
+            "type": "attendance",
+            "format": "pdf",
+            "file_path": "attendance_report_rep_9098a88da4e05c0e6952a0fa33f70617.pdf",
+            "file_size": 4777,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:13:54"
+        },
+        {
+            "id": 14,
+            "report_uuid": "rep_d9ecaf18780751476f4ca588c82e9aec",
+            "title": "Payroll Report (EXCEL)",
+            "type": "payroll",
+            "format": "excel",
+            "file_path": "payroll_report_rep_d9ecaf18780751476f4ca588c82e9aec.xlsx",
+            "file_size": 7016,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:13:54"
+        },
+        {
+            "id": 15,
+            "report_uuid": "rep_64f0a049779cec8f0374e07614a73a1f",
+            "title": "Employee Report (CSV)",
+            "type": "employee",
+            "format": "csv",
+            "file_path": "employee_report_rep_64f0a049779cec8f0374e07614a73a1f.csv",
+            "file_size": 861,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:13:55"
+        },
+        {
+            "id": 16,
+            "report_uuid": "rep_c6467e414d78ed9b8eb94f1aa7344311",
+            "title": "Attendance Report (PDF)",
+            "type": "attendance",
+            "format": "pdf",
+            "file_path": "attendance_report_rep_c6467e414d78ed9b8eb94f1aa7344311.pdf",
+            "file_size": 4777,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:15:48"
+        },
+        {
+            "id": 17,
+            "report_uuid": "rep_c5c57ed56613d07c65fc5a7c9b1d591e",
+            "title": "Payroll Report (EXCEL)",
+            "type": "payroll",
+            "format": "excel",
+            "file_path": "payroll_report_rep_c5c57ed56613d07c65fc5a7c9b1d591e.xlsx",
+            "file_size": 7016,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:15:48"
+        },
+        {
+            "id": 18,
+            "report_uuid": "rep_66c742a237324cfbe5e1dcac56da6f38",
+            "title": "Employee Report (CSV)",
+            "type": "employee",
+            "format": "csv",
+            "file_path": "employee_report_rep_66c742a237324cfbe5e1dcac56da6f38.csv",
+            "file_size": 861,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:15:48"
+        },
+        {
+            "id": 19,
+            "report_uuid": "rep_b815a664cc00cb3cd5121a428d6a63d0",
+            "title": "Attendance Report (PDF)",
+            "type": "attendance",
+            "format": "pdf",
+            "file_path": "attendance_report_rep_b815a664cc00cb3cd5121a428d6a63d0.pdf",
+            "file_size": 4777,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:16:26"
+        },
+        {
+            "id": 20,
+            "report_uuid": "rep_c440d04510b71929156fccf1138686b0",
+            "title": "Payroll Report (EXCEL)",
+            "type": "payroll",
+            "format": "excel",
+            "file_path": "payroll_report_rep_c440d04510b71929156fccf1138686b0.xlsx",
+            "file_size": 7015,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:16:26"
+        },
+        {
+            "id": 21,
+            "report_uuid": "rep_063f45d9a7e881a8277208c1bf7c9511",
+            "title": "Employee Report (CSV)",
+            "type": "employee",
+            "format": "csv",
+            "file_path": "employee_report_rep_063f45d9a7e881a8277208c1bf7c9511.csv",
+            "file_size": 861,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:16:26"
+        },
+        {
+            "id": 22,
+            "report_uuid": "rep_ab1799d1c47ed15498e28dc95ba12077",
+            "title": "Attendance Report (PDF)",
+            "type": "attendance",
+            "format": "pdf",
+            "file_path": "attendance_report_rep_ab1799d1c47ed15498e28dc95ba12077.pdf",
+            "file_size": 4777,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:16:54"
+        },
+        {
+            "id": 23,
+            "report_uuid": "rep_3ef1e655b56e8d7ead49e1dc86ac522b",
+            "title": "Payroll Report (EXCEL)",
+            "type": "payroll",
+            "format": "excel",
+            "file_path": "payroll_report_rep_3ef1e655b56e8d7ead49e1dc86ac522b.xlsx",
+            "file_size": 7016,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:16:54"
+        },
+        {
+            "id": 24,
+            "report_uuid": "rep_b49bd360a0fd3218567391cbe80ff90b",
+            "title": "Employee Report (CSV)",
+            "type": "employee",
+            "format": "csv",
+            "file_path": "employee_report_rep_b49bd360a0fd3218567391cbe80ff90b.csv",
+            "file_size": 861,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:16:54"
+        },
+        {
+            "id": 25,
+            "report_uuid": "rep_c4b1fa696ffe1c8329ff8f49d28d770b",
+            "title": "Attendance Report (PDF)",
+            "type": "attendance",
+            "format": "pdf",
+            "file_path": "attendance_report_rep_c4b1fa696ffe1c8329ff8f49d28d770b.pdf",
+            "file_size": 4777,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:17:39"
+        },
+        {
+            "id": 26,
+            "report_uuid": "rep_416ad097033b16cbb4d4b8dc075d73a9",
+            "title": "Payroll Report (EXCEL)",
+            "type": "payroll",
+            "format": "excel",
+            "file_path": "payroll_report_rep_416ad097033b16cbb4d4b8dc075d73a9.xlsx",
+            "file_size": 7016,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:17:39"
+        },
+        {
+            "id": 27,
+            "report_uuid": "rep_03e350c245556669bbb94da29d117ea4",
+            "title": "Employee Report (CSV)",
+            "type": "employee",
+            "format": "csv",
+            "file_path": "employee_report_rep_03e350c245556669bbb94da29d117ea4.csv",
+            "file_size": 861,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:17:39"
+        },
+        {
+            "id": 28,
+            "report_uuid": "rep_719647b7ace329fe76382aaf09609567",
+            "title": "Attendance Report (PDF)",
+            "type": "attendance",
+            "format": "pdf",
+            "file_path": "attendance_report_rep_719647b7ace329fe76382aaf09609567.pdf",
+            "file_size": 4777,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:18:07"
+        },
+        {
+            "id": 29,
+            "report_uuid": "rep_c5621daefcefbe4436fe949288401e97",
+            "title": "Payroll Report (EXCEL)",
+            "type": "payroll",
+            "format": "excel",
+            "file_path": "payroll_report_rep_c5621daefcefbe4436fe949288401e97.xlsx",
+            "file_size": 7015,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:18:08"
+        },
+        {
+            "id": 30,
+            "report_uuid": "rep_9af5dd30babfda72d4602f60a57d0b73",
+            "title": "Employee Report (CSV)",
+            "type": "employee",
+            "format": "csv",
+            "file_path": "employee_report_rep_9af5dd30babfda72d4602f60a57d0b73.csv",
+            "file_size": 861,
+            "generated_by": 1,
+            "created_at": "2026-09-11 14:18:08"
+        }
+    ],
+    "io_labels": [
+        {
+            "id": 2178,
+            "io_type": "INPUT",
+            "address": "I0.0",
+            "label": "SINGLE PHASE PREVENTER-SPP"
+        },
+        {
+            "id": 2179,
+            "io_type": "INPUT",
+            "address": "I0.1",
+            "label": "SERVO PUMP-1 MPCB TRIP-CB1"
+        },
+        {
+            "id": 2180,
+            "io_type": "INPUT",
+            "address": "I0.2",
+            "label": "SERVO PUMP-2 MPCB TRIP-CB2"
+        },
+        {
+            "id": 2181,
+            "io_type": "INPUT",
+            "address": "I0.3",
+            "label": "PILOT PUMP MPCB TRIP-CB3"
+        },
+        {
+            "id": 2182,
+            "io_type": "INPUT",
+            "address": "I0.4",
+            "label": "DRIVE-1 READY"
+        },
+        {
+            "id": 2183,
+            "io_type": "INPUT",
+            "address": "I0.5",
+            "label": "SERVO ALARM CODE-1"
+        },
+        {
+            "id": 2184,
+            "io_type": "INPUT",
+            "address": "I0.6",
+            "label": "SERVO ALARM CODE-2"
+        },
+        {
+            "id": 2185,
+            "io_type": "INPUT",
+            "address": "I0.7",
+            "label": "SERVO ALARM CODE-0"
+        },
+        {
+            "id": 2186,
+            "io_type": "INPUT",
+            "address": "I1.0",
+            "label": "DRIVE-2 READY"
+        },
+        {
+            "id": 2187,
+            "io_type": "INPUT",
+            "address": "I1.1",
+            "label": "SERVO PUMP-1 SUCTION BALL VALVE LIMIT-LS1"
+        },
+        {
+            "id": 2188,
+            "io_type": "INPUT",
+            "address": "I1.2",
+            "label": "SERVO PUMP-2 SUCTION BALL VALVE LIMIT-LS2"
+        },
+        {
+            "id": 2189,
+            "io_type": "INPUT",
+            "address": "I1.3",
+            "label": "HYD.OIL TEMP HIGH-TEMP"
+        },
+        {
+            "id": 2190,
+            "io_type": "INPUT",
+            "address": "I1.4",
+            "label": "HYD.OIL LEVEL SENSOR -FLS"
+        },
+        {
+            "id": 2191,
+            "io_type": "INPUT",
+            "address": "I1.5",
+            "label": "ESTOP AT POWER PACK -ES2"
+        },
+        {
+            "id": 2192,
+            "io_type": "INPUT",
+            "address": "I2.0",
+            "label": "TOP CLAMP FWD PRESSUR SWITCH -PS1"
+        },
+        {
+            "id": 2193,
+            "io_type": "INPUT",
+            "address": "I2.1",
+            "label": "TOP CLAMP REV PRESSURE SWITCH-PS2"
+        },
+        {
+            "id": 2194,
+            "io_type": "INPUT",
+            "address": "I2.2",
+            "label": "SPARE INPUT-I2.2"
+        },
+        {
+            "id": 2195,
+            "io_type": "INPUT",
+            "address": "I2.3",
+            "label": "SPARE INPUT-I2.3"
+        },
+        {
+            "id": 2196,
+            "io_type": "INPUT",
+            "address": "I2.4",
+            "label": "SPARE INPUT-I2.4"
+        },
+        {
+            "id": 2197,
+            "io_type": "INPUT",
+            "address": "I2.5",
+            "label": "SPARE INPUT-I2.5"
+        },
+        {
+            "id": 2198,
+            "io_type": "INPUT",
+            "address": "I2.6",
+            "label": "SPARE INPUT-I2.6"
+        },
+        {
+            "id": 2199,
+            "io_type": "INPUT",
+            "address": "I2.7",
+            "label": "SPARE INPUT-I2.7"
+        },
+        {
+            "id": 2200,
+            "io_type": "INPUT",
+            "address": "I3.0",
+            "label": "SPARE INPUT-I3.0"
+        },
+        {
+            "id": 2201,
+            "io_type": "INPUT",
+            "address": "I3.1",
+            "label": "SPARE INPUT-I3.1"
+        },
+        {
+            "id": 2202,
+            "io_type": "INPUT",
+            "address": "I3.2",
+            "label": "SPARE INPUT-I3.2"
+        },
+        {
+            "id": 2203,
+            "io_type": "INPUT",
+            "address": "I3.3",
+            "label": "SPARE INPUT-I3.3"
+        },
+        {
+            "id": 2204,
+            "io_type": "INPUT",
+            "address": "I3.4",
+            "label": "SPARE INPUT-I3.4"
+        },
+        {
+            "id": 2205,
+            "io_type": "INPUT",
+            "address": "I3.5",
+            "label": "SPARE INPUT-I3.5"
+        },
+        {
+            "id": 2206,
+            "io_type": "INPUT",
+            "address": "I3.6",
+            "label": "ROLLER DRIVE-1 AT MACHINE SIDE MPCB TRIP -CB14"
+        },
+        {
+            "id": 2207,
+            "io_type": "INPUT",
+            "address": "I3.7",
+            "label": "ROLLER DRIVE-2 AT EJECTION SIDE MPCB TRIP-CB15"
+        },
+        {
+            "id": 2208,
+            "io_type": "INPUT",
+            "address": "I4.0",
+            "label": "SPARE INPUT-I4.0"
+        },
+        {
+            "id": 2209,
+            "io_type": "INPUT",
+            "address": "I4.1",
+            "label": "MAIN RAM UP LIMIT-PX1"
+        },
+        {
+            "id": 2210,
+            "io_type": "INPUT",
+            "address": "I4.2",
+            "label": "MAIN RAM FAST DOWN LIMIT-PX2"
+        },
+        {
+            "id": 2211,
+            "io_type": "INPUT",
+            "address": "I4.3",
+            "label": "MAIN RAM SLOW DOWN LIMIT-PX3"
+        },
+        {
+            "id": 2212,
+            "io_type": "INPUT",
+            "address": "I4.4",
+            "label": "MAIN RAM DOWN LIMIT-PX4"
+        },
+        {
+            "id": 2213,
+            "io_type": "INPUT",
+            "address": "I4.5",
+            "label": "PRESS FRONT SIDE STOPPER UP LIMIT-PX5"
+        },
+        {
+            "id": 2214,
+            "io_type": "INPUT",
+            "address": "I4.6",
+            "label": "PRESS FRONT SIDE STOPPER DOWN LIMIT-PX6"
+        },
+        {
+            "id": 2215,
+            "io_type": "INPUT",
+            "address": "I4.7",
+            "label": "MOULD CAR FRONT SIDE STOPPER UP LIMIT -PX7"
+        },
+        {
+            "id": 2216,
+            "io_type": "INPUT",
+            "address": "I5.0",
+            "label": "MOULD CAR FRONT SIDE STOPPER DOWN LIMIT-PX8"
+        },
+        {
+            "id": 2217,
+            "io_type": "INPUT",
+            "address": "I5.1",
+            "label": "TOP EJECTION UP PRESSURE SWITCH-PS3"
+        },
+        {
+            "id": 2218,
+            "io_type": "INPUT",
+            "address": "I5.2",
+            "label": "TOP EJECTOR DOWN PRESSURE SWITCH -PS4"
+        },
+        {
+            "id": 2219,
+            "io_type": "INPUT",
+            "address": "I5.3",
+            "label": "SPARE INPUT-I5.3"
+        },
+        {
+            "id": 2220,
+            "io_type": "INPUT",
+            "address": "I5.4",
+            "label": "SPARE INPUT-I5.4"
+        },
+        {
+            "id": 2221,
+            "io_type": "INPUT",
+            "address": "I5.5",
+            "label": "SPARE INPUT-I5.5"
+        },
+        {
+            "id": 2222,
+            "io_type": "INPUT",
+            "address": "I5.6",
+            "label": "SPARE INPUT-I5.6"
+        },
+        {
+            "id": 2223,
+            "io_type": "INPUT",
+            "address": "I5.7",
+            "label": "SPARE INPUT-I5.7"
+        },
+        {
+            "id": 2224,
+            "io_type": "INPUT",
+            "address": "I6.0",
+            "label": "ESTOP AT REMOTE -ES3"
+        },
+        {
+            "id": 2225,
+            "io_type": "INPUT",
+            "address": "I6.1",
+            "label": "CYCLE START -1- MPB-1"
+        },
+        {
+            "id": 2226,
+            "io_type": "INPUT",
+            "address": "I6.2",
+            "label": "CYCLE START- 2- MPB-2"
+        },
+        {
+            "id": 2227,
+            "io_type": "INPUT",
+            "address": "I6.3",
+            "label": "EJECTOR STATION ROLLER LIMIT-1 PX13"
+        },
+        {
+            "id": 2228,
+            "io_type": "INPUT",
+            "address": "I6.4",
+            "label": "EJECTOR STATION ROLLER LIMIT-2-PX14"
+        },
+        {
+            "id": 2229,
+            "io_type": "INPUT",
+            "address": "I6.5",
+            "label": "PRESS STATION ROLLER LIMIT-1-PX15"
+        },
+        {
+            "id": 2230,
+            "io_type": "INPUT",
+            "address": "I6.6",
+            "label": "PRESS STATION ROLLER LIMIT-2-PX16"
+        },
+        {
+            "id": 2231,
+            "io_type": "INPUT",
+            "address": "I6.7",
+            "label": "SPARE INPUT-I6.7"
+        },
+        {
+            "id": 2232,
+            "io_type": "INPUT",
+            "address": "I7.0",
+            "label": "MANUAL\/AUTO -SS1"
+        },
+        {
+            "id": 2233,
+            "io_type": "INPUT",
+            "address": "I7.1",
+            "label": "SREVO PUMP ON -PB3"
+        },
+        {
+            "id": 2234,
+            "io_type": "INPUT",
+            "address": "I7.2",
+            "label": "SERVO PUMP OFF -PB4"
+        },
+        {
+            "id": 2235,
+            "io_type": "INPUT",
+            "address": "I7.3",
+            "label": "MAIN RAM UP PB5"
+        },
+        {
+            "id": 2236,
+            "io_type": "INPUT",
+            "address": "I7.4",
+            "label": "MAIN RAM DOWN PB6"
+        },
+        {
+            "id": 2237,
+            "io_type": "INPUT",
+            "address": "I7.5",
+            "label": "ACK PB7"
+        },
+        {
+            "id": 2238,
+            "io_type": "INPUT",
+            "address": "I7.6",
+            "label": "HOME RETURN MPB3"
+        },
+        {
+            "id": 2239,
+            "io_type": "INPUT",
+            "address": "I7.7",
+            "label": "ESTOP AT PENDANT ES1"
+        },
+        {
+            "id": 2240,
+            "io_type": "INPUT",
+            "address": "I8.0",
+            "label": "TOP CLAMPING FWD SS2"
+        },
+        {
+            "id": 2241,
+            "io_type": "INPUT",
+            "address": "I8.1",
+            "label": "TOP CLAMPING REV SS2"
+        },
+        {
+            "id": 2242,
+            "io_type": "INPUT",
+            "address": "I8.2",
+            "label": "PRESS FRONT SIDE STOPPER UP SS3"
+        },
+        {
+            "id": 2243,
+            "io_type": "INPUT",
+            "address": "I8.3",
+            "label": "PRESS FRONT SIDE STOPPER DOWN SS3"
+        },
+        {
+            "id": 2244,
+            "io_type": "INPUT",
+            "address": "I8.4",
+            "label": "MOULD CAR FRONT SIDE STOPPER UP SS4"
+        },
+        {
+            "id": 2245,
+            "io_type": "INPUT",
+            "address": "I8.5",
+            "label": "MOULD CAR FRONT SIDE STOPPER DOWN SS4"
+        },
+        {
+            "id": 2246,
+            "io_type": "INPUT",
+            "address": "I8.6",
+            "label": "TOP EJECTION UP SS5"
+        },
+        {
+            "id": 2247,
+            "io_type": "INPUT",
+            "address": "I8.7",
+            "label": "TOP EJECTION DOWN SS5"
+        },
+        {
+            "id": 2248,
+            "io_type": "INPUT",
+            "address": "I9.0",
+            "label": "EJECTOR DOWN PB8"
+        },
+        {
+            "id": 2249,
+            "io_type": "INPUT",
+            "address": "I9.1",
+            "label": "EJECTOR UP PB9"
+        },
+        {
+            "id": 2250,
+            "io_type": "INPUT",
+            "address": "I9.2",
+            "label": "ROLLER DRIVE 1 FWD SS7 AT MACHINE"
+        },
+        {
+            "id": 2251,
+            "io_type": "INPUT",
+            "address": "I9.3",
+            "label": "ROLLER DRIVE 1 REV SS7 AT MACHINE"
+        },
+        {
+            "id": 2252,
+            "io_type": "INPUT",
+            "address": "I9.4",
+            "label": "ROLLER DRIVE 2 FED SS8 AT EJECTION"
+        },
+        {
+            "id": 2253,
+            "io_type": "INPUT",
+            "address": "I9.5",
+            "label": "ROLLER DRIVE 2 REV SS8 AT EJECTION"
+        },
+        {
+            "id": 2254,
+            "io_type": "INPUT",
+            "address": "I9.6",
+            "label": "SPARE INPUT-I9.6"
+        },
+        {
+            "id": 2255,
+            "io_type": "INPUT",
+            "address": "I9.7",
+            "label": "SPARE INPUT-I9.7"
+        },
+        {
+            "id": 2256,
+            "io_type": "INPUT",
+            "address": "I10.0",
+            "label": "SPARE INPUT-I10.0"
+        },
+        {
+            "id": 2257,
+            "io_type": "INPUT",
+            "address": "I10.1",
+            "label": "SPARE INPUT-I10.1"
+        },
+        {
+            "id": 2258,
+            "io_type": "INPUT",
+            "address": "I10.2",
+            "label": "SPARE INPUT-I10.2"
+        },
+        {
+            "id": 2259,
+            "io_type": "INPUT",
+            "address": "I10.3",
+            "label": "SPARE INPUT-I10.3"
+        },
+        {
+            "id": 2260,
+            "io_type": "INPUT",
+            "address": "I10.4",
+            "label": "SPARE INPUT-I10.4"
+        },
+        {
+            "id": 2261,
+            "io_type": "INPUT",
+            "address": "I10.5",
+            "label": "SPARE INPUT-I10.5"
+        },
+        {
+            "id": 2262,
+            "io_type": "INPUT",
+            "address": "I10.6",
+            "label": "SPARE INPUT-I10.6"
+        },
+        {
+            "id": 2263,
+            "io_type": "INPUT",
+            "address": "I10.7",
+            "label": "SPARE INPUT-I10.7"
+        },
+        {
+            "id": 2264,
+            "io_type": "OUTPUT",
+            "address": "Q0.0",
+            "label": "SERVO PUMP START"
+        },
+        {
+            "id": 2265,
+            "io_type": "OUTPUT",
+            "address": "Q0.1",
+            "label": "SERVO PUMP ESTOP"
+        },
+        {
+            "id": 2266,
+            "io_type": "OUTPUT",
+            "address": "Q0.2",
+            "label": "SERVO PUMP FAULT ACK"
+        },
+        {
+            "id": 2267,
+            "io_type": "OUTPUT",
+            "address": "Q0.3",
+            "label": "PILOT PUMP CONTACTOR K3"
+        },
+        {
+            "id": 2268,
+            "io_type": "OUTPUT",
+            "address": "Q0.4",
+            "label": "SPARE OUTPUT-Q0.4"
+        },
+        {
+            "id": 2269,
+            "io_type": "OUTPUT",
+            "address": "Q0.5",
+            "label": "SPARE OUTPUT-Q0.5"
+        },
+        {
+            "id": 2270,
+            "io_type": "OUTPUT",
+            "address": "Q0.6",
+            "label": "SPARE OUTPUT-Q0.6"
+        },
+        {
+            "id": 2271,
+            "io_type": "OUTPUT",
+            "address": "Q0.7",
+            "label": "SPARE OUTPUT-Q0.7"
+        },
+        {
+            "id": 2272,
+            "io_type": "OUTPUT",
+            "address": "Q1.0",
+            "label": "SPARE OUTPUT-Q1.0"
+        },
+        {
+            "id": 2273,
+            "io_type": "OUTPUT",
+            "address": "Q1.1",
+            "label": "SPARE OUTPUT-Q1.1"
+        },
+        {
+            "id": 2274,
+            "io_type": "OUTPUT",
+            "address": "Q2.0",
+            "label": "S1-SERVO PUMP1 SWASH PLATE VALVE"
+        },
+        {
+            "id": 2275,
+            "io_type": "OUTPUT",
+            "address": "Q2.1",
+            "label": "S2-SERVO PUMP1 UNLOADING VALVE"
+        },
+        {
+            "id": 2276,
+            "io_type": "OUTPUT",
+            "address": "Q2.2",
+            "label": "S3-PILOT PUMP UNLOADING VALVE"
+        },
+        {
+            "id": 2277,
+            "io_type": "OUTPUT",
+            "address": "Q2.3",
+            "label": "S4-SERVO PUMP2 SWASH PLATE VALVE"
+        },
+        {
+            "id": 2278,
+            "io_type": "OUTPUT",
+            "address": "Q2.4",
+            "label": "S5-SERVO PUMP2 UNLOADING VALVE"
+        },
+        {
+            "id": 2279,
+            "io_type": "OUTPUT",
+            "address": "Q2.5",
+            "label": "SPARE OUTPUT-Q2.5"
+        },
+        {
+            "id": 2280,
+            "io_type": "OUTPUT",
+            "address": "Q2.6",
+            "label": "SPARE OUTPUT-Q2.6"
+        },
+        {
+            "id": 2281,
+            "io_type": "OUTPUT",
+            "address": "Q2.7",
+            "label": "SPARE OUTPUT-Q2.7"
+        },
+        {
+            "id": 2282,
+            "io_type": "OUTPUT",
+            "address": "Q3.0",
+            "label": "S12-TOP CLAMPING CYL.FWD"
+        },
+        {
+            "id": 2283,
+            "io_type": "OUTPUT",
+            "address": "Q3.1",
+            "label": "S13-TOP CLAMPING CYL.REV"
+        },
+        {
+            "id": 2284,
+            "io_type": "OUTPUT",
+            "address": "Q3.2",
+            "label": "S18-TOP EJECTION CYL.DOWN"
+        },
+        {
+            "id": 2285,
+            "io_type": "OUTPUT",
+            "address": "Q3.3",
+            "label": "S19-TOP EJECTION CYL.UP"
+        },
+        {
+            "id": 2286,
+            "io_type": "OUTPUT",
+            "address": "Q3.4",
+            "label": "SPARE OUTPUT-Q3.4"
+        },
+        {
+            "id": 2287,
+            "io_type": "OUTPUT",
+            "address": "Q3.5",
+            "label": "SPARE OUTPUT-Q3.5"
+        },
+        {
+            "id": 2288,
+            "io_type": "OUTPUT",
+            "address": "Q3.6",
+            "label": "SPARE OUTPUT-Q3.6"
+        },
+        {
+            "id": 2289,
+            "io_type": "OUTPUT",
+            "address": "Q3.7",
+            "label": "SPARE OUTPUT-Q3.7"
+        },
+        {
+            "id": 2290,
+            "io_type": "OUTPUT",
+            "address": "Q4.0",
+            "label": "S6-MAIN RAM PRESSING"
+        },
+        {
+            "id": 2291,
+            "io_type": "OUTPUT",
+            "address": "Q4.1",
+            "label": "S7-PUSHUP CYL.DOWN"
+        },
+        {
+            "id": 2292,
+            "io_type": "OUTPUT",
+            "address": "Q4.2",
+            "label": "S8-PUSHUP CYL.DOWN PILOT OPEN"
+        },
+        {
+            "id": 2293,
+            "io_type": "OUTPUT",
+            "address": "Q4.3",
+            "label": "S9-MAIN RAM DECOMPRSSION VALVE"
+        },
+        {
+            "id": 2294,
+            "io_type": "OUTPUT",
+            "address": "Q4.4",
+            "label": "S10-PUSHUP CYL.FAST DOWN PILOT OPEN"
+        },
+        {
+            "id": 2295,
+            "io_type": "OUTPUT",
+            "address": "Q4.5",
+            "label": "S11-PUSHUP CYL.SLOW DOWN PILOT OPEN"
+        },
+        {
+            "id": 2296,
+            "io_type": "OUTPUT",
+            "address": "Q4.6",
+            "label": "SPARE OUTPUT Q4.6"
+        },
+        {
+            "id": 2297,
+            "io_type": "OUTPUT",
+            "address": "Q4.7",
+            "label": "SPARE OUTPUT Q4.7"
+        },
+        {
+            "id": 2298,
+            "io_type": "OUTPUT",
+            "address": "Q5.0",
+            "label": "S14-PRESS REAR SIDE STOPPER UP"
+        },
+        {
+            "id": 2299,
+            "io_type": "OUTPUT",
+            "address": "Q5.1",
+            "label": "S15-PRESS REAR SIDE STOPPER DOWN"
+        },
+        {
+            "id": 2300,
+            "io_type": "OUTPUT",
+            "address": "Q5.2",
+            "label": "S16-EJECTOR FRONT STOPPER UP"
+        },
+        {
+            "id": 2301,
+            "io_type": "OUTPUT",
+            "address": "Q5.3",
+            "label": "S17-EJECTOR FRONT STOPPER DOWN"
+        },
+        {
+            "id": 2302,
+            "io_type": "OUTPUT",
+            "address": "Q5.4",
+            "label": "S20-EJECTOR EJECTION CYL.UP"
+        },
+        {
+            "id": 2303,
+            "io_type": "OUTPUT",
+            "address": "Q5.5",
+            "label": "S21-EJECTIOR EJECTION CYL.DOWN"
+        },
+        {
+            "id": 2304,
+            "io_type": "OUTPUT",
+            "address": "Q5.6",
+            "label": "SPARE OUTPUT-Q5.6"
+        },
+        {
+            "id": 2305,
+            "io_type": "OUTPUT",
+            "address": "Q5.7",
+            "label": "SPARE OUTPUT-Q5.7"
+        },
+        {
+            "id": 2306,
+            "io_type": "OUTPUT",
+            "address": "Q7.0",
+            "label": "SERVO PUMP1 ON\/OFF LAMP"
+        },
+        {
+            "id": 2307,
+            "io_type": "OUTPUT",
+            "address": "Q7.1",
+            "label": "MAIN RAM UP LAMP"
+        },
+        {
+            "id": 2308,
+            "io_type": "OUTPUT",
+            "address": "Q7.2",
+            "label": "MAIN RAM DOWN LAMP"
+        },
+        {
+            "id": 2309,
+            "io_type": "OUTPUT",
+            "address": "Q7.3",
+            "label": "HOOTER"
+        },
+        {
+            "id": 2310,
+            "io_type": "OUTPUT",
+            "address": "Q7.4",
+            "label": "EJECTOR DOWN LAMP"
+        },
+        {
+            "id": 2311,
+            "io_type": "OUTPUT",
+            "address": "Q7.5",
+            "label": "EJECTOR UP LAMP"
+        },
+        {
+            "id": 2312,
+            "io_type": "OUTPUT",
+            "address": "Q7.6",
+            "label": "SPARE OUTPUT-Q7.6"
+        },
+        {
+            "id": 2313,
+            "io_type": "OUTPUT",
+            "address": "Q7.7",
+            "label": "SPARE OUTPUT-Q7.7"
+        },
+        {
+            "id": 2314,
+            "io_type": "OUTPUT",
+            "address": "Q8.0",
+            "label": "TOWER LAMP RED"
+        },
+        {
+            "id": 2315,
+            "io_type": "OUTPUT",
+            "address": "Q8.1",
+            "label": "TOWER LAMP YELLOW"
+        },
+        {
+            "id": 2316,
+            "io_type": "OUTPUT",
+            "address": "Q8.2",
+            "label": "TOWER LAMP GREEN"
+        },
+        {
+            "id": 2317,
+            "io_type": "OUTPUT",
+            "address": "Q8.3",
+            "label": "SPARE OUTPUT-Q8.3"
+        },
+        {
+            "id": 2318,
+            "io_type": "OUTPUT",
+            "address": "Q8.4",
+            "label": "SPARE OUTPUT-Q8.4"
+        },
+        {
+            "id": 2319,
+            "io_type": "OUTPUT",
+            "address": "Q8.5",
+            "label": "SPARE OUTPUT-Q8.5"
+        },
+        {
+            "id": 2320,
+            "io_type": "OUTPUT",
+            "address": "Q8.6",
+            "label": "SPARE OUTPUT-Q8.6"
+        },
+        {
+            "id": 2321,
+            "io_type": "OUTPUT",
+            "address": "Q8.7",
+            "label": "SPARE OUTPUT-Q8.7"
+        }
+    ],
+    "recipe_log": [
+        {
+            "id": 33,
+            "log_id": 38,
+            "operator_name": "admin",
+            "timestamp": "2026-07-13 11:43:55",
+            "shift_count": "0",
+            "recipe_name": "",
+            "work_order": "13072026",
+            "work_order_sl_no": 2,
+            "home_position": 0,
+            "fast_app_position": 0,
+            "final_pressing_position": 0,
+            "final_pressing_pressure": 0,
+            "bumping_count": 0,
+            "curing_time_hh": 0,
+            "curing_time_min": 0,
+            "batch_no": 4,
+            "curing_time_sec": 0,
+            "previous_cycle_time": 0,
+            "actual_cycle_time": 0
+        },
+        {
+            "id": 32,
+            "log_id": 36,
+            "operator_name": "admin",
+            "timestamp": "2026-07-12 00:46:55",
+            "shift_count": "0",
+            "recipe_name": "",
+            "work_order": "12072026",
+            "work_order_sl_no": 0,
+            "home_position": 0,
+            "fast_app_position": 0,
+            "final_pressing_position": 0,
+            "final_pressing_pressure": 0,
+            "bumping_count": 0,
+            "curing_time_hh": 0,
+            "curing_time_min": 0,
+            "batch_no": 2,
+            "curing_time_sec": 0,
+            "previous_cycle_time": 0,
+            "actual_cycle_time": 0
+        },
+        {
+            "id": 31,
+            "log_id": 35,
+            "operator_name": "admin",
+            "timestamp": "2026-07-11 00:08:06",
+            "shift_count": "0",
+            "recipe_name": "",
+            "work_order": "11072026",
+            "work_order_sl_no": 0,
+            "home_position": 0,
+            "fast_app_position": 0,
+            "final_pressing_position": 0,
+            "final_pressing_pressure": 0,
+            "bumping_count": 0,
+            "curing_time_hh": 0,
+            "curing_time_min": 0,
+            "batch_no": 1,
+            "curing_time_sec": 0,
+            "previous_cycle_time": 0,
+            "actual_cycle_time": 0
+        }
+    ],
+    "recipe_tool_allocations": [
+        {
+            "recipe_name": "DEMO_COMPLETE_LOOK",
+            "tool_id": 2,
+            "part_name": "part1"
+        },
+        {
+            "recipe_name": "PART-HM-HEAVY",
+            "tool_id": 3,
+            "part_name": "part2"
+        }
+    ],
+    "all_tables": [
+        {
+            "TABLE_NAME": "alarmwarning0",
+            "TABLE_ROWS": 0,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "alarm_buffer",
+            "TABLE_ROWS": 0,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "alarm_history",
+            "TABLE_ROWS": 0,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "alarm_mappings",
+            "TABLE_ROWS": 89,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "app_settings",
+            "TABLE_ROWS": 8,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "attendance",
+            "TABLE_ROWS": 12,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "audit_logs",
+            "TABLE_ROWS": 292,
+            "DATA_LENGTH": 507904
+        },
+        {
+            "TABLE_NAME": "bumping_log",
+            "TABLE_ROWS": 3,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "bumping_recipes",
+            "TABLE_ROWS": 0,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "chat_history",
+            "TABLE_ROWS": 2,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "chat_messages",
+            "TABLE_ROWS": 24,
+            "DATA_LENGTH": 65536
+        },
+        {
+            "TABLE_NAME": "chat_sessions",
+            "TABLE_ROWS": 6,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "critical_spares",
+            "TABLE_ROWS": 2,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "data_log",
+            "TABLE_ROWS": 7,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "departments",
+            "TABLE_ROWS": 4,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "down_time",
+            "TABLE_ROWS": 7,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "employee",
+            "TABLE_ROWS": 0,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "employees",
+            "TABLE_ROWS": 6,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "io_labels",
+            "TABLE_ROWS": 144,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "knowledge_base",
+            "TABLE_ROWS": 28,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "leave_records",
+            "TABLE_ROWS": 4,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "logevents0",
+            "TABLE_ROWS": 3435,
+            "DATA_LENGTH": 12075008
+        },
+        {
+            "TABLE_NAME": "mail_recipients",
+            "TABLE_ROWS": 4,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "maintenance_log",
+            "TABLE_ROWS": 0,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "maintenance_master",
+            "TABLE_ROWS": 0,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "maintenance_planner",
+            "TABLE_ROWS": 0,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "mc_spec",
+            "TABLE_ROWS": 0,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "p1graphlog",
+            "TABLE_ROWS": 50,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "p2graphlog",
+            "TABLE_ROWS": 50,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "p3graphlog",
+            "TABLE_ROWS": 50,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "parameter_limits",
+            "TABLE_ROWS": 36,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "payroll",
+            "TABLE_ROWS": 6,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "permissions",
+            "TABLE_ROWS": 714,
+            "DATA_LENGTH": 81920
+        },
+        {
+            "TABLE_NAME": "production_logs",
+            "TABLE_ROWS": 0,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "recipes",
+            "TABLE_ROWS": 22,
+            "DATA_LENGTH": 147456
+        },
+        {
+            "TABLE_NAME": "recipe_log",
+            "TABLE_ROWS": 3,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "recipe_tool_allocations",
+            "TABLE_ROWS": 2,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "reports",
+            "TABLE_ROWS": 29,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "runlog",
+            "TABLE_ROWS": 19083,
+            "DATA_LENGTH": 5783552
+        },
+        {
+            "TABLE_NAME": "saved_emails",
+            "TABLE_ROWS": 2,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "spare_orders_history",
+            "TABLE_ROWS": 0,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "spare_order_items",
+            "TABLE_ROWS": 0,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "sql0",
+            "TABLE_ROWS": 0,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "tasks",
+            "TABLE_ROWS": 3,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "toollogbatch",
+            "TABLE_ROWS": 50,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "toolmaster",
+            "TABLE_ROWS": 50,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "tool_master",
+            "TABLE_ROWS": 2,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "translations",
+            "TABLE_ROWS": 1093,
+            "DATA_LENGTH": 262144
+        },
+        {
+            "TABLE_NAME": "trend_data",
+            "TABLE_ROWS": 0,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "trend_logs",
+            "TABLE_ROWS": 0,
+            "DATA_LENGTH": 16384
+        },
+        {
+            "TABLE_NAME": "users",
+            "TABLE_ROWS": 7,
+            "DATA_LENGTH": 32768
+        },
+        {
+            "TABLE_NAME": "work_orders",
+            "TABLE_ROWS": 5,
+            "DATA_LENGTH": 16384
+        }
+    ]
+}

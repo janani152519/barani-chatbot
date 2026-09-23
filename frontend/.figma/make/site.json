@@ -1,0 +1,10 @@
+{
+  "description": "Create stunning and responsive frontends effortlessly, empowering developers and designers to build user-friendly web applications with ease.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

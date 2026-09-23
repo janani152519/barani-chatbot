@@ -1,0 +1,17 @@
+{
+    "name": "company-ai/backend",
+    "description": "Company AI Assistant Backend API",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.1",
+        "phpoffice/phpspreadsheet": "^2.0",
+        "dompdf/dompdf": "^3.0",
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "./"
+        }
+    }
+}

@@ -1,0 +1,45 @@
+# Node dependencies
+node_modules/
+frontend/node_modules/
+
+# PHP Composer dependencies
+vendor/
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+
+# Environment files with sensitive credentials
+.env
+.env.local
+.env.*.local
+frontend/.env
+frontend/.env.local
+
+# Build artifacts
+dist/
+frontend/dist/
+
+# Logs and runtime generated data
+storage/logs/*.log
+storage/logs/outbox/*.json
+storage/mailbox/admin/*
+!storage/mailbox/admin/.gitkeep
+storage/mailbox/temp/*
+!storage/mailbox/temp/.gitkeep
+storage/reports/*
+!storage/reports/.gitkeep
+storage/temp_mail_account.json
+
+# Scratch and temporary IDE files
+scratch/
+.tempmediaStorage/
+.system_generated/
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
