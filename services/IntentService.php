@@ -60,6 +60,21 @@ class IntentService
         return $norm;
     }
 
+    public static function extractEntityName(string $query, array $context = []): ?string
+    {
+        $pronounPattern = '/\b(her|his|him|she|he|they|them|their|it|its)\b/i';
+        if (preg_match($pronounPattern, $query) && !empty($context['last_entity'])) {
+            return $context['last_entity'];
+        }
+
+        // Try extracting person name or entity if mentioned
+        if (preg_match('/(?:for|about|of|is)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)/', $query, $matches)) {
+            return trim($matches[1]);
+        }
+
+        return $context['last_entity'] ?? null;
+    }
+
     public static function parseIntent(string $question, ?array $conversationContext = null): array
     {
         $norm = self::normalize($question);
