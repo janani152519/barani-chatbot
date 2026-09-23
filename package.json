@@ -8,7 +8,7 @@
   "scripts": {
     "install-all": "npm --prefix frontend install",
     "dev": "npm --prefix frontend run dev",
-    "build": "npm --prefix frontend install && npm --prefix frontend run build",
+    "build": "npm --prefix frontend install && npm --prefix frontend run build && node -e \"const fs=require('fs'); fs.cpSync('frontend/dist', 'dist', {recursive:true, force:true});\"",
     "preview": "npm --prefix frontend run preview"
   }
 }
