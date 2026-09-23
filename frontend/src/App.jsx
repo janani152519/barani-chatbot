@@ -7,14 +7,10 @@ import { getAuthUser, logout } from "./services/api";
 
 export default function App() {
   const [user, setUser] = useState(() => getAuthUser());
-  const [state, setState] = useState(() => (getAuthUser() ? "chat" : "login"));
+  const [state, setState] = useState("entrance");
 
   const handleEntranceDone = () => {
-    if (user) {
-      setState("chat");
-    } else {
-      setState("login");
-    }
+    setState("login");
   };
 
   const handleLogin = (authenticatedUser) => {

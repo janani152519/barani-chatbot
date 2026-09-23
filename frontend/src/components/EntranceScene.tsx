@@ -402,32 +402,93 @@ export default function EntranceScene({ onComplete }: Props) {
 
       {/* Progress bar */}
       <div
-        className="absolute bottom-8 left-1/2"
-        style={{ transform: "translateX(-50%)", width: 200 }}
+        style={{
+          position: "absolute",
+          bottom: 32,
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: 240,
+          zIndex: 40,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 6
+        }}
       >
-        <div className="progress-bar">
-          <div className="progress-bar-fill" style={{ width: `${progress}%` }} />
+        <div
+          style={{
+            width: "100%",
+            height: 4,
+            background: "rgba(255, 255, 255, 0.15)",
+            borderRadius: 2,
+            overflow: "hidden"
+          }}
+        >
+          <div
+            style={{
+              width: `${progress}%`,
+              height: "100%",
+              background: "#10a37f",
+              boxShadow: "0 0 10px rgba(16, 163, 127, 0.8)",
+              transition: "width 0.1s linear"
+            }}
+          />
         </div>
+        <span
+          style={{
+            fontFamily: "var(--font-mono)",
+            fontSize: 9,
+            letterSpacing: "0.15em",
+            color: "rgba(255, 255, 255, 0.5)",
+            textTransform: "uppercase"
+          }}
+        >
+          {phase === "approach" && "Scanning security clearance…"}
+          {phase === "gate" && "Perimeter gate opening…"}
+          {phase === "enter" && "Authorizing SCADA gateway…"}
+          {phase === "done" && "Ready for login"}
+        </span>
       </div>
 
-      {/* Skip */}
+      {/* Prominent Skip Intro Button */}
       <button
+        type="button"
         onClick={onComplete}
         style={{
           position: "absolute",
           bottom: 24,
           right: 32,
+          display: "flex",
+          alignItems: "center",
+          gap: 8,
+          padding: "9px 18px",
+          background: "rgba(33, 33, 33, 0.85)",
+          border: "1px solid rgba(255, 255, 255, 0.25)",
+          backdropFilter: "blur(12px)",
+          borderRadius: 24,
+          color: "#ffffff",
           fontFamily: "var(--font-mono)",
-          fontSize: 10,
-          letterSpacing: "0.14em",
-          color: "var(--text-dim)",
-          background: "none",
-          border: "none",
+          fontSize: 11,
+          fontWeight: 600,
+          letterSpacing: "0.1em",
           cursor: "pointer",
-          textTransform: "uppercase",
+          zIndex: 50,
+          boxShadow: "0 4px 16px rgba(0,0,0,0.5)",
+          transition: "all 0.2s ease",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.background = "#10a37f";
+          e.currentTarget.style.borderColor = "#10a37f";
+          e.currentTarget.style.transform = "translateY(-1px)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.background = "rgba(33, 33, 33, 0.85)";
+          e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.25)";
+          e.currentTarget.style.transform = "translateY(0)";
         }}
       >
-        Skip intro
+        <span>SKIP INTRO</span>
+        <span style={{ fontSize: 13 }}>⏭</span>
       </button>
     </div>
   );
