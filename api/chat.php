@@ -151,7 +151,15 @@ $ins->execute([':s' => $sessionId, ':m' => $botAnswer, ':i' => $intent, ':p' => 
 
 // ── 7. Audit ─────────────────────────────────────────────────────────────────
 $llmMode = 'local_offline_llm';
-Logger::audit($user['id'], 'chat_query', "[$llmMode] Q: \"$message\" | Intent: $intent");
+$retrievedSummary = "Query: \"{$message}\" | Intent: {$intent} | Response: " . substr(strip_tags($botAnswer), 0, 120) . "...";
+if (!empty($formatted['data'])) {
+    $recCount = is_array($formatted['data']) ? count($formatted['data']) : 1;
+    $retrievedSummary .= " | [{$recCount} database records retrieved from gri_db]";
+} elseif (!empty($formatted['records'])) {
+    $recCount = is_array($formatted['records']) ? count($formatted['records']) : 1;
+    $retrievedSummary .= " | [{$recCount} database records retrieved from gri_db]";
+}
+Logger::auditRetrieval($user['id'], $retrievedSummary, 'chat_query', $user['username'] ?? 'admin');
 
 // ── 8. Respond ───────────────────────────────────────────────────────────────
 Response::success(array_merge([

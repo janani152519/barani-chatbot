@@ -44,7 +44,8 @@ $endpoints = [
     ['method' => 'GET',  'path' => '/api/download.php', 'desc' => 'Secure Path-Protected Report File Download'],
     ['method' => 'POST', 'path' => '/api/email.php', 'desc' => 'SMTP Report Email Dispatcher'],
     ['method' => 'GET',  'path' => '/api/payroll.php', 'desc' => 'Payroll Records & Aggregations'],
-    ['method' => 'GET',  'path' => '/api/scheduled_emails.php', 'desc' => 'Scheduled Email Dispatch Automation']
+    ['method' => 'GET',  'path' => '/api/scheduled_emails.php', 'desc' => 'Scheduled Email Dispatch Automation'],
+    ['method' => 'GET',  'path' => '/api/audit_logs.php', 'desc' => 'Database Audit Log & Security Trail']
 ];
 
 $isJson = (isset($_GET['format']) && $_GET['format'] === 'json') ||

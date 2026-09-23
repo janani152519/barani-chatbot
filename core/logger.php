@@ -10,9 +10,22 @@ class Logger
     /**
      * Log an action to the audit_logs table and storage log file.
      */
-    public static function audit(?int $userId, string $action, string $description = ''): void
+    public static function audit(?int $userId, string $action, string $description = '', ?string $operator = null): void
     {
         $ip = $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1';
+
+        // Determine human-readable operator name
+        if ($operator === null) {
+            if ($userId === 1 || (isset($_SESSION['user']['username']) && $_SESSION['user']['username'] === 'admin')) {
+                $operator = 'admin';
+            } elseif (!empty($_SESSION['user']['username'])) {
+                $operator = $_SESSION['user']['username'];
+            } elseif ($userId !== null && $userId > 0) {
+                $operator = "User#{$userId}";
+            } else {
+                $operator = "System";
+            }
+        }
 
         // 1. Write to database audit_logs table
         try {
@@ -38,9 +51,9 @@ class Logger
                     VALUES (:operator, :action, 'system', :remarks)
                 ");
                 $stmt->execute([
-                    ':operator' => $userId ? "User#{$userId}" : "System",
+                    ':operator' => $operator,
                     ':action' => substr($action, 0, 50),
-                    ':remarks' => substr($description, 0, 255)
+                    ':remarks' => $description // longtext in schema, no truncation
                 ]);
             }
         } catch (\Throwable $e) {
@@ -51,11 +64,20 @@ class Logger
         try {
             $logFile = storage_path('logs/audit.log');
             $timestamp = date('Y-m-d H:i:s');
-            $userIdStr = $userId !== null ? "User #{$userId}" : "System/Guest";
-            $entry = "[{$timestamp}] [{$userIdStr}] Action: {$action} | Details: {$description} | IP: {$ip}\n";
+            $entry = "[{$timestamp}] [{$operator}] Action: {$action} | Details: {$description} | IP: {$ip}\n";
             file_put_contents($logFile, $entry, FILE_APPEND | LOCK_EX);
         } catch (\Throwable $e) {
             // Silent fallback
         }
     }
+
+    /**
+     * Dedicated audit helper for logging details retrieved by admin/user.
+     */
+    public static function auditRetrieval(?int $userId, string $detailsSummary, string $action = 'details_retrieved', ?string $operator = 'admin'): void
+    {
+        $logMessage = "admin logged in and these details were retrieved: {$detailsSummary}";
+        self::audit($userId, $action, $logMessage, $operator);
+    }
 }
+

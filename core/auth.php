@@ -99,7 +99,23 @@ class Auth
         $_SESSION['user'] = $userData;
         $_SESSION['api_token'] = $token;
 
-        Logger::audit($userData['id'], 'login_success', "User {$user['username']} logged in successfully as {$userData['role']}");
+        $dbName = env('DB_DATABASE', 'gri_db');
+        $tableCount = 56;
+        try {
+            $stmtCount = $pdo->query("SELECT count(*) FROM information_schema.tables WHERE table_schema = DATABASE()");
+            $tableCount = (int)$stmtCount->fetchColumn();
+        } catch (\Throwable $t) {}
+
+        $ip = $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1';
+        $tokenPrefix = substr($token, 0, 10);
+        $retrievedDetails = "User Account [ID: {$userData['id']}, Username: {$user['username']}, Role: {$userData['role']}, Department: {$userData['department_name']}], Database Gateway [Schema: {$dbName}, Tables: {$tableCount}], Session Token [{$tokenPrefix}...], Client IP: {$ip}";
+
+        Logger::audit(
+            $userData['id'],
+            'admin_login',
+            "admin logged in and these details were retrieved: {$retrievedDetails}",
+            $user['username']
+        );
 
         return $userData;
     }

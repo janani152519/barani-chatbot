@@ -3,12 +3,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Trash2, LogOut, Loader2, User, Send, Sparkles, Plus,
   MessageSquare, ChevronLeft, Bot, Clock,
-  Database, X, Menu,
+  Database, X, Menu, Shield,
   Mail, DollarSign, LayoutDashboard, MapPin, History, FileText
 } from "lucide-react";
 import Message from "./Message";
 import { HomeView, PayrollPanel, EmailSchedulerPanel } from "./Dashboard";
 import FactoryMap from "./FactoryMap";
+import AuditLogPanel from "./AuditLogPanel";
 import { detectChartType } from "./ChartMessage";
 import { sendMessage, getAuthUser } from "../services/api";
 
@@ -686,6 +687,20 @@ export default function ChatWindow({ onLogout }) {
               <MapPin size={13} color={activePortal === "machines" ? "#10a37f" : "#8e8e8e"} />
               <span>Floor Map</span>
             </button>
+            <button
+              onClick={() => setActivePortal("audit_logs")}
+              style={{
+                padding: "5px 12px", borderRadius: 6, cursor: "pointer",
+                fontSize: 11.5, fontWeight: 500, display: "flex", alignItems: "center", gap: 6,
+                background: activePortal === "audit_logs" ? "#2f2f2f" : "transparent",
+                color: activePortal === "audit_logs" ? "#ffffff" : "#8e8e8e",
+                border: `1px solid ${activePortal === "audit_logs" ? "rgba(255, 255, 255, 0.15)" : "transparent"}`,
+                transition: "all 0.15s ease", whiteSpace: "nowrap"
+              }}
+            >
+              <Shield size={13} color={activePortal === "audit_logs" ? "#10a37f" : "#8e8e8e"} />
+              <span>Audit Logs</span>
+            </button>
           </div>
 
           {/* Right: Actions */}
@@ -711,20 +726,45 @@ export default function ChatWindow({ onLogout }) {
               New Chat
             </button>
 
-
             <div style={{
               display: "flex", alignItems: "center", gap: 7,
               padding: "6px 12px", borderRadius: 8,
-              background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(148, 163, 184, 0.1)",
-              fontSize: 11.5, fontWeight: 600, color: "#CBD5E1"
+              background: "#2f2f2f",
+              border: "1px solid rgba(255, 255, 255, 0.12)",
+              fontSize: 11.5, fontWeight: 600, color: "#ececec"
             }}>
-              <User size={13} style={{ color: "#3B82F6" }} />
+              <User size={13} style={{ color: "#10a37f" }} />
               <span>{user.username}</span>
-              <span style={{ fontSize: 9.5, color: "#10B981", fontFamily: "var(--font-mono)", fontWeight: 700, textTransform: "uppercase" }}>
+              <span style={{ fontSize: 9.5, color: "#10a37f", fontFamily: "var(--font-mono)", fontWeight: 700, textTransform: "uppercase" }}>
                 {user.role}
               </span>
             </div>
+
+            <button
+              onClick={onLogout}
+              style={{
+                padding: "6px 12px", borderRadius: 8,
+                background: "#212121",
+                border: "1px solid rgba(255, 255, 255, 0.15)",
+                color: "#8e8e8e", fontSize: 11.5, fontWeight: 500,
+                cursor: "pointer", display: "flex", alignItems: "center",
+                gap: 5, transition: "all 0.15s ease"
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.color = "#f87171";
+                e.currentTarget.style.borderColor = "rgba(239, 68, 68, 0.4)";
+                e.currentTarget.style.background = "#2a2a2a";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.color = "#8e8e8e";
+                e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.15)";
+                e.currentTarget.style.background = "#212121";
+              }}
+              title="Sign Out to Login Screen"
+            >
+              <LogOut size={12} />
+              <span>Sign Out</span>
+            </button>
           </div>
         </header>
 
@@ -1129,11 +1169,15 @@ export default function ChatWindow({ onLogout }) {
             }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 <span style={{ fontSize: 18 }}>
-                  {activePortal === "email_scheduler" ? "📄" : "🗺️"}
+                  {activePortal === "email_scheduler" ? "📄" : activePortal === "audit_logs" ? "🛡️" : "🗺️"}
                 </span>
                 <div>
                   <span style={{ fontSize: 13, fontWeight: 600, color: "#ececec" }}>
-                    {activePortal === "email_scheduler" ? "Custom Reports & Email Dispatcher" : "Interactive Machine Floor Map"}
+                    {activePortal === "email_scheduler"
+                      ? "Custom Reports & Email Dispatcher"
+                      : activePortal === "audit_logs"
+                      ? "Database Security & Audit Trail"
+                      : "Interactive Machine Floor Map"}
                   </span>
                   <span style={{ fontSize: 11, color: "#8e8e8e", marginLeft: 8 }}>
                     • gri_db Telemetry
@@ -1161,9 +1205,10 @@ export default function ChatWindow({ onLogout }) {
 
 
             {/* Scrollable Portal View */}
-            <div style={{ flex: 1, overflowY: "auto", padding: activePortal === "email_scheduler" ? "0" : "20px 24px" }}>
+            <div style={{ flex: 1, overflowY: "auto", padding: (activePortal === "email_scheduler" || activePortal === "audit_logs") ? "0" : "20px 24px" }}>
               {activePortal === "email_scheduler" && <EmailSchedulerPanel />}
               {activePortal === "machines" && <FactoryMap />}
+              {activePortal === "audit_logs" && <AuditLogPanel />}
             </div>
 
             {/* In-Portal Quick AI Query Dock */}

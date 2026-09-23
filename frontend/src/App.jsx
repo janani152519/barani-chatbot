@@ -3,11 +3,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import EntranceScene from "./components/EntranceScene";
 import LoginScreen from "./components/LoginScreen";
 import ChatWindow from "./components/ChatWindow";
-import { getAuthUser } from "./services/api";
+import { getAuthUser, logout } from "./services/api";
 
 export default function App() {
-  const [state, setState] = useState("entrance");
   const [user, setUser] = useState(() => getAuthUser());
+  const [state, setState] = useState(() => (getAuthUser() ? "chat" : "login"));
 
   const handleEntranceDone = () => {
     if (user) {
@@ -20,12 +20,13 @@ export default function App() {
   const handleLogin = (authenticatedUser) => {
     setUser(authenticatedUser);
     setState("entering");
-    setTimeout(() => setState("chat"), 3000);
+    setTimeout(() => setState("chat"), 1500);
   };
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    await logout();
     setUser(null);
-    setState("entrance");
+    setState("login");
   };
 
   return (

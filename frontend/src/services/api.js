@@ -151,3 +151,17 @@ export async function emailReport(reportId, group = "HR") {
 
   return await response.json();
 }
+
+/**
+ * Fetch live database audit log records
+ */
+export async function getAuditLogs(limit = 50, filter = "") {
+  const params = new URLSearchParams({ limit: String(limit) });
+  if (filter) params.append("q", filter);
+  const response = await fetch(`${API_BASE}/audit_logs.php?${params.toString()}`, {
+    method: "GET",
+    headers: getHeaders()
+  });
+  return await response.json();
+}
+

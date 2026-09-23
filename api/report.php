@@ -49,6 +49,13 @@ try {
 
         $downloadUrl = "/api/download.php?file=" . urlencode($customReport['file_name']);
 
+        Logger::auditRetrieval(
+            $user['id'],
+            "Generated {$type} report in {$format} format ({$customReport['file_name']}) with verified factory telemetry records",
+            'report_generated',
+            $user['username'] ?? 'admin'
+        );
+
         Response::success([
             'success'         => true,
             'report'          => $customReport,
@@ -63,6 +70,13 @@ try {
 
     // Standard report fallback (excel/csv)
     $reportMeta = ReportService::generateReport($type, $format, $user);
+
+    Logger::auditRetrieval(
+        $user['id'],
+        "Generated {$type} ledger in {$format} format ({$reportMeta['file_name']})",
+        'report_generated',
+        $user['username'] ?? 'admin'
+    );
 
     Response::success([
         'success'         => true,
