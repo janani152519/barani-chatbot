@@ -51,10 +51,13 @@ $isJson = (isset($_GET['format']) && $_GET['format'] === 'json') ||
           (isset($_SERVER['HTTP_ACCEPT']) && str_contains($_SERVER['HTTP_ACCEPT'], 'application/json'));
 
 if ($isJson) {
+    header('Cache-Control: no-cache, no-store, must-revalidate');
+    header('Pragma: no-cache');
+    header('Expires: 0');
     header('Content-Type: application/json; charset=utf-8');
     echo json_encode([
         'status' => 'online',
-        'service' => 'Company AI Assistant Backend API',
+        'service' => 'Barani Hydraulics AI Assistant Backend API',
         'frontend_url' => 'http://localhost:3000',
         'php_version' => PHP_VERSION,
         'database' => [
@@ -68,27 +71,36 @@ if ($isJson) {
     ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     exit;
 }
+
+header('Cache-Control: no-cache, no-store, must-revalidate');
+header('Pragma: no-cache');
+header('Expires: 0');
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company AI Backend API — Status</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Barani Hydraulics AI Assistant Backend — Status</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #171717;
-            --bg-card: #212121;
-            --border-card: rgba(255, 255, 255, 0.1);
-            --accent-blue: #10a37f;
-            --accent-cyan: #10a37f;
+            --bg-primary: #212121;
+            --bg-secondary: #171717;
+            --bg-card: #262626;
+            --bg-card-hover: #2f2f2f;
+            --border-card: #343434;
+            --border-subtle: #2d2d2d;
             --accent-green: #10a37f;
-            --accent-purple: #10a37f;
+            --accent-green-hover: #1a7f64;
             --text-main: #ececec;
-            --text-muted: #b4b4b4;
+            --text-secondary: #d1d5db;
+            --text-muted: #8e8e8e;
         }
 
         * {
@@ -98,7 +110,7 @@ if ($isJson) {
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background: var(--bg-primary);
             color: var(--text-main);
             min-height: 100vh;
@@ -106,6 +118,7 @@ if ($isJson) {
             flex-direction: column;
             align-items: center;
             padding: 2.5rem 1.5rem;
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
@@ -131,88 +144,89 @@ if ($isJson) {
         }
 
         .logo-icon {
-            width: 48px;
-            height: 48px;
-            background: #10a37f;
-            border-radius: 12px;
+            width: 44px;
+            height: 44px;
+            background: #2f2f2f;
+            border: 1px solid #444444;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
         }
 
         .logo-icon svg {
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
             fill: none;
-            stroke: #ffffff;
+            stroke: #ececec;
             stroke-width: 2;
         }
 
         h1 {
-            font-size: 1.65rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
+            font-size: 1.45rem;
+            font-weight: 600;
+            letter-spacing: -0.015em;
             color: #ffffff;
         }
 
         .subtitle {
-            font-size: 0.875rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
-            margin-top: 2px;
+            margin-top: 3px;
         }
 
         .badge-live {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(16, 163, 127, 0.15);
-            border: 1px solid rgba(16, 163, 127, 0.4);
-            color: #10a37f;
+            background: #171717;
+            border: 1px solid #383838;
+            color: #ececec;
             padding: 0.35rem 0.85rem;
             border-radius: 9999px;
             font-size: 0.8rem;
-            font-weight: 600;
+            font-weight: 500;
         }
 
         .pulse-dot {
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: #10a37f;
+            background: var(--accent-green);
             box-shadow: 0 0 0 rgba(16, 163, 127, 0.4);
             animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(16, 163, 127, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(16, 163, 127, 0); }
+            70% { box-shadow: 0 0 0 8px rgba(16, 163, 127, 0); }
             100% { box-shadow: 0 0 0 0 rgba(16, 163, 127, 0); }
         }
 
         /* Hero Banner CTA */
         .cta-banner {
-            background: #212121;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 16px;
-            padding: 1.5rem 2rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-card);
+            border-radius: 12px;
+            padding: 1.35rem 1.75rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 1.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.75rem;
         }
 
         .cta-banner-text h2 {
-            font-size: 1.2rem;
-            font-weight: 700;
+            font-size: 1.15rem;
+            font-weight: 600;
             color: #ffffff;
             margin-bottom: 0.25rem;
         }
 
         .cta-banner-text p {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.875rem;
         }
 
         .btn-frontend {
@@ -222,19 +236,18 @@ if ($isJson) {
             background: #ffffff;
             color: #0d0d0d;
             text-decoration: none;
-            padding: 0.75rem 1.4rem;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-            transition: all 0.2s ease;
+            padding: 0.65rem 1.25rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            transition: all 0.15s ease;
             white-space: nowrap;
         }
 
         .btn-frontend:hover {
-            background: #ececec;
+            background: #e3e3e3;
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
         }
 
         /* Stats Grid */
@@ -242,19 +255,23 @@ if ($isJson) {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.75rem;
         }
 
         .stat-card {
             background: var(--bg-card);
             border: 1px solid var(--border-card);
-            border-radius: 14px;
-            padding: 1.25rem;
-            backdrop-filter: blur(8px);
+            border-radius: 12px;
+            padding: 1.15rem 1.25rem;
+            transition: border-color 0.15s ease;
+        }
+
+        .stat-card:hover {
+            border-color: #484848;
         }
 
         .stat-label {
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             text-transform: uppercase;
             letter-spacing: 0.06em;
             color: var(--text-muted);
@@ -263,8 +280,8 @@ if ($isJson) {
         }
 
         .stat-value {
-            font-size: 1.25rem;
-            font-weight: 700;
+            font-size: 1.2rem;
+            font-weight: 600;
             color: #ffffff;
             display: flex;
             align-items: center;
@@ -281,9 +298,8 @@ if ($isJson) {
         .endpoints-section {
             background: var(--bg-card);
             border: 1px solid var(--border-card);
-            border-radius: 16px;
+            border-radius: 12px;
             padding: 1.5rem;
-            backdrop-filter: blur(10px);
         }
 
         .section-header {
@@ -294,29 +310,31 @@ if ($isJson) {
         }
 
         .section-header h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #ffffff;
         }
 
         .endpoint-list {
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
+            gap: 0.6rem;
         }
 
         .endpoint-item {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0.85rem 1rem;
-            background: rgba(255, 255, 255, 0.025);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            transition: background 0.15s ease;
+            padding: 0.75rem 1rem;
+            background: #212121;
+            border: 1px solid #303030;
+            border-radius: 8px;
+            transition: all 0.15s ease;
         }
 
         .endpoint-item:hover {
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--bg-card-hover);
+            border-color: #424242;
         }
 
         .endpoint-path {
@@ -324,26 +342,28 @@ if ($isJson) {
             align-items: center;
             gap: 0.75rem;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.875rem;
+            font-size: 0.85rem;
+            color: #ececec;
         }
 
         .method-badge {
-            font-size: 0.7rem;
-            font-weight: 800;
-            padding: 0.2rem 0.5rem;
-            border-radius: 5px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 0.2rem 0.55rem;
+            border-radius: 4px;
             text-transform: uppercase;
+            letter-spacing: 0.04em;
         }
 
         .method-post {
-            background: #2f2f2f;
-            color: #ececec;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: #171717;
+            color: #d1d5db;
+            border: 1px solid #424242;
         }
 
         .method-get {
-            background: rgba(16, 163, 127, 0.15);
-            color: #10a37f;
+            background: rgba(16, 163, 127, 0.12);
+            color: var(--accent-green);
             border: 1px solid rgba(16, 163, 127, 0.35);
         }
 
@@ -361,8 +381,13 @@ if ($isJson) {
         }
 
         .footer a {
-            color: var(--accent-blue);
-            text-decoration: none;
+            color: var(--text-main);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .footer a:hover {
+            color: #ffffff;
         }
     </style>
 </head>
@@ -375,7 +400,7 @@ if ($isJson) {
                     <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                 </div>
                 <div>
-                    <h1>Company AI Assistant Backend</h1>
+                    <h1>Barani Hydraulics AI Assistant Backend</h1>
                     <div class="subtitle">Core PHP 8 REST API Engine & Database Gateway</div>
                 </div>
             </div>
@@ -389,7 +414,7 @@ if ($isJson) {
         <div class="cta-banner">
             <div class="cta-banner-text">
                 <h2>Looking for the Web UI?</h2>
-                <p>The interactive frontend application is running on port 3000.</p>
+                <p>The interactive ChatGPT-style frontend application is running on port 3000.</p>
             </div>
             <a href="http://localhost:3000" target="_blank" class="btn-frontend">
                 Launch Frontend UI (Port 3000) &rarr;
@@ -402,9 +427,9 @@ if ($isJson) {
                 <div class="stat-label">Database Connection</div>
                 <div class="stat-value">
                     <?php if ($dbStatus === 'connected'): ?>
-                        <span style="color: #34d399;">● Connected</span>
+                        <span style="color: #10a37f;">● Connected</span>
                     <?php else: ?>
-                        <span style="color: #f87171;">● Failed</span>
+                        <span style="color: #ef4444;">● Failed</span>
                     <?php endif; ?>
                 </div>
                 <div class="stat-sub">
@@ -424,7 +449,7 @@ if ($isJson) {
 
             <div class="stat-card">
                 <div class="stat-label">Architecture</div>
-                <div class="stat-value" style="color: #818cf8;">Zero-Trust RBAC</div>
+                <div class="stat-value" style="color: #ececec;">Zero-Trust RBAC</div>
                 <div class="stat-sub">PDO Parameterized &bull; Field-level guards</div>
             </div>
         </div>
@@ -433,7 +458,7 @@ if ($isJson) {
         <div class="endpoints-section">
             <div class="section-header">
                 <h3>Active REST Endpoints</h3>
-                <a href="?format=json" style="color: var(--accent-blue); font-size: 0.825rem; text-decoration: none;">View as JSON &rarr;</a>
+                <a href="?format=json" style="color: #ececec; font-size: 0.825rem; text-decoration: underline; text-underline-offset: 3px;">View as JSON &rarr;</a>
             </div>
             <div class="endpoint-list">
                 <?php foreach ($endpoints as $ep): ?>
@@ -452,7 +477,7 @@ if ($isJson) {
 
         <!-- Footer -->
         <div class="footer">
-            Company AI Assistant &bull; Server Time: <?= date('Y-m-d H:i:s T') ?> &bull; <a href="http://localhost:3000">Open Web Interface</a>
+            Barani Hydraulics AI Assistant &bull; Server Time: <?= date('Y-m-d H:i:s T') ?> &bull; <a href="http://localhost:3000">Open Web Interface</a>
         </div>
     </div>
 </body>
