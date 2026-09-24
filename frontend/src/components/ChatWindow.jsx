@@ -155,9 +155,9 @@ export default function ChatWindow({ onLogout }) {
     const q = (queryText || inputText).trim();
     if (!q || loading) return;
 
-    // Only detect chart type if user explicitly requested a chart, graph, or plot
-    const isChartRequested = /\b(chart|graph|graphical|graphic|plot|visual|visualize|visualization|visuals|diagram|trend\s*curve|histogram|pareto|bar\s*chart|pie\s*chart|radar\s*chart)\b/i.test(q);
-    const isTableRequested = /\b(table|records|all\s+data|raw\s+data|export|excel|csv|download|full\s+log|history)\b/i.test(q);
+    // Only detect chart type if user explicitly requested a chart, graph, or graphical representation
+    const isChartRequested = /\b(chart|graph|graphical|graphical\s+representation|plot|diagram|histogram|pareto\s*chart|bar\s*chart|pie\s*chart|line\s*chart|radar\s*chart|visualize|visualization)\b/i.test(q);
+    const isTableRequested = /\b(table|records|all\s+data|raw\s+data|export|excel|csv|download|full\s+log)\b/i.test(q);
     const chartType = isChartRequested ? detectChartType(q) : null;
 
     const timeStr = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
